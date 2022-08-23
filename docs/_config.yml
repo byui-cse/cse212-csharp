@@ -5,7 +5,7 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
-theme: slate
+theme: jekyll-theme-slate
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
