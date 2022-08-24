@@ -12,6 +12,8 @@ jobs:
         with:
           ruby-version: 2.7
           bundler-cache: true
+      - name: makeexe
+        run: chmod +x script/*
       - name: build
         run: script/bootstrap
       - name: test
