@@ -1,7 +1,10 @@
 #!/bin/sh
 
 set -e
+echo "Starting bootstrap"
 cd docs
+pwd
 gem install bundler
 bundle install
 cd ..
+pwd

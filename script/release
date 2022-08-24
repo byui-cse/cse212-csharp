@@ -2,6 +2,8 @@
 # Tag and push a release.
 
 set -e
+echo "Starting release"
+pwd
 
 # Make sure we're in the project root.
 
