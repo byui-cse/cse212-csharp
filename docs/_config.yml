@@ -1,3 +1,6 @@
+title: CSE 212 | Programming with Data Structures
+description: 
+show_downloads: false
 lsi: false
 safe: true
 source: docs/
@@ -5,6 +8,8 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
+plugins:
+  - jekyll-remote-theme
 remote_theme: jekyll-theme-byui-cs
 kramdown:
   math_engine: mathjax
