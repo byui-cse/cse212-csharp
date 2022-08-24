@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.name          = "jekyll-theme-byui-cs"
   s.version       = "0.2.0"
-  s.license       = "none"
+  s.license       = "MIT"
   s.authors       = ["Aaron Kay", "Brigham Young University - Idaho"]
   s.email         = ["info@byui.edu"]
   s.homepage      = "https://byui.edu"
