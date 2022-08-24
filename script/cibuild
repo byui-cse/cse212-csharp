@@ -6,8 +6,8 @@ pwd
 cd docs
 pwd
 
-bundle exec jekyll build -d ./docs/_site
-bundle exec htmlproofer ./docs/_site --check-html --check-sri
+bundle exec jekyll build
+bundle exec htmlproofer ./_site --check-html --check-sri
 bundle exec rubocop -D --config .rubocop.yml
 #bundle exec script/validate-html
 gem build jekyll-theme-byui-cs.gemspec
