@@ -1,3 +1,8 @@
+---
+layout: default
+title: Names
+---
+
 # My header
 ## first title
 
