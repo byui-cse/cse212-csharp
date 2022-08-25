@@ -1,8 +1,9 @@
 ---
 layout: default
-title: W01 Prepare: Reading
+title: "W01 Prepare: Reading"
 ---
 
+# W01 Prepare: Reading
 ## Table of Contents
 
 * Dynamic Arrays
@@ -18,21 +19,22 @@ title: W01 Prepare: Reading
     * Four Step Process
 * Key Terms
 
-Dynamic Arrays
-FIXED ARRAYS
-A fixed array is a collection of data put in memory with the following properties:
+## Dynamic Arrays
+### Fixed Arrays
 
-The fixed array cannot grow or shrink after it is created.
+A **fixed array** is a collection of data put in memory with the following properties:
 
-Each item in the fixed array is the same size
+* The fixed array cannot grow or shrink after it is created.
+* Each item in the fixed array is the same size
+* Each item in the fixed array is contiguous (i.e. right next to each other) in memory
 
-Each item in the fixed array is contiguous (i.e. right next to each other) in memory
+It is very easy for the programming language to access any position in the array. We use the term **index** when referring to a position in the array. The index starts at 0. In the example array below, we will assume that index 0 begins at memory location 100. We will also assume that the size of each element in the array is 4 bytes. Using this information, we can determine the memory location for each index. Generically, we can say that `memory(index) = starting_address + (index * item_size)`
 
-It is very easy for the programming language to access any position in the array. We use the term index when referring to a position in the array. The index starts at 0. In the example array below, we will assume that index 0 begins at memory location 100. We will also assume that the size of each element in the array is 4 bytes. Using this information, we can determine the memory location for each index. Generically, we can say that memory(index) = starting_address + (index * item_size)
+{% include image.html url="fixed_array.jpeg" description="Shows a fixed array with 8 items (index going from 0 to 7) where each item is 4 bytes long.  Since the starting memory address is 100, the addresses of all items (in order) are 100, 104, 108, 112, 116, 120, 124, and 128." caption="Fixed Array" %}
 
-Shows a fixed array with 8 items (index going from 0 to 7) where each item is 4 bytes long.  Since the starting memory address is 100, the addresses of all items (in order) are 100, 104, 108, 112, 116, 120, 124, and 128.
 Fixed Array
-DYNAMIC ARRAYS
+
+### Dynamic Arrays
 The difference between a dynamic array and a fixed array is that the dynamic array can grow (and also shrink). This means that we can always add another item to a dynamic array. One of the common operations performed on a dynamic array is to append a new item to the end of the list. Consider the dynamic array below.
 
 Shows a dynamic array with capacity 8 and size 7.  Indices 0 through 6 are populated with 8, 12, 31, 15, 4, 42, and 27.
