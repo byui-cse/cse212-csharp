@@ -30,20 +30,20 @@ A **fixed array** is a collection of data put in memory with the following prope
 
 It is very easy for the programming language to access any position in the array. We use the term **index** when referring to a position in the array. The index starts at 0. In the example array below, we will assume that index 0 begins at memory location 100. We will also assume that the size of each element in the array is 4 bytes. Using this information, we can determine the memory location for each index. Generically, we can say that `memory(index) = starting_address + (index * item_size)`
 
-{% include image.html url="fixed_array.jpeg" description="Shows a fixed array with 8 items (index going from 0 to 7) where each item is 4 bytes long.  Since the starting memory address is 100, the addresses of all items (in order) are 100, 104, 108, 112, 116, 120, 124, and 128." caption="Fixed Array" %}
+{% include image.html url="fixed_array.jpg" description="Shows a fixed array with 8 items (index going from 0 to 7) where each item is 4 bytes long.  Since the starting memory address is 100, the addresses of all items (in order) are 100, 104, 108, 112, 116, 120, 124, and 128." caption="Fixed Array" %}
 
 ### Dynamic Arrays
 The difference between a **dynamic array** and a fixed array is that the dynamic array can grow (and also shrink). This means that we can always add another item to a dynamic array. One of the common operations performed on a dynamic array is to append a new item to the end of the list. Consider the dynamic array below.
 
-{% include image.html url="dynamic_array_not_full.jpeg" description="Shows a dynamic array with capacity 8 and size 7.  Indices 0 through 6 are populated with 8, 12, 31, 15, 4, 42, and 27." caption="Dynamic Array" %}
+{% include image.html url="dynamic_array_not_full.jpg" description="Shows a dynamic array with capacity 8 and size 7.  Indices 0 through 6 are populated with 8, 12, 31, 15, 4, 42, and 27." caption="Dynamic Array" %}
 
 In the dynamic array, the **size** of the array is 7 and the **capacity** is 8. If we append another number to the array, we can use the formula described earlier to get the memory location of the next available index. We will then store the new number into the memory location just calculated.
 
-{% include image.html url="dynamic_array_full.jpeg" description="Shows the same array with 19 added into index 7.  The array is now full with capacity and size both equal to 8." caption="Dynamic Array that is Full" %}
+{% include image.html url="dynamic_array_full.jpg" description="Shows the same array with 19 added into index 7.  The array is now full with capacity and size both equal to 8." caption="Dynamic Array that is Full" %}
 
 In this updated array, both the size and the capacity are now 8. If we want to append another number, we cannot just add it to the end. A dynamic array is really just a fixed size array (in this case a fixed array of size of 8) that we will discard in favor of building a bigger fixed array. If we tried to add another one, then we would be overwriting memory that likely belongs to another variable. This dangerous condition is called buffer **overflow**.
 
-{% include image.html url="dynamic_array_overflow.jpeg" description="Shows the same array with 99 attempted to be added after index 7 in memory.  Anything added after index 7 is considered overflow and is memory that belongs to another variable." caption="Overflowing a Dynamic Array" %}
+{% include image.html url="dynamic_array_overflow.jpg" description="Shows the same array with 99 attempted to be added after index 7 in memory.  Anything added after index 7 is considered overflow and is memory that belongs to another variable." caption="Overflowing a Dynamic Array" %}
 
 To properly grow the array, we have to complete the following steps:
 
@@ -52,17 +52,17 @@ To properly grow the array, we have to complete the following steps:
 * Delete the original smaller array.
 * Add the new item to the larger array.
 
-{% include image.html url="dynamic_array_grow.jpeg" description="Shows the previous full array.  A new array with double the capacity (16) is created.  ALl the values from Indices 0 to 7 from the original array are copied to the new array.  The new value 99 is then added to index 8 of the new array." caption="Growing a Dynamic Array" %}
+{% include image.html url="dynamic_array_grow.jpg" description="Shows the previous full array.  A new array with double the capacity (16) is created.  ALl the values from Indices 0 to 7 from the original array are copied to the new array.  The new value 99 is then added to index 8 of the new array." caption="Growing a Dynamic Array" %}
 
 ### Inserting in the Array
 If we wanted to insert an item somewhere besides the end of the dynamic array, we would need to be careful to maintain the order of the items in the array. In the array below, if we insert a value at the beginning of the array, all other items will need to move to the next index (i.e. move to the right).
 
-{% include image.html url="dynamic_array_insert.jpeg" description="Shows the previous array of capacity 16 and size 9.  The number 20 is inserted into index 0 which causes the previous values in Indices 0 to 8 to move over by one to the right (towards the end)." caption="Inserting into a Dynamic Array" %}
+{% include image.html url="dynamic_array_insert.jpg" description="Shows the previous array of capacity 16 and size 9.  The number 20 is inserted into index 0 which causes the previous values in Indices 0 to 8 to move over by one to the right (towards the end)." caption="Inserting into a Dynamic Array" %}
 
 ### Deleting from the Array
 If we wanted to delete an item from the array, we would need to move all items after the item removed to the previous index (i.e. move to the left). As a special case, if we wanted to remove the last item in the array, we would not need to move any other items. The typical effect of removing the last item is to just decrease the size variable by 1 while leaving the capacity the same. This means that the data is not really "deleted." If we append a new item, then the previously "deleted" item will be overwritten.
 
-{% include image.html url="dynamic_array_delete.jpeg" description="Shows the previous array of capacity 16 and size 10.  The number 20 is removed from index 0 which causes the previous values in Indices 1 to 9 to move over by one to the left (towards the beginning)." caption="Deleting from a Dynamic Array" %}
+{% include image.html url="dynamic_array_delete.jpg" description="Shows the previous array of capacity 16 and size 10.  The number 20 is removed from index 0 which causes the previous values in Indices 1 to 9 to move over by one to the left (towards the beginning)." caption="Deleting from a Dynamic Array" %}
 
 ### Python Lists
 In Python, a dynamic array is created by using a **list**. The most common way to create a list is to use square brackets (e.g. `my_list = [1, 2, 3]`) The following table shows the most common operations in a dynamic array and the equivalent Python code:
@@ -137,7 +137,7 @@ leap_years = [year for year in range(1900, 2001) if (year % 400 == 0) or
 ### Scientific Method
 It can be daunting to try to solve a problem (especially if you are constrained by time in an interview). While it can be tempting to either dive into code or dive into the internet to find help, we want to develop engineering discipline in our work. When we learned about science, we were introduced to the scientific method.
 
-{% include image.html url="scientific_method.jpeg" description="Shows a flow chart representing the scientific method.  The process goes: Problem Statement, Research, Hypothesis, Experiment, and then Conclusions.  If the conclusions suggest that the problem is solved, then we can finish knowing we have the answer.  If the conclusions suggest that the problem is not solved, then we return back up to the Research step." caption="Scientific Method" %}
+{% include image.html url="scientific_method.jpg" description="Shows a flow chart representing the scientific method.  The process goes: Problem Statement, Research, Hypothesis, Experiment, and then Conclusions.  If the conclusions suggest that the problem is solved, then we can finish knowing we have the answer.  If the conclusions suggest that the problem is not solved, then we return back up to the Research step." caption="Scientific Method" %}
 
 
 ### Four Step Process
@@ -148,7 +148,7 @@ When we go directly to writing code we are short-circuiting the process. When we
 * Implement the Solution - Using your design, implement the solution in a programming language.
 * Evaluate the Solution - Test your solution on several example inputs. Identify which scenarios are working and which ones are not. If it's working, ask yourself if it could be done better (e.g. faster, with less code, with fewer variables, etc). If the solution still needs work, return back to the first step again.
 
-{% include image.html url="problem_solving.jpeg" description="Shows a flow chart representing how to solve code problems.  The process goes: Understand the Problem, Plan & Design the Solution, Implement the Solution, and Evaluate the Solution.  If the solution is not complete, then the process goes back to Understand the Problem." caption="Four Step Process to Problem Solving" %}
+{% include image.html url="problem_solving.jpg" description="Shows a flow chart representing how to solve code problems.  The process goes: Understand the Problem, Plan & Design the Solution, Implement the Solution, and Evaluate the Solution.  If the solution is not complete, then the process goes back to Understand the Problem." caption="Four Step Process to Problem Solving" %}
 
 ## Key Terms
 <dl>
