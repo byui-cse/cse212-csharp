@@ -2,4 +2,5 @@
 
 source "https://rubygems.org"
 
+gem "jekyll-theme-byui-cs", "~> 0.2"
 gemspec
