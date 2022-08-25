@@ -239,6 +239,15 @@ ol li {
   margin-bottom: 3px;
 }
 
+ol ul li {
+	list-style: none;
+	border-left: none;
+}
+
+ol ul {
+	margin-bottom: 0;
+}
+
 dl dt {
   font-weight: bold;
 }
