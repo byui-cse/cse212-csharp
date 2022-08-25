@@ -62,7 +62,7 @@ If we wanted to insert an item somewhere besides the end of the dynamic array, w
 ### Deleting from the Array
 If we wanted to delete an item from the array, we would need to move all items after the item removed to the previous index (i.e. move to the left). As a special case, if we wanted to remove the last item in the array, we would not need to move any other items. The typical effect of removing the last item is to just decrease the size variable by 1 while leaving the capacity the same. This means that the data is not really "deleted." If we append a new item, then the previously "deleted" item will be overwritten.
 
-{% include image.html url="dynamic_array_insert.jpeg" description="Shows the previous array of capacity 16 and size 10.  The number 20 is removed from index 0 which causes the previous values in Indices 1 to 9 to move over by one to the left (towards the beginning)." caption="Deleting from a Dynamic Array" %}
+{% include image.html url="dynamic_array_delete.jpeg" description="Shows the previous array of capacity 16 and size 10.  The number 20 is removed from index 0 which causes the previous values in Indices 1 to 9 to move over by one to the left (towards the beginning)." caption="Deleting from a Dynamic Array" %}
 
 ### Python Lists
 In Python, a dynamic array is created by using a **list**. The most common way to create a list is to use square brackets (e.g. `my_list = [1, 2, 3]`) The following table shows the most common operations in a dynamic array and the equivalent Python code:
