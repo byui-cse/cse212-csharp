@@ -318,7 +318,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 850px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -405,6 +405,10 @@ Small Device Styles
 @media screen and (max-width: 992px) {
   img {
     max-width: 100%;
+  }
+
+  .inner {
+    max-width: 640px;
   }
 }
 
