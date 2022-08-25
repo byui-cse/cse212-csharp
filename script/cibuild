@@ -11,6 +11,7 @@ bundle exec htmlproofer ./_site --check-html --check-sri
 bundle exec rubocop -D --config .rubocop.yml
 #bundle exec script/validate-html
 gem build jekyll-theme-byui-cs.gemspec
+gem install "jekyll-theme-byui-cs"
 
 cd ..
 pwd
