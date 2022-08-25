@@ -58,6 +58,7 @@ body {
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  counter-reset: figures;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -271,6 +272,20 @@ kbd {
   line-height: 11px;
   padding: 3px 5px;
   vertical-align: middle;
+}
+
+figure {
+	margin: 0 auto 1em;
+	counter-increment: figures;
+}
+
+figure figcaption:before {
+	content: 'Figure ' counter(figures) ' - ';
+}
+
+figure figcaption {
+    text-align: center;
+    	margin: 0 auto 1em;
 }
 
 /*******************************************************************************

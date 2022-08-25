@@ -32,8 +32,6 @@ It is very easy for the programming language to access any position in the array
 
 {% include image.html url="fixed_array.jpeg" description="Shows a fixed array with 8 items (index going from 0 to 7) where each item is 4 bytes long.  Since the starting memory address is 100, the addresses of all items (in order) are 100, 104, 108, 112, 116, 120, 124, and 128." caption="Fixed Array" %}
 
-Fixed Array
-
 ### Dynamic Arrays
 The difference between a dynamic array and a fixed array is that the dynamic array can grow (and also shrink). This means that we can always add another item to a dynamic array. One of the common operations performed on a dynamic array is to append a new item to the end of the list. Consider the dynamic array below.
 
