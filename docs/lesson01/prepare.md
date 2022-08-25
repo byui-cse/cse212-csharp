@@ -5,7 +5,6 @@ title: "W01 Prepare: Reading"
 
 # W01 Prepare: Reading
 ## Table of Contents
-
 * Dynamic Arrays
     * Fixed Arrays
     * Dynamic Arrays
