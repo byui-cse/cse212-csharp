@@ -303,6 +303,10 @@ Full-Width Styles
   margin: 0 auto;
 }
 
+.figures {
+  max-width: 640px;
+}
+
 // header.inner, footer.inner {
 //   max-width: 100%;
 // }
@@ -397,6 +401,10 @@ Small Device Styles
     font-size:14px;
   }
 
+  .figures {
+    max-width: 480px;
+  }
+  
   .icon-byui-logo {
     font-size:50px;
   }
@@ -444,6 +452,10 @@ Small Device Styles
 @media screen and (max-width: 320px) {
   body {
     font-size:14px;
+  }
+
+  .figures {
+    max-width: 320px;
   }
 
   .icon-byui-logo {
