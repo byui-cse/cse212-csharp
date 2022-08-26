@@ -62,7 +62,7 @@ There are many different tools available to help you write and preview Markdown 
 
 Writing in Markdown requires the memorization of some basic syntax (here is an example of a [cheat sheet](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) you might find useful). Listed below is syntax that was used in the example tutorial.
 
-```markdown
+``````markdown
 	
 # Title
 
@@ -98,7 +98,7 @@ x = 3
 y = 7
 z = x * y
 print(z)
-\`\`\`
+```
 
 To put text in italics, use a single star:  *i am italics*
 To put text in bold, use two stars: **i am bold**
@@ -116,26 +116,25 @@ header 1 | header 2 | header 3
 value 11 | value 21 | value 31
 value 12 | value 22 | value 32
 value 13 | value 23 | value 33
-```
+``````
 		
 ### Milestone Submissions
 You will have three milestone submissions during the remainder of the semester in which you will receive a grade and feedback from your teacher:
 
-Outline - You will submit an outline of your tutorial. An example outline will be provided in the assignment description.
-
-Draft Submission 1 - You will submit one of your completed data structure topic markdown files for review.
-
-Draft Submission 2 - You will submit another one of your completed data structure topic markdown files for review.
+* Outline - You will submit an outline of your tutorial. An example outline will be provided in the assignment description.
+* Draft Submission 1 - You will submit one of your completed data structure topic markdown files for review.
+* Draft Submission 2 - You will submit another one of your completed data structure topic markdown files for review.
 
 ### Grading Rubric
 The final project will be graded as follows, with only five possible numeric grades (there is no scale):
 
-Grade	Description
-100% (A)	Demonstrated creativity while providing an engaging tutorial. All requirements have been satisified and there were no significant technical errors. This tutorial would be very helpful for most students to learn data structures. You should consider adding new sections to discuss additional data structures to prepare for future interviews.
-89% (B+)	Most requirements have been implemented OR there were some significant technical errors. This tutorial would be helpful for some students to learn data structures but may cause some confusion if material is not updated. You should address the issues in the tutorial to prepare for future interviews.
-75% (C)	Only some requirements have been implemented OR there are numerous technical errors. This tutorial would not be helpful for most students to learn data structures. You should consider spending time after the course to review your course notes and rework the tutorial so you are prepared for future interviews.
-60% (D-)	Only some requirements have been implemented and there are numerous technical errors. This tutorial is not ready for other students to learn data structures. You should consider either retaking the course or spending time after the course to reattempt the tutorial. These actions are important to prepare you for future intreviews.
-0% (F)	Project was not submitted or shows no effort to attempt.
+| Grade     | Description                                                                |
+|-----------|----------------------------------------------------------------------------|
+| 100% (A)  | Demonstrated creativity while providing an engaging tutorial. All requirements have been satisfied and there were no significant technical errors. This tutorial would be very helpful for most students to learn data structures. You should consider adding new sections to discuss additional data structures to prepare for future interviews. |
+| 89% (B+)  | Most requirements have been implemented OR there were some significant technical errors. This tutorial would be helpful for some students to learn data structures but may cause some confusion if material is not updated. You should address the issues in the tutorial to prepare for future interviews. |
+| 75% (C)   | Only some requirements have been implemented OR there are numerous technical errors. This tutorial would not be helpful for most students to learn data structures. You should consider spending time after the course to review your course notes and rework the tutorial so you are prepared for future interviews. |
+| 60% (D-)  | Only some requirements have been implemented and there are numerous technical errors. This tutorial is not ready for other students to learn data structures. You should consider either retaking the course or spending time after the course to reattempt the tutorial. These actions are important to prepare you for future interviews.
+| 0% (F)    | Project was not submitted or shows no effort to attempt. |
 
 ### Working Independently
-This final project must be completed individually to ensure you are meeting all course outcomes. You should not complete this project within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you design or write your project. It is an honor code violation to obtain text or example problems for your project from others including using the internet (i.e. sites that allow students to share their solutions).
+This final project **must be completed individually** to ensure you are meeting all course outcomes. You should not complete this project within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you design or write your project. It is an honor code violation to obtain text or example problems for your project from others including using the internet (i.e. sites that allow students to share their solutions).
