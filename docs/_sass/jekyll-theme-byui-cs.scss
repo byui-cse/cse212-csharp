@@ -244,7 +244,7 @@ ol ul li {
 	border-left: none;
 }
 
-ol ul {
+ol ul, ol ol {
 	margin-bottom: 0;
 }
 
@@ -308,7 +308,10 @@ kbd {
 }
 
 .figures img {
+  display: block;
   margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
   border: 0px;
   max-width: 92%;
   padding: 0px 4%;
