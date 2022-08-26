@@ -58,7 +58,7 @@ The Markdown language is commonly used to develop documentation. The purpose of 
 
 There are many different tools available to help you write and preview Markdown files. Visual Studio Code has built-in support for Markdown. If you create a file with an `md` extension, then you can click on the preview button and you can see the Markdown and the finished product side by side.
 
-{% include figure.html url="visual_studio_code.jpg" description="Shows the 0-welcome.md file from the example loaded into Visual Studio Code with the preview enabled." caption="Markdown in Visual Studio Code" %}
+{% include image.html url="visual_studio_code.jpg" description="Shows the 0-welcome.md file from the example loaded into Visual Studio Code with the preview enabled." caption="Markdown in Visual Studio Code" %}
 
 Writing in Markdown requires the memorization of some basic syntax (here is an example of a [cheat sheet](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) you might find useful). Listed below is syntax that was used in the example tutorial.
 
