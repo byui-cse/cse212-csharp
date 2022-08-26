@@ -1,12 +1,39 @@
 ---
 layout: default
-title: "W02 Prove: Individual Assignment"
+title: "W04 Prove: Individual Assignment"
 ---
 
-# W02 Prove: Individual Assignment
+# W04 Prove: Individual Assignment
 ## Instructions
 This assignment **must be completed individually** to ensure you are meeting all course outcomes. You should not complete this assignment within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you answer these problems. It is an honor code violation to obtain answers for these problems from others including using the internet (i.e. sites that allow students to share their solutions).
 
-Download the [02-prove_response.docx](02-prove_response.docx) document to provide your answers to questions asked in the steps below.
+There is no response document for this assignment. All test cases and results should be placed within the test documentation at the end of each code file.
 
-### Part 1 - Analyze Code
+### Part 1 - Taking Turns Queue
+1. Download the following code file: [04-prove_taking_turns_queue.py]() (Note: Do not read through the code first. Instead, proceed with the instructions below).
+2. The Taking_Turns_Queue class maintains a circular queue of people. When a person is added, they are assigned a number of turns (a value of 0 or less means that they have an infinite number of turns). When a person is removed from the queue, they are re-added to the queue if they still have turns left. Here are the detailed requirements (**which can not be changed**):
+    1. The add_person function shall enqueue a person into the queue.
+    2. The get_next_person function shall dequeue a person from the queue and display their name.
+    3. When a person is dequeued and still has turns left, they shall be enqueued again.
+    4. When a person is dequeued and has an infinite number of turns (defined as having number of turns of 0 or less), they shall be enqueued again.
+    5. If the queue is empty, then an error message shall be displayed.
+3. Test cases are already written for you in the code. Run the tests and find the errors. You should summarize the results of the tests and the errors found within the test case documentation at the end of the code file.
+4. Fix the code so that all requirements are implemented correctly. You know that you are done because the test cases will all pass.
+
+### Part 2 - Priority Queue
+1. Download the following code file: [04-prove_priority_queue.py]() (Note: Do not read through the code first. Instead, proceed with the instructions below).
+2. The Priority_Queue class maintains a queue where each value put in the queue also has a priority (higher numbers have a higher priority). When you add to the queue, it goes to the back as expected. When you remove from the queue, the highest priority item is removed. If there are multiple values with the same high priority, then the first one (following the FIFO strategy) is removed first. Here are the detailed requirements (**which can not be changed**):
+    1. The enqueue function shall add a node to the back of the queue.
+    2. The dequeue function shall remove the node with the highest priority and return its value.
+    3. If there are more than one node with the highest priority, then the item closest to the front of the queue will be removed and its value returned.
+    4. If the queue is empty, then an error message will be displayed.
+3. Write your own test cases based on these requirements within the test case documentation at the end of the code file. Ensure that your tests cover all of the requirements listed above.
+4. Run your test cases and find the errors. If your tests were not sufficient, you might not find all the errors in the code. You should summarize the results of the tests and the errors found within the test case documentation at the end of the code file.
+5. Fix the code so that all requirements are implemented correctly. You know that you are done because the test cases will all pass (assuming your test cases were sufficient).
+
+## Submission
+You need to submit the following files for this assignment:
+* `04-prove_taking_turns_queue.py` - Code from Part 1 with all errors fixed.
+* `04-prove_priority_queue.py` - Code form Part 2 with all errors fixed.
+
+Please submit each file separately. Do not use a compression tool (e.g., zip, rar) to combine the files.
