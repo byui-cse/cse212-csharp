@@ -36,31 +36,31 @@ In this section, you will be asked several questions related to performance usin
 
   1. Download the following code and load into your code editor: [file here]() (NOTE: Do not run the code until you're asked to below)
    
-  2. This file contains three different methods called algorithm1, algorithm2, and algorithm3. Predict the performance of each method using big O notation.
+  2. This file contains three different methods called Algorithm1, Algorithm2, and Algorithm3. Predict the performance of each method using big O notation.
    
   3. Run the code and observe the outputs. Here is what the columns in the table represent:
    
       * n - The size of the data given to the methods in this test
    
-      * alg1_count - The number of loop iterations (i.e. work) done by algorithm1
+      * alg1_count - The number of loop iterations (i.e. work) done by Algorithm1
        
-      * alg2_count - The number of loop iterations (i.e. work) done by algorithm2
+      * alg2_count - The number of loop iterations (i.e. work) done by Algorithm2
        
-      * alg3_count - The number of loop iterations (i.e. work) done by algorithm3
+      * alg3_count - The number of loop iterations (i.e. work) done by Algorithm3
        
-      * alg1_time - The time in milliseconds it took to complete algorithm1
+      * alg1_time - The time in milliseconds it took to complete Algorithm1
      
-      * alg2_time - The time in milliseconds it took to complete algorithm2
+      * alg2_time - The time in milliseconds it took to complete Algorithm2
        
       * alg3_time - The time in milliseconds it took to complete algorithm3
       
-     While the alg#_count value should be the same in every execution, the alg#_time will vary every time it is executed on the same or different computers. For the timing numbers, the code ran the test 10 times and took the average. This was done since there are some operating system conditions that could affect timing in some cases.
+     While the alg#_count value should be the same in every execution, the Time will vary every time it is executed on the same or different computers. For the timing numbers, the code ran the test 10 times and took the average. This was done since there are some operating system conditions that could affect timing in some cases.
 
   4. Discuss the fllowing together: 
       
       * Do that actual results agree wiht the big O predictions made earlier? If not, what do oyu think the big O should be?
      
-      * Which method (algorithm1, algorithm2, algorithm3) has the best performance and which one the worst performance?
+      * Which method (Algorithm1, Algorithm2, Algorithm3) has the best performance and which one the worst performance?
        
       * Looking at the results, why do we say that big O only applies when n in "large"?
        
