@@ -13,9 +13,15 @@ title: "W02 Teach: Group Practice"
 
 In this section, you will be asked several questions related to performance using big O notation. You will be asked to compare your answers to the actual solutions at the end of this section. You should watch the clock to make sure you don't spend more than half of your hour on this section before going to the next section.
 
-  1. Open up the following code and determine the big O notation for each of the four functions: [file here.]()
+  1. Open up the following code and determine the big O notation for each of the four methods: [file here.]()
    
-  2. To calculate the average of a list of numbers, we can use the built-in Python functions as follows: int average = sum(numbers) / len(numbers). What is the big O notation for this code. You will need to think about how the built-in Python functions are implemented.
+  2. Using the LINQ syntax, we can sum an array of number as follows: 
+      * var numbers = new [] {1, 2, 3, 4, 5, 6};
+      * Console.Out.WriteLine(numbers.sum());
+      * var average = numbers.Average();
+      * Console.Out.WriteLine(average);
+
+     What is the big O notation for this code? You will need to think about how the built-in methods are implemented.
    
   3. Using either a graphing calculator or a graphing website (e.g. desmos.com), plot the following graphs:
      * y = x^2 to represent O(n^2)
@@ -30,11 +36,11 @@ In this section, you will be asked several questions related to performance usin
 
   1. Download the following code and load into your code editor: [file here]() (NOTE: Do not run the code until you're asked to below)
    
-  2. This file contains three different functions called algorithm1, algorithm2, and algorithm3. Predict the performance of each function using big O notation.
+  2. This file contains three different methods called algorithm1, algorithm2, and algorithm3. Predict the performance of each method using big O notation.
    
   3. Run the code and observe the outputs. Here is what the columns in the table represent:
    
-      * n - The size of the data given to the functions in this test
+      * n - The size of the data given to the methods in this test
    
       * alg1_count - The number of loop iterations (i.e. work) done by algorithm1
        
