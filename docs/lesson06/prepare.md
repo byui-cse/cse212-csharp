@@ -5,11 +5,11 @@ title: "W06 Prepare: Reading"
 
 # W06 Prepare: Reading
 ## Table of Contents
-- [Maps](#)<br>
--- I. [Making the Map from the Set](#)<br>
--- II. [Sets in Python](#)<br>
--- III. [Complex Dictionary Data](#)<br>
--- IV. [Building Summary Tables](#)<br>
+- [Maps](#maps)<br>
+-- I. [Making the Map from the Set](#making-the-map-from-the-set)<br>
+-- II. [Maps in Python](#maps-in-python)<br>
+-- III. [Complex Dictionary Data](#complex-dictionary-data)<br>
+-- IV. [Building Summary Tables](#building-summary-tables)<br>
 - [Key Terms](#key-terms)<br>
 
 ---
