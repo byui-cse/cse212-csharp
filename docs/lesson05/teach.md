@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "W02 Teach: Group Practice"
+title: "W05 Teach: Group Practice"
 ---
 
 # W05 Teach: Group Practice
