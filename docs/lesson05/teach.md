@@ -13,11 +13,11 @@ These problems shoul be completed and discussed as a group. Answers are provided
    
   2. This code will determine if a string has all unique letters. For example, "abcdefg" has unique letters but "abccdefg" does not because the "c" is repeated more than once. The code is implemented using loops which results in an O(n^2) performance.
    
-  3. Answer the question together: how can unique letter function be written wiht O(n) performance using a set? As you answer this question, talk about the behavior, purpose and/or performance of a set to help you arrive at an answer.
+  3. Answer the question together: how can unique letter method be written wiht O(n) performance using a set? As you answer this question, talk about the behavior, purpose and/or performance of a set to help you arrive at an answer.
   
   4.  When you think you know how to solve the problem (tale no more than five minutes), [read the answer to the question]() and compare wiht your initial answer.
    
-  5. Based on your understanding, replace the code in the unique_letters method, so it achieves O(n) using a set.
+  5. Based on your understanding, replace the code in the AreUniqueLetters method, so it achieves O(n) using a set.
    
   6. When you are done, take a look at the [solution]() and discuss it together.
 
