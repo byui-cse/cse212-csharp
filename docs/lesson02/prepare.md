@@ -29,13 +29,27 @@ To evaluate code and look for alternative solutions, it is important that we hav
 ***Big O*** notation is used to describe the performance of an **algorithm** (or function) for large sets of data. If we have two functions that do the same thing, we can use ***Big O*** notation to compare the performance of the two functions. As a simple example, consider the following code which looks for the name "Bob" in a list of names:
 
 	
-```
-(PYTHON VERSION)
+<!--  (PYTHON VERSION) 
+```python
 def find_bob(name_list):
 	for name in name_list:
 		if name == "Bob":
 			return True
 	return False
+```
+-->
+
+
+<!--  (CSharp VERSION) -->
+```csharp
+bool FindBob(string[] nameList) {
+    foreach (var name in nameList) {
+        if (name == "Bob"){
+            return true;
+        }
+    }
+    return false;
+}
 ```
 
 The size of the data in this function is based on the size of the **name_list**.  We will say that size of the data is n. The for loop in the code means that we will potentially run n times. This worst case potential will only happen if "Bob" is not in the list of names. Therefore, we say that the ***Big O*** in the worst case is ***O(n)***. In general, when we ask for the big O of a function we are asking for the worst case scenario. This function does have a best case scenario. If "Bob" is the first name in the list, then the loop will only run one time. Therefore, we can say the ***Big O*** in the best case is ***O(1)***. We call ***O(1)*** **constant** time. When looking at code, usually a single line of code like an assignment statement, is considered ***O(1)***.
@@ -56,19 +70,32 @@ Representation of ***O(n)***
 
 Consider the following code that has two loops in serial (one right after the other):
 
-```
-(???Python version code)
+<!--  (PYTHON VERSION) 
+```python
 def multiple_loops(n):
 	for i in range(n):
 		print(i)
 	for j in range(n):
 		print(i**2)
 ```
+-->
+<!--  (CSharp VERSION) -->
+```csharp
+void MultipleLoops(int n) {
+    for (int i = 1; i < n; i++) {
+        Console.WriteLine(i);
+	}
+    for (int j = 1; j < n; j++) {
+	Console.WriteLine(j*j);
+        }
+    }
+```
+
 
 In this function, each **for loop** contributes ***O(n)*** to the performance of the function. The total would be ***O(n)*** + ***O(n)*** = ***O(2n)***. If we graph this, ***O(2n)*** does look like it has a worse performance than ***O(n)***. However, if we zoom very far out to very large values of n, it is still just two time more work. If we graphed ***O(n^2^)*** for these large values, we can't even see the line escape the y-axis. ***O(n)*** and ***O(2n)*** are equivalent. Any **coefficients** in ***Big O*** notation should be dropped. Therefore, instead of saying ***O(2n)*** for the function above, we will say ***O(n)***.
 
 
-<!--- Image 2 here   orig 750 x 507-->
+<!--- Image 2 here-->
 {% include image.html url="three_zoomed_out.jpg"
 description=" shows"
 caption="Comparison of ***O(n)*** [red] and ***O(2n)*** [purple] and ***O(n^2^)*** [green]"
@@ -79,13 +106,26 @@ caption="Comparison of ***O(n)*** [red] and ***O(2n)*** [purple] and ***O(n^2^)*
 ---
 As seen earlier, the structure of the for loops is important to analyzing the ***Big O*** performance for a function. Consider the following scenario:
 
-```
-(???Python version code)
+<!--  (Python VERSION)
+```python
 def multiplication_table(n):
 	for i in range(n):
 		for j in range(n):
 			print((i+1) * (j+1))
 ```
+
+<!--  (CSharp VERSION) -->
+```csharp
+void MultiplicationTable(int n) {
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < n; j++) {
+            Console.WriteLine((i+1)* (j+1));
+        }
+    }
+}
+```
+
+
 
 This function has a loop within a loop. Both loops are based on the size of the data. Instead of adding ***O(n)*** twice like we did with loops in serial, we multiply as follows: ***O(n)*** * ***O(n)*** = ***O(n^2^)***. The rate of increase is much higher with an ***O(n^2^)*** function compared to an ***O(n)*** function. The **find_bob** function would, in the worst case, take 1,000 checks if the list size was 1,000, but the **multiplication_table** will take 1,000^2^ = 1,000,000 print statements to complete for a similarly sized value of n. This results in ***O(n^2^)*** which is **polynomial** time.  The graph for an ***O(n^2^)*** function is shown below:
 
@@ -100,12 +140,23 @@ caption="Representation of ***O(n^2)***"
 Caution should be used when analyzing code that contains a loop within a loop. If one of the loops is based on the size of the data but the other loop is not, it would be more accurate to characterize it as ***O(kn)*** where **k** is a constant. Based on the rules we learned earlier, ***O(kn)*** = ***O(n)*** when **k** is a coefficient. The code below would be ***O(n)*** because the inner loop is only running three times but the outer loop is based on the size of the data.
 
 	
-```
-(???Python version code)
+<!--  (Python VERSION)
+```python
 def short_multiplication_table(n):
 	for i in range(n):
 		for j in range(3):
 			print((i+1) * (j+1))
+```
+-->
+<!--  (CSharp VERSION) -->
+```csharp
+void ShortMultiplicationTable(int n) {
+    for (int i = 1; i < n; i++) {
+         for (int j = 1; j < 3; j++) {
+              Console.WriteLine((i+1)* (j+i));
+        }
+    }
+}
 ```
 
 When we count iterations of a loops in a function, we may end up with complex polynomials that look like this. Assume that we had performance predicted at ***O(2n^3^ - 7n^2^ + 13n - 15)***. In addition to dropping coefficients, we also drop lesser exponents like (in this example) the n^2^ and the n. Therefore, ***O(2n^3^ - 7n^2^ + 13n - 15)*** = ***O(n^3^)***. This code likely has a loop, within a loop, within a loop.
@@ -168,8 +219,9 @@ We should not be satisfied with the functionality of our code only. We should al
 
 When we analyze performance, we are making a prediction. Frequently, we need to perform tests to **benchmark** (*i.e.* measure) the actual performance of the functions we are using. In Python???, the timeit library provides a capability to measure how much time was spent executing a function. Consider the following example:
 
-```
-(???Python version code)
+
+<!--  (Python VERSION) 
+```python
 import timeit
 
 def lots_of_loops(n):
@@ -182,24 +234,44 @@ def lots_of_loops(n):
 
 time = timeit.timeit("lots_of_loops(100)", number=10, globals=globals()) / 10 * 1000
 ```
-
 The parameters in the timeit function are interpreted as follows:
-
 - "lots_of_loops(100)" => This is the code that will be executed and timed
-
 - number=10 => This means the lots_of_loops function will be executed 10 times in serial
-
 - globals=globals() => This will give access to your lots_of_loops function inside the timeit function
-
 - / 10 => This will get the average time for the 10 executions
-
 -  \* 1000 => This will convert the result from seconds to milliseconds
 
-Another way to look at actual performance is to instrument the code by adding a variable that counts how much work is performed. This variable can then be returned.
+-->
 
-	
+
+<!--  (CSharp VERSION) -->
+```csharp
+var watch = new System.Diagnostics.Stopwatch();
+
+void LotsOfLoops(int n) {
+    int total = 0;
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < n; j++) {
+            for (int k = 1; k < n; k++) {
+                total += (i*j*k);
+            }
+        }
+    }
+    Console.WriteLine(total);
+    }
+
+watch.Start();    //Start the internal stopwatch (real-time)
+LotsOfLoops(100); 
+watch.Stop();    //Start the internal stopwatch (real-time)
+Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
 ```
-(???Python version code)
+This example takes advantage of a built-in class (explanation [here](https://www.tutorialsteacher.com/articles/how-to-calculate-code-execution-time-in-csharp)) that uses the processor to act as a stopwatch to count the number of milliseconds from the time it's started until it's stopped. 
+
+
+Without access to an actual real-time timer, either on the processor or externally in the system, another way to look at actual performance is to instrument the code by adding a variable that counts how much work is performed. This variable can then be returned and compared to a base case for relative performance.
+	
+<!--  (Python VERSION)
+```python
 def lots_of_loops(n):
 	total = 0
 	count = 0 # Instrumented code
@@ -218,6 +290,28 @@ print("Work = {}".format(work))
 # The time displayed will vary based on your computer
 print("Time in milliseconds = {}".format(time)) 
 ```
+-->
+
+<!--  (CSharp VERSION) -->
+```csharp
+int LotsOfLoopsWithInstrumentation(int n) {
+    int total = 0;
+    int count = 0; // Variable just to instrument 
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < n; j++) {
+            for (int k = 1; k < n; k++) {
+                total += (i*j*k);
+                count++;  //Count the number of times in the inner-most loop
+            }
+        }
+    }
+    Console.WriteLine(total);   // output from useful work
+    return count;               // instrumentation
+}
+int work = LotsOfLoopsWithInstrumentation(1000);
+Console.WriteLine("Innermost count is: %i",work);   // output from instrumentation
+```
+***This may need some more explanation ?? ***
 
 ### Key Terms
 
