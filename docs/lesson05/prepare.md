@@ -10,7 +10,7 @@ title: "W05 Prepare: Reading"
 -- II. [Hashing and Sets](#hashing-and-sets)<br>
 -- III. [Dealing with Conflicts](#dealing-with-conflicts)<br>
 -- IV. [Applications with Sets](#applications-with-sets)<br>
--- V. [Sets in Python](#sets-in-python)<br>
+-- V. [Sets in CSharp](#sets-in-csharp)<br>
 - [Articulating Answers to Technical Questions](#articulating-answers-to-technical-questions)<br>
 -- I. [Interview Questions](#interview-questions)<br>
 -- II. [Articulating the Answer](#articulating-the-answer)<br>
@@ -45,13 +45,16 @@ caption="Set for 10-Digit Numbers"
 %}
 
 
-The equation we used above can be generalized as follows: **`index(n) = n % sparse_list_size`**. This works great for numbers. We can also use equations like this for strings and floats. The generic function is index(n) = hash(n) % sparse_list_size. The hash(n) represents what is called a **hashing** function. The hashing function will convert non-integers into integers so that the modulo operation can be performed. Python has a built-in hash function. The values returned by the hash function will vary every time you run a Python script, but they will be consistent while you are running a script to completion. Not everything can be hashed. For example, a list in Python cannot be hashed. It is common to say that the index(n) is the hashing function for a set and that the values in a set have been hashed.
+The equation we used above can be generalized as follows: **`index(n) = n % sparse_list_size`**. This works great for numbers. We can also use equations like this for strings and floats. The generic function is index(n) = hash(n) % sparse_list_size. The hash(n) represents what is called a **hashing** function. The hashing function will convert non-integers into integers so that the modulo operation can be performed. CSharp has a large variety of hashing functions that are used, depending on the data-type.   The values returned by the hash function will vary every time you run a CSharp script, but they will be consistent while you are running a script to completion. Not everything can be hashed. For example, a list in CSharp cannot be hashed. It is common to say that the index(n) is the hashing function for a set and that the values in a set have been hashed.
 
-<!--- Image x here   orig  x by y-->
+A set of data that has been hashed can also be thought of as a **dictionary** or **associative array**, where the key of the element pair  is determined by a hash algorithm applied to the value element.  
+
+<!--  Previous Python image with REPL steps not applicable
 {% include image.html url="hash_python.jpg"
 description="Shows the output of several calls to the hash function in Python.  hash(3) resulted in 3.  hash(-3) resulted in -3.  hash(&quot;cat&quot;) resulted in 791447170.  hash(&quot;dog&quot;) resulted in 1290104669.  hash(3.14) resulted in 1846836513.  hash(True) resulted in 1. hash([1,2,3]) resulted in a TypeError that said unhashable type: 'list'"
 caption="Hashing in Python"
 %}
+-->
 
 If we only have 100 spots and there are up to 10 billion possible values, it's reasonable to expect that perhaps there is a weakness in the data structure. Using the same diagram above, what would happen if we tried to add 548,345,952? This would also be placed in index 2. This is called a conflict. 
 
@@ -82,17 +85,9 @@ Sets have the following key characteristics:
 
 - Fast performance for adding, removing, and finding (membership test).
 
-- No duplicates are allowed. Most set implementations (including Python) will not give us an error when you try to add a duplicate value. This is done so that we can easily convert from a list, which may have duplicates, to a set that contains just the unique values.
+- No duplicates are allowed. Most set implementations (including CSharp) will not give us an error when you try to add a duplicate value. This is done so that we can easily convert from a list, which may have duplicates, to a set that contains just the unique values.
 
 - The set does not keep values in order. This occurs because the index(n) hashing function is not based on the order the value was added.
-
-- The set has many uses including the following:
-
-- Finding the unique values in a list.
-
-- Providing quick access to unique results previously calculated.
-
-- Performing mathematical set operations such as an intersection (common values between two sets) and union (all values within two sets).
 
 Sets have many uses, including the following:
 
@@ -103,6 +98,7 @@ Sets have many uses, including the following:
 - Performing mathematical set operations such as an intersection (common values between two sets) and union (all values within two sets).
 
 
+<!-- Python version
 ### Sets in Python
 In Python, a set can be represented using a curly braces (e.g. **`my_set = {1, 2, 3}`**) To create an empty set (unlike an empty list), we use the code: empty_set = set(). The **`in`** operator can be used to determine membership in the set. The performance of the set is based on the performance of the hashing algorithm.
 
@@ -122,17 +118,44 @@ There are also mathematical operations to perform an intersection and union betw
 	
 set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
-
 set3 = intersection(set1, set2)  # This will result in {4, 5}
 set3 = set1 & set2               # Alternate way of writing an intersection
-
 set4 = union(set1, set2)  # This will result in {1, 2, 3, 4, 5, 6, 7, 8}
 set4 = set1 | set2        # Alternate way of writing a union
 
 ```
 
 The Python library also includes a class called **`dict`** which stands for dictionary which is built using the set. The dictionary in Python also uses the curly brace notation. We will learn more about this in the future when we study maps.
+-->
 
+
+### Sets in CSharp
+<!-- Csharp version -->
+CSharp (dotnet version) has built classes that implement various types of sets that can be used.  Objects are instantiated from the respective class, as so:
+```csharp
+// Instantiate a set of integers
+HashSet<int> newHashedSet = new HashSet<int>();
+```
+
+These classes contain many methods and properties to implement operations and give properties about the set.  The basic operations of which are shown in the table below:  
+
+| Common Set Operation | Description| CSharp Code          | Performance|
+|----------------------|------------|----------------------|------------|
+| Add(value)           | Adds "value" to the set                | myset.[Add](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.add?view=net-6.0#system-collections-generic-hashset-1-add(-0))(value)    | ***O(1)*** - Performance of hashing the value (assuming good conflict resolution) |
+| Remove(value)        | Removes the "value" from the set       | myset.[Remove](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.add?view=net-6.0#system-collections-generic-hashset-1-add(-0))(value) | ***O(1)*** - Performance of hashing the value (assuming good conflict resolution) |
+| Contains(value)        | Determines if "value" is in the set    | if (myset.[Contains](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.contains?view=net-6.0#system-collections-generic-hashset-1-contains)(value)) | ***O(1)*** - Performance of hashing the value (assuming good conflict resolution) |
+| Count()               | Returns the number of items in the set | myset.[Count](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.count?view=net-6.0#system-collections-generic-hashset-1-count) | ***O(1)*** - Performance of returning the size of the set                         |
+
+The following code demonstrates a couple of the mathematical operations (**intersection**, and **union**) that are available from methods in the class:
+
+```csharp
+HashSet<int> set1 = new HashSet<int>(){1,2,3,4,5};
+HashSet<int> set2 = new HashSet<int>(){4,5,6,7,8};
+HashSet<int> set3,set4 = new HashSet<int>();
+set3 = (HashSet<int>) set1.Intersect(set2);  // This will result in {4, 5}
+set4 = (HashSet<int>) set1.Union(set2);      // This will result in {1, 2, 3, 4, 5, 6, 7, 8}
+
+```
 ---
 ## Articulating Answers to Technical Questions
 ---
