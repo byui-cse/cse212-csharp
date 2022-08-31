@@ -24,7 +24,7 @@ During the last lesson, we learned about the stack. The Stack was "Last In, Firs
 
 In the example below, we can see a line at a busy grocery store used to represent a queue. The person next in line for the cashier is called the **front** and the person at the end of the line is called the **back**. When the person at the front is removed from the queue we call this a **dequeue** operation. When a new person joins the queue at the back, we call this an **enqueue** operation. Note that someone cannot cheat and enter the line in the middle of the queue. 
 
-<!--- Image x here   orig 750 x 507-->
+<!--- Image x here  -->
 {% include image.html url="queue.jpg"
 description="Shows a line at a grocery store with the next person be dequeued from the front and a new person being enqueued into the back."
 caption="Grocery Store Line Queue"
@@ -35,7 +35,7 @@ Queues are used when we need to process a collection of requests in a fair and o
 ### Web Server Queue
 A web server receives numerous HTTP (Hypertext Transfer Protocol) requests for web pages from clients throughout the world. Each request requires the web server to send back information. The amount of time it takes to send that information makes it difficult to respond timely to all requests. This would be similair to a customer service desk that had only one phone. If the customer service agent is helping someone else, then no one would pick up your call. To solve the problem, a queue is used to pick up all the phone calls and transfer you to the customer service agent when they are ready for the next person.
 
-<!--- Image x here   orig 750 x 507-->
+<!--- Image x here  -->
 {% include image.html url="web_server.jpg"
 description="Shows 3 laptop computers sending requests through the Internet Cloud to a server.  The server enqueues the requests into a Web Server Queue (which currently has 4 requests with space for 5).  The server dequeues requests from the queue when it is ready.  The response is sent to back to the laptop through the Internet Cloud."
 caption="Web Server Queue"
@@ -102,8 +102,14 @@ Based on these requirements, we can write some **test cases**. Notice that we ar
 
 ### Running Test Cases
 
-Notice that each test has a detailed scenario and expected result based on the requirements. If we were given a function called is_leap_year, we could write test code as follows:
+Notice that each test has a detailed scenario and expected result based on the requirements. If we were given a function called :
+```csharp
+bool IsLeapYear(int year) // {}
+```
+we could write inline test code as follows:
 
+
+<!--  Python version
 ```python
 result = is_leap_year(1996)
 print(result)
@@ -114,19 +120,54 @@ print(result)
 result = is_leap_year(2003)
 print(result)
 ```
+-->
+<!--  C# version -->
+```csharp
+int[] yearsToTest = {1996,1900,2000,2003};
+foreach(int year in yearsToTest) {
+    Console.WriteLine("Year {D} is: {0}",year,IsLeapYear(year));
+}
+/* Generates Console Output:
+Year 1996 is: True
+Year 1900 is: False
+Year 2000 is: True
+Year 2003 is: False
+*/
+```
+If anything fails when we run the test code, then we must look manually at the output, then track down where in the code that the test failed.
 
-If anything fails when we run the test code, then we must look for code related to the test that failed.
 
+Instead of just printing out the results, we can use CSharp built-in class methods to do the compare, and throw us into exception processing when there are errors.  This type of testing is typically called 'assertion' testing.  In this approach, the code under test is run with known inputs to produce expected outputs and the results are 'asserted' (checked against) the correct result.  If the assertion function fails, then the program will exit or go to exception processing and tell you which test (e.g. assert statement) failed. For example, in CSharp, the folling would be used:
+
+
+<!--  Python version
 Instead of printing out the results, test code in Python can use the assert function. If the assert function fails, then the program will exit and tell you which test (e.g. assert statement) failed. For example:
-
 ```python
 assert is_leap_year(1996) == True
 assert is_leap_year(1900) == False
 assert is_leap_year(2000) == True
 assert is_leap_year(2003) == False
 ```
+-->
+<!--  C# version -->
+
+```csharp
+using System;
+using System.Diagnostics;
+Debug.Assert(IsLeapYear(1996) != true, "1996 should've been a leap year");
+Debug.Assert(IsLeapYear(1900) != false, "1900 should not been a leap year");
+Debug.Assert(IsLeapYear(2000) != true, "2000 should've been a leap year");
+Debug.Assert(IsLeapYear(2003) != false, "2003 should not been a leap year");
+```
+
+With this builtin Assert method, program execution can be programmed to halt, retry with different results, or give the user a "ABORT, RETRY, IGNORE" pop-up box!
+
+While, this is a very simple example, complex structures of input/expected-output values can be created and tested against the code.
+
 For more complicated programs, a single test scenario may require you to call multiple functions to properly set up the scenario. For example, if we were testing the enqueue and dequeue functions of a queue class, we might enqueue three numbers and then dequeue the three numbers to ensure that they came out in the correct order. The test code may look like the following:
 
+
+<!--  Python
 ```python
 # Test 1
 # Scenario: Ensure that after adding 3 items to the queue, they can be 
@@ -144,7 +185,16 @@ print(result)
 result = queue.dequeue()
 print(result)
 ```
+-->
+
+<!--  C# version -->
+```csharp
+
+```
+
+
 In addition to finding defects, testing also has the benefit of helping the programmer better understand the requirements of the software. Whether you or another engineer wrote the code, the process of writing test scenarios will increase your understanding of what the software should do.
+Testing like this is also critical in the software life-cycle where code needs to constantly be improved.  In the **Continuous Integration / Continuous Deployment (aka: CI/CD [See HERE](https://en.wikipedia.org/wiki/Continuous_integration))** model of development, operating software or apps can be updated for audiences of millions of users, sometimes many times a day.  For this model to work, a key part of the release process has to include rigorous testing that not only checks the functionality of the new features, but also assures regression testing to make sure the new 'fix' hasn't broken something along the way.  These tests are automated with **assertion** statements, most-often programmatically generated to get maximum coverage of the code.
 
 ---
 ## Key Terms
