@@ -46,7 +46,7 @@ The web server does the same thing. When a request is sent, it is put into a que
 ### Reader/Writer Queue
 Frequently, we have the need to run different software components concurrently (e.g. looks like they are running at the same time). Each component is called a **process** or a thread (additional information about threads in Python can be found [here](https://realpython.com/intro-to-python-threading/)). Each process will likely have their own set of variables that are maintained. Frequently, there is need to have shared data between the processes. The diagram below shows a variable which is being shared by multiple processes.
 
-<!--- Image x here   orig 750 x 507-->
+<!--- Image x here  -->
 {% include image.html url="reader_writer.jpg"
 description="Shows 3 processes trying to read a shared variable and 3 processes trying to write to a shared variable."
 caption="Reader/Writer Problem"
@@ -55,7 +55,9 @@ caption="Reader/Writer Problem"
 Processes P1 through P6 are all trying to use the variable at the same time. Processes P1, P2, and P3 are reading the variable and processes P4, P5, and P6 are writing to the variable. The concurrent reading is not a problem. However, if everyone tries to both read and write at the same time, new and modified values may be missed or overwritten. One solution is to protect the code that is writing to the shared data so that only one process can change the variable at a time. A queue is used to ensure order and integrity. When a process wants to write, it is enqueued. When a process is dequeued, it is then allowed to modify the shared variable. When the process is done, then the next process is dequeued.
 
 
+<!-- 
 ### Queues in Python
+
 In Python, a queue can be represented using a list. To dequeue an item from the front of the queue, **'[0]'** and **'del'** can be used to both obtain and delete the first item from the list. To enqueue an item to the back of the queue, the **'append'** function can be used on the list. The size can be determined by using the len function on the list. The performance of the queue using a Python list is based on the performance of the dynamic array.
 
 
@@ -67,7 +69,26 @@ In Python, a queue can be represented using a list. To dequeue an item from the 
 | empty()                | Returns true if the length of the queue is zero.                                           | if len(my_queue) == 0:                                          | O(1) - Performance of checking the size of the dynamic array                         |
 
 The Python library also includes a class called **'deque'** which stands for a double-ended queue and is more frequently used, due to better performance. We will learn more about this in the future when we study linked lists (Lesson 7). It is important to note at this point that when we use a Queue with a Linked List instead of Dynamic Array, then we will have better performance with the **'dequeue'** function.
+-->
 
+
+
+### Queues in CSharp
+
+| Common Queue Operation | Description | Python Code  | Performance |
+|------------------------|-------------|--------------|-------------|
+| enqueue(value)         | Adds "value" to the back of the queue    | my_queue.append(value) | O(1) - Performance of adding to the end of the dynamic array |
+| dequeue()              | Two approaches: Remove and return the item from the front of the queue; or pop off index 0 | value = my_queue[0] del my_queue[0], or value = my_queue.pop(0) | O(n) - Performance of obtaining and removing from the beginning of the dynamic array |
+| size()                 | Return the size of the queue                      | length = len(my_queue)    | O(1) - Performance of returning the size of the dynamic array |
+| empty()                | Returns true if the length of the queue is zero.  | if len(my_queue) == 0:    | O(1) - Performance of checking the size of the dynamic array  |
+
+```csharp
+using System;
+using System.Collections;
+Queue q = new Queue();
+q.Enqueue('A');
+char ch = (char)q.Dequeue();
+```
 
 ---
 ## Finding Defects Using Testing
@@ -108,7 +129,6 @@ bool IsLeapYear(int year) // {}
 ```
 we could write inline test code as follows:
 
-
 <!--  Python version
 ```python
 result = is_leap_year(1996)
@@ -121,6 +141,7 @@ result = is_leap_year(2003)
 print(result)
 ```
 -->
+
 <!--  C# version -->
 ```csharp
 int[] yearsToTest = {1996,1900,2000,2003};
@@ -189,6 +210,13 @@ print(result)
 
 <!--  C# version -->
 ```csharp
+/* --------  Test 1 ----------
+Scenario: Ensure that after adding 3 items to the queue, they can be removed in the proper order
+
+Put (push)  in:  300, 200, 100
+Expected Result out (LIFO queue): 100, 200, 300
+*/
+
 
 ```
 
