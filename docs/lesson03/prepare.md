@@ -9,7 +9,7 @@ title: "W03 Prepare: Reading"
 -- I. [Stack of Pancakes](#stack-of-pancakes)<br>
 -- II. [The "Undo" Option and the Stack](#the-undo-option-and-the-stack)<br>
 -- III. [Software and the Function Stack](#software-and-the-function-stack)<br>
--- IV. [Stacks in Python](#stacks-in-python)<br>
+-- IV. [Stacks in C-Sharp](#stacks-in-c-sharp)<br>
 - [Understanding Code Using Reviews](#understanding-code-using-reviews)<br>
 -- I. [Code Reviews](#code-reviews)<br>
 -- II. [Read code "cover-to-cover"](#read-code-cover-to-cover)<br>
@@ -74,8 +74,7 @@ caption="Function Stack in Programming"
 
 In addition to keeping track of the function name that is running, the stack also allows us to see where in the function we were when a function was originally called as well as the memory that we were using in our function. Stacks work well for remembering where we've been and the circumstances we were in during that previous time.
 
-When using Python or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function stack.
-
+When using Python or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function stack.  Here's an example of a Python dump from an error during runtime:
 
 
 <!--- Image x here   orig size was: 750 x 507-->
@@ -95,17 +94,45 @@ caption="Debugger showing Function Stack"
 %}
 
 
+<!-- Python Version
 ### Stacks in Python
 
 In Python, a stack can be represented using a list. To push an item to the back of the stack, the append function can be used on the list. To pop items from the back of the stack, the pop function can be used. The pop function will also delete it from the list. The size can be determined by using the len function on the list. The performance of the stack using a Python list is based on the performance of the dynamic array.
 
 
-| **Common Stack Operation** | **Description**                                              | **Python Code**            | **Performance**                                                          |
+| **Common Stack Operation** | **Description**                                      | **Python Code**        | **Performance**                                                      |
 |------------------------|----------------------------------------------------------|------------------------|----------------------------------------------------------------------|
 | push(value)            | Adds "value" to the back of the stack.                   | my_stack.append(value) | ***O(1)*** - Performance of adding to the end of a dynamic array     |
 | pop()                  | Removes and returns the item from the back of the stack. | value = my_stack.pop() | ***O(1)*** - Performance of removing from the end of a dynamic array |
 | size()                 | Return the size of the stack.                            | length = len(my_stack) | ***O(1)*** - Performance of returning the size of the dynamic array  |
 | empty()                | Returns true if the length of the stack is zero.         | if len(my_stack) == 0: | ***O(1)*** - Performance of checking the size of the dynamic array   |
+-->
+
+
+
+
+<!-- C-Sharp Version -->
+### Stacks in C-Sharp
+In C-Sharp, a stack can be represented using an array of various data types. The methods associated with changing elements on the stack (push/pop/size/empty) would have to be written manually. CSharp (dotnet implementation) does include a built-in class that has associated methods (See [HERE](https://docs.microsoft.com/en-us/dotnet/api/system.collections.stack?view=net-6.0)).  These methods are shown in the table below, along with the ***Big O*** performance of them.  To use the built-in class, it has to be included like:
+```csharp
+using System;
+using System.Collections.Generic;
+    static void Main()
+	{
+        // Creating a Stack of Integers
+        Stack<int> myStack = new Stack<int>();
+        myStack.Push(5);
+        Console.Write("Last element pushed was : ",myStack.Pop());
+	}
+```
+To push an item to the back of the stack, the append function can be used on the list. To pop items from the back of the stack, the pop function can be used. The pop function will also delete it from the list. The size can be determined by using the len function on the list. The performance of the stack using a Python list is based on the performance of the dynamic array.
+
+| **Common Stack Operation** | **Description**                                      | **C# Code**        | **Performance**                                                      |
+|------------------------|----------------------------------------------------------|------------------------|----------------------------------------------------------------------|
+| push(value)            | Adds "value" to the back of the stack.                   | myStack.Push(value) | ***O(1)*** - Performance of adding to the end of a dynamic array     |
+| pop()                  | Removes and returns the item from the back of the stack. | value = myStack.pop() | ***O(1)*** - Performance of removing from the end of a dynamic array |
+| size()                 | Return the size of the stack.                            | length = myStack.Count | ***O(1)*** - Performance of returning the size of the dynamic array  |
+| empty()                | Returns true if the length of the stack is zero.         | if (myStack.Count == 0) {} | ***O(1)*** - Performance of checking the size of the dynamic array   |
 
 ---
 ## Understanding Code Using Reviews
@@ -157,6 +184,7 @@ If we created diagrams in the previous step from our reading of the code "cover 
 To execute code manually in our minds and on paper, we must start at the beginning (or if we are looking at one piece of the software, perhaps start at the beginning of one of the functions). If inputs are provided at the beginning (or at any other place along the way), we will have to develop useful inputs to see what will happen. For example, consider the following code:
 
 	
+<!-- Python Version
 ```python
 def do_something(text):
     new_text = ""
@@ -169,16 +197,36 @@ def do_something(text):
             new_text += letter
     return new_text
 ```
+-->
 
-The function needs text and so we will propose some text like "Hello". We will then step through each line of code and record in our notebook the value of each variable. If we come across a code function that we don't understand (e.g. the ord and chr commands), then we will need to go online to read about those. The **ord** function will return the ASCII numeric code that represents a character. The **chr** function will convert an ASCII numeric code into a letter again. When we finish the code we get **Ifmmp** which appears to be a form of simple childhood encryption in which each letter in the original text is changed by one letter higher in the alphabet. When we ran the program, we noticed that you had to check if the letter was a space. It would be good to try to the test again with spaces. If we tried "Hello World", we end up with **Ifmmp Xpsme**. Not only does the function perform the encoding, but it also preserves the spaces.
+<!-- C-Sharp Version -->
+```csharp
+void DoSomething(string textIn) {
+    string newText = "";
+    foreach(var letter in textIn) {
+        if (letter != " ") {
+            int number = (int) letter;  //Cast it to be a number
+            int newLetter = (int) (number + 1);
+            newText += newLetter;
+        } else {
+            newText += letter;
+        }
+    }
+}
+```
 
-| text  | letter | number | new_number | new_letter | new_text |
+The method needs a string for an input, and so we will propose something like "Hello". We will then step through each line of code and record in our notebook the value of each variable. If we come across a code function that we don't understand
+(also known as the **ord** and **chr** commands in Python), then go online to read about those. An **ord** function returns the [ASCII](https://www.asciitable.com/) numeric code that represents a character. A **chr** function converts an decimal numeric code into its equivalent  ASCII letter.  In C-Sharp, this functionality is realized most simply by casting the variables from one type to another (even though the value of the byte remains the same).  Running this code converts the string **Hello** into **Ifmmp** which appears to be a form of simple childhood encryption in which each letter in the original text is changed by one letter higher in the alphabet. When we ran the program, we noticed that you had to check if the letter was a space. It would be good to try to the test again with spaces. If we tried "Hello World", we end up with **Ifmmp Xpsme**. Not only does the function perform the encoding, but it also preserves the spaces.
+
+| textIn  | letter | number | newNumber | newLetter | newText |
 |-------|--------|--------|------------|------------|----------|
 | Hello | H      | 72     | 73         | I          | I        |
 |       | e      | 101    | 102        | f          | If       |
 |       | l      | 108    | 109        | m          | Ifm      |
 |       | l      | 108    | 109        | m          | Ifmm     |
 |       | o      | 111    | 112        | p          | Ifmmp    |
+
+This type of simple analysis by evaluating the variables, step-by-step, is often valuable to understand what the code is doing.
 
 
 ### Analyze the use of Data Structures
