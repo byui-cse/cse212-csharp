@@ -115,24 +115,19 @@ In Python, a stack can be represented using a list. To push an item to the back 
 ### Stacks in C-Sharp
 In C-Sharp, a stack can be represented using an array of various data types. The methods associated with changing elements on the stack (push/pop/size/empty) would have to be written manually. CSharp (dotnet implementation) does include a built-in class that has associated methods (See [HERE](https://docs.microsoft.com/en-us/dotnet/api/system.collections.stack?view=net-6.0)).  These methods are shown in the table below, along with the ***Big O*** performance of them.  To use the built-in class, it has to be included like:
 ```csharp
-using System;
-using System.Collections.Generic;
-    static void Main()
-	{
-        // Creating a Stack of Integers
-        Stack<int> myStack = new Stack<int>();
-        myStack.Push(5);
-        Console.Write("Last element pushed was : ",myStack.Pop());
-	}
+// Creating a Stack of Integers
+Stack<int> mystack = new Stack<int>();
+mystack.Push(5);
+Console.Write("Last element pushed was : ",mystack.Pop());
 ```
-To push an item to the back of the stack, the append function can be used on the list. To pop items from the back of the stack, the pop function can be used. The pop function will also delete it from the list. The size can be determined by using the len function on the list. The performance of the stack using a Python list is based on the performance of the dynamic array.
+To push an item to the back of the stack, the append function can be used on the list. To pop items from the back of the stack, the pop function can be used. The pop function will also delete it from the list. The size can be determined by using the len function on the list. The performance of the stack using a CSharp list is based on the performance of the dynamic array.
 
-| **Common Stack Operation** | **Description**                                      | **C# Code**        | **Performance**                                                      |
+| **Common Stack Operation** | **Description**                                      | **CSharp Code**        | **Performance**                                                      |
 |------------------------|----------------------------------------------------------|------------------------|----------------------------------------------------------------------|
-| push(value)            | Adds "value" to the back of the stack.                   | myStack.Push(value) | ***O(1)*** - Performance of adding to the end of a dynamic array     |
-| pop()                  | Removes and returns the item from the back of the stack. | value = myStack.pop() | ***O(1)*** - Performance of removing from the end of a dynamic array |
-| size()                 | Return the size of the stack.                            | length = myStack.Count | ***O(1)*** - Performance of returning the size of the dynamic array  |
-| empty()                | Returns true if the length of the stack is zero.         | if (myStack.Count == 0) {} | ***O(1)*** - Performance of checking the size of the dynamic array   |
+| push(value)            | Adds "value" to the back of the stack.                   | mystack.Push(value) | ***O(1)*** - Performance of adding to the end of a dynamic array     |
+| pop()                  | Removes and returns the item from the back of the stack. | value = mystack.Pop() | ***O(1)*** - Performance of removing from the end of a dynamic array |
+| size()                 | Return the size of the stack.                            | length = mystack.Count | ***O(1)*** - Performance of returning the size of the dynamic array  |
+| empty()                | Returns true if the length of the stack is zero.         | if (mystack.Count == 0) {} | ***O(1)*** - Performance of checking the size of the dynamic array   |
 
 ---
 ## Understanding Code Using Reviews

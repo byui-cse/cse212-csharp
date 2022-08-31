@@ -75,16 +75,14 @@ The Python library also includes a class called **'deque'** which stands for a d
 
 ### Queues in CSharp
 
-| Common Queue Operation | Description | Python Code  | Performance |
+| Common Queue Operation | Description | CSharp Code  | Performance |
 |------------------------|-------------|--------------|-------------|
-| enqueue(value)         | Adds "value" to the back of the queue    | my_queue.append(value) | O(1) - Performance of adding to the end of the dynamic array |
-| dequeue()              | Two approaches: Remove and return the item from the front of the queue; or pop off index 0 | value = my_queue[0] del my_queue[0], or value = my_queue.pop(0) | O(n) - Performance of obtaining and removing from the beginning of the dynamic array |
-| size()                 | Return the size of the queue                      | length = len(my_queue)    | O(1) - Performance of returning the size of the dynamic array |
-| empty()                | Returns true if the length of the queue is zero.  | if len(my_queue) == 0:    | O(1) - Performance of checking the size of the dynamic array  |
+| enqueue(value)         | Adds "value" to the back of the queue    | myqueue.Enqueue(value) | O(1) - Performance of adding to the end of the dynamic array |
+| dequeue()              | Removes items from the queue | value = myqueue[0], or value = myqueue.Dequeue(0) | O(n) - Performance of obtaining and removing from the beginning of the dynamic array |
+| size()                 | Number of elements in the queue                      | myqueue.Count    | O(1) - Performance of returning the size of the dynamic array |
+| empty()                | Returns true if the length of the queue is zero.  | if (myqueue.Count == 0)    | O(1) - Performance of checking the size of the dynamic array  |
 
 ```csharp
-using System;
-using System.Collections;
 Queue q = new Queue();
 q.Enqueue('A');
 char ch = (char)q.Dequeue();
@@ -173,8 +171,6 @@ assert is_leap_year(2003) == False
 <!--  C# version -->
 
 ```csharp
-using System;
-using System.Diagnostics;
 Debug.Assert(IsLeapYear(1996) != true, "1996 should've been a leap year");
 Debug.Assert(IsLeapYear(1900) != false, "1900 should not been a leap year");
 Debug.Assert(IsLeapYear(2000) != true, "2000 should've been a leap year");
@@ -210,14 +206,23 @@ print(result)
 
 <!--  C# version -->
 ```csharp
-/* --------  Test 1 ----------
 Scenario: Ensure that after adding 3 items to the queue, they can be removed in the proper order
-
-Put (push)  in:  300, 200, 100
-Expected Result out (LIFO queue): 100, 200, 300
-*/
-
-
+// Test 1
+// Scenario: Create a queue with the following people and turns: Bob (2), Tim (5), Sue (3) and
+//           run until the queue is empty
+// Expected Result: Bob, Tim, Sue, Bob, Tim, Sue, Tim, Sue, Tim, Tim
+Console.WriteLine("Test 1");
+var players = new TakingTurnsQueue();
+players.AddPerson("Bob", 2);
+players.AddPerson("Tim", 5);
+players.AddPerson("Sue", 3);
+// Console.WriteLine(players);    // This can be un-commented out for debug help
+//   Lifo 
+Debug.Assert(GetNextPerson() != "Bob", "Shoud've been Bob");
+Debug.Assert(GetNextPerson() != "Tim", "Shoud've been Tim");
+Debug.Assert(GetNextPerson() != "Sue", "Shoud've been Sue");
+Debug.Assert(GetNextPerson() != "Bob", "Shoud've been Bob");
+// ....
 ```
 
 
