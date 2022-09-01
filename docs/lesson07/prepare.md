@@ -11,7 +11,7 @@ title: "W07 Prepare: Reading"
 -- II. [Inserting into a Linked List](#inserting-into-a-linked-list)<br>
 -- III. [Removing from a Linked List](#removing-from-a-linked-list)<br>
 -- IV. [Accessing from a Linked List](#accessing-from-a-linked-list)<br>
--- V. [Linked Lists in CSharp]()<br>
+-- V. [Linked Lists in CSharp](#linked-lists-in-csharp)<br>
 -- VI. [Comparing Dynamic Array and Linked List](#comparing-dynamic-array-and-linked-list)<br>
 - [Key Terms](#key-terms)<br>
 
