@@ -1,0 +1,60 @@
+Configuration file: /Users/lynnrwatson/Repositories/cse212-csharp/docs/local-config.yml
+ Theme Config file: /Users/lynnrwatson/Repositories/cse212-csharp/docs/_config.yml
+            Source: /Users/lynnrwatson/Repositories/cse212-csharp/docs
+       Destination: /Users/lynnrwatson/Repositories/cse212-csharp/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 3.122 seconds.
+ Auto-regeneration: enabled for '/Users/lynnrwatson/Repositories/cse212-csharp/docs'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2022-09-01 14:55:28
+                    nohup.out
+                    ...done in 1.623552 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 14:55:29
+                    nohup.out
+                    ...done in 0.24098 seconds.
+                    
+[2022-09-01 14:56:29] ERROR bad Request-Line `\x16\x03\x01\x02¬\x01\x00\x02¨\x03\x03ÎšvK\x0Fò¥¡ø¨*¸Y0\x16l€¬x\x02B/\x02sZá\fò×ïå (Â8ƒ’„)ÊÂj”L¥ÕëW×ƒûı?npã=¾Ÿ«tcH\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À'.
+[2022-09-01 14:56:29] ERROR bad Request-Line `\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03zvËoS\x1EĞ»u¯\fG~–ñ¬Ñ~RşGgL\x1A¦\x17A¸c‚ ÔJ\x15„×õÅ€õ¤°@‡\x05›Œ8\t‡\bZXŸ\x06Rl\x12)j"…\a\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À'.
+      Regenerating: 1 file(s) changed at 2022-09-01 14:59:57
+                    lesson08/prepare.md
+                    ...done in 0.567039 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:00:17
+                    lesson08/prepare.md
+                    ...done in 0.254467 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:06:27
+                    lesson08/prepare.md
+                    ...done in 0.592043 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:12:43
+                    lesson08/prepare.md
+                    ...done in 0.352487 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:13:57
+                    lesson08/prepare.md
+                    ...done in 0.456474 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:01
+                    lesson08/prepare.md
+                    ...done in 0.229029 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:15
+                    lesson08/prepare.md
+                    ...done in 0.4004 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:47
+                    lesson08/prepare.md
+                    ...done in 0.267655 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:53
+                    lesson08/prepare.md
+                    ...done in 0.364611 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:17:02
+                    lesson08/prepare.md
+                    ...done in 0.316927 seconds.
+                    
