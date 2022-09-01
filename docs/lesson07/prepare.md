@@ -11,7 +11,7 @@ title: "W07 Prepare: Reading"
 -- II. [Inserting into a Linked List](#inserting-into-a-linked-list)<br>
 -- III. [Removing from a Linked List](#removing-from-a-linked-list)<br>
 -- IV. [Accessing from a Linked List](#accessing-from-a-linked-list)<br>
--- V. [Linked Lists in Python](#linked-lists-in-python)<br>
+-- V. [Linked Lists in CSharp]()<br>
 -- VI. [Comparing Dynamic Array and Linked List](#comparing-dynamic-array-and-linked-list)<br>
 - [Key Terms](#key-terms)<br>
 
@@ -56,8 +56,6 @@ Inserting at the head usually requires a four step process:
     2.) Set the "next" of the new node to the current head (new_node.next = self.head)
     3.) Set the "prev" of the current head to the new node (self.head.prev = new_node)
     4.) Set the head equal to the new node (self.head = new_node)
-
-
 
 <!--- Figure 4 -->
 {% include image.html url="linked_list_insert_head.jpg"
@@ -139,8 +137,9 @@ caption="Remove from the Middle from the Linked List"
 
 ### Accessing from a Linked List
 
-If we want to find a value in the linked list or if we want to find a specific node (e.g. the 3rd node or the 10th node), we are required to loop through the linked list. We can start at either the head (if we want to go forward through the list) or we can start at the tail (if we want to go backward through the list). To loop through the list, we will follow the "next" (or the "prev" if going backwards from tail) links until we get to the end. The following code is a basic traversal through a linked list:
+If we want to find a value in the linked list or if we want to find a specific node (e.g. the 3rd node or the 10th node), we are required to loop through the linked list. We can start at either the head (if we want to go forward through the list) or we can start at the tail (if we want to go backward through the list). To loop through the list, we will follow the "next" (or the "prev" if going backwards from tail) links until we get to the end. The following code shows two ways to implement a basic traversal through a linked list.  The first loop uses the DotNet builtin method of the LinkedList class.  The second shows details of moving from node to node.
 
+<!-- Python version 
 ```python
 
 def go_forward(self):
@@ -156,7 +155,38 @@ def go_forward(self):
 		# Follow the pointer to the next node
 		current = current.next
 ```
+-->
 
+<!-- CSharp -->
+```csharp
+LinkedList <String> myLinkedList = new LinkedList <String>();
+// Using automated traversal
+foreach(string item in myLinkedList) {
+    Console.WriteLine(item.Value);
+    }
+
+// Manually stepping thru
+LinkedListNode <String> currentNode = myLinkedList.First;
+while (currentNode!=null) {
+    if ( currentNode == null ) {
+        Console.WriteLine( "list is empty");
+        }
+    else {
+        Console.WriteLine( "Value of current node:  {0}", currentNode.Value );
+        }
+    currentNode = currentNode.Next;
+    }
+
+if (myLinkedList.First!=null) {
+    currentNode=myLinkedList.First;
+    while(currentNode!=null) {
+        Console.WriteLine(currentNode);
+        currentNode = currentNode ;
+        }
+```
+
+
+<!-- Python
 ## Linked Lists in Python
 
 In your assignment this week you will be writing your own linked list class. However, Python does have a linked list available for use called the `**deque**`. To create an empty linked list, the following code is used: link_list = deque(). You will need to include the following import statement as well: import deque. The table below shows the common functions in the deque.
@@ -171,6 +201,31 @@ In your assignment this week you will be writing your own linked list class. How
 | remove(i)                    | Removes node "i".                                      | del my_deque[i]            | O(n) - It's not complicated to adjust the pointers to remove, but it takes a loop to find the node to remove.       |
 | size()                       | Return the size of the linked list                     | length = len(my_deque)     | O(1) - The size is maintained within the linked list class.                                                         |
 | empty()                      | Returns true if the length of the linked list is zero. | if len(my_deque) == 0:     | O(1) - The comparison of the length with 0 is all that is needed.                                                   |
+
+-->
+
+
+
+<!-- CSharp -->
+## Linked Lists in CSharp
+
+In your assignment this week you will be writing your own linked list class.  The DotNet framework includes a class for a linked list available for use called `**deque**`. To create an empty linked list, the following code is used:
+
+```csharp
+LinkedList<string> sentence = new LinkedList<string>();  //Empty new linked list
+```
+
+| Common Linked List Operation | Description |CSharp Code | Performance |
+|------------------------------|-------------|-------------|-------------|
+| insert_head(value)           | Adds "value" before the head                           | mylinkedlist.AddFirst(value)   | O(1) - Just need to adjust the pointers near the head.                                                              |
+| insert_tail(value)           | Adds "value" after the tail                            | mylinkedlist.AddLast(value)    | O(1) - Just need to adjust the pointers near the tail.                                                              |
+| insert(i, value)             | Adds "value" after node "i".                           | mylinkedlist.AddAfter(i, value)| O(n) - It's not complicated to adjust the pointers to insert, but it takes a loop to find the node to insert after. |
+| remove_head()                | Removes the first item (the head)                      | mylinkedlist.RemoveFirst()     | O(1) - Adjusts the pointers near the head.                                                              |
+| remove_tail(index)           | Removes the last item (the tail)                       | mylinkedlist.RemoveLast()     | O(1) - Just need to adjust the pointers near the head.                                                              |
+| remove(i)                    | Removes node "i".                                      | mylinkedlist.Remove(LinkedListNode)       | O(n) - It's not complicated to adjust the pointers to remove, but it takes a loop to find the node to remove.       |
+| size()                       | Return the size of the linked list                     | mylinkedlist.Count     | O(1) - The size is maintained within the linked list class.                                                         |
+| empty()                      | Returns true if the length of the linked list is zero. | if (mylinkedlist.Count == 0)     | O(1) - The comparison of the length with 0 is all that is needed.                                                   |
+
 
 
 ### Comparing Dynamic Array and Linked List
@@ -191,7 +246,7 @@ We can conclude the following:
     * The dynamic array has good performance at the end.
     * The linked list has good performance at the beginning and the end.
 
-Thinking back about stacks and queues, the stack did the push and pop operations from the end. Therefore, a stack can use either a dynamic array or linked list (a Python **`list`** or a Python **`deque`**) equally well. However, since a queue did the enqueue and dequeue operations from the end and the front, a queue should always be implemented with a linked list (a Python **`deque`**). This strong statement only applies when the size of the data is "large" (recall discussions earlier about big O). If we only have a small number of items in my queue, then both a dynamic array and linked list will run fast enough.
+Thinking back about stacks and queues, the stack did the push and pop operations from the end. Therefore, a stack can use either a dynamic array or linked list equally well. However, since a queue did the enqueue and dequeue operations from the end and the front, a queue should always be implemented with a linked list.  This strong statement only applies when the size of the data is "large" (recall discussions earlier about big O). If we only have a small number of items in my queue, then both a dynamic array and linked list will run fast enough.
 
 ---
 ## Key Terms
