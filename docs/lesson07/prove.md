@@ -35,7 +35,7 @@ The `GetEnumerator` function provides the ability to iterate forward through a L
 ```csharp
 foreach(var item in myLinkedList)
 {
-	Console.WriteLine(item)
+	Console.WriteLine(item);
 }
 ```
 
@@ -44,7 +44,7 @@ The `Reverse` function is used to iterate backwards. Implement the `Reverse` fun
 ```csharp
 foreach(var item in myLinkedList.Reverse())
 {
-	Console.WriteLine(item)
+	Console.WriteLine(item);
 }
 ```
 
