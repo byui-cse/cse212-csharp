@@ -9,8 +9,7 @@ This assignment **must be completed individually** to ensure you are meeting all
 
 There is no response document for this assignment. All test cases and results should be placed within the test documentation in the `Run()` method of each file.
 
-All of the files for this assignment will be found in the GitHub classroom ***prove-04*** repository. You will modify the repository for your submission for this assignment.
-
+All of the files for this assignment will be found in the GitHub classroom ***prove-04*** repository. You will commit changes to your own repository for your submission for this assignment.
 
 ### Part 1 - Taking Turns Queue
 1. Examine the following code file: **TakingTurns.cs** (Note: Do not read through the referenced code first. Instead, proceed with the instructions below).
