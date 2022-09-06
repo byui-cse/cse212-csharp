@@ -112,6 +112,7 @@ The code for inserting into a BST is shown below. Some things to note are as fol
 
 *    In the _insert function, we should identify the base case and the recursive calls to the correct subtrees.
 
+<!-- Python Version 
 ``` python
 def insert(self, data):
 	"""
@@ -151,6 +152,42 @@ def _insert(self, data, node):
 			# recursively on the right subtree.
 			self._insert(data, node.right)
 ```
+-->
+
+<!-- CSharp Version -->
+```csharp
+class node {
+    node left,right; // store pointers to each direction
+    int data;		 //And the data itself (here an integer, but could be anything)
+
+	void insert(int dataToInsert, node currentNode){
+		node newNodeBST = new node();
+		if (currentNode == null) {
+		// Nothing to search, so just put it here
+		newNodeBST.data = dataToInsert;
+		} else  { // the head no
+		if (dataToInsert < data) {
+			if ( currentNode.left== null) {
+				// Found a spot, put it here
+				currentNode.left = newNodeBST;
+				newNodeBST.data = dataToInsert;
+				} else { // Recursively look to the left
+				insert(dataToInsert, currentNode.left);
+				}
+			} else if (dataToInsert >= data) {
+			if ( currentNode.right== null) {
+				// Found a spot, put it here
+				currentNode.right = newNodeBST;
+				newNodeBST.data = dataToInsert;
+				} else { // Recursively look to the right
+				insert(dataToInsert, currentNode.right);
+				}
+			}
+		}
+	}
+```
+
+
 
 ### Traversing a BST
 
@@ -160,13 +197,15 @@ We **traverse** a BST when we want to display all the data in the tree. An in-or
 
 *    Base case: If the subtree is empty, then don't recursively traverse or use anything.
 
-The code for traversing a BST is shown below. In addition to the observations made to the insert code above, we should note the following additional things about this algorithm:
+The code for traversing a BST is shown below.
+
+<!-- Python version 	
+In addition to the observations made to the insert code above, we should note the following additional things about this algorithm:
 
 *    The starting function is called **\_\_iter\_\_**. The use of double underscores in Python means that this function is part of the Python framework. When we write code like for item in collection, the **\_\_iter\_\_** function is called on the collection to get the next item. In our case, the **\_\_iter\_\_** will provide the user the next value in the BST. We call this a generator function.
 
 *    The yield command is used to provide the next value to the for loop. The yield is like a return statement in a function. However, unlike a return, the yield will allow the function to start back where it left off in the function when **\_\_iter\_\_** is called again. If we want delegate the yield operation to another function, the command is modified to be yield from. If a generator function (e.g. **\_\_iter\_\_**) needs to call another function which will yield the result, then we will need to use the yield from keywords.
 
-		
 ```python
 def __iter__(self):
 	"""
@@ -213,9 +252,43 @@ def _traverse_forward(self, node):
 ```
 A reverse traversal is frequently associated with the __reversed__ function in Python.
 
-### BST in Python
+ALL OF THIS IS DIFFERENT IN CSHARP  -- no analogous
+-->
 
-In your assignment this week you will be writing your own BST class. Python does not have a built-in BST class. However, there are packages that can be installed from other developers such as [bintrees](https://pypi.org/project/bintrees/) that provides implementations of the BST.The table below shows the common functions in a BST.
+<!-- CSharp version  -->
+```csharp
+public class Node
+	{
+		public int Data;
+		public Node Left;
+		public Node Right;
+		public void DisplayNode()
+		{
+			Console.Write(Data + " ");
+		}
+	}
+	public Node root;
+	public BinarySearchTree()
+	{
+		root = null;
+	}
+	public void InOrderTraverse(Node traverseNode)
+		{
+		if(traverseNode == null) {
+			return;
+			} else {
+				InOrderTraverse(traverseNode.Left);
+				Console.Write(traverseNode.Data + " ");
+				InOrderTraverse(traverseNode.Right);
+			}
+```
+
+
+
+
+### BST in CSharp
+
+In your assignment this week you will be writing your own BST class. CSharp does not have a built-in BST class. There are many examples online about the construction of a class that contain the principal elements, data, left-ptr, right-ptr.  The table below shows the common functions in a BST.
 
 | Common BST Operation | Description | Performance  |
 |----------------------|-------------|--------------|

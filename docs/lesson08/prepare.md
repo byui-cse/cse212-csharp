@@ -22,14 +22,27 @@ title: "W08 Prepare: Reading"
 
 
 Usually when we write functions, we design them so they call different functions. Recursion is a technique where a function calls itself. For example, consider the following code:
+
+<!-- TODO Python Remove 
 ```python
 
 def say_hello():
 	print("Hello")
 	say_hello()  # This is the recursive call
+-->
+
+<!--Csharp -->
+```csharp
+void SayHello(){
+	Console.WriteLine("Hello");
+	SayHello();
+	}
 ```
 
-This code will print "Hello" forever. Actually, Python will eventually stop with a RecursionError because the say_hello function was called too many times. Notice that in this function, the first call to say_hello never has a chance to finish. In software, when a function is called, it is put onto a stack. The stack is used to keep track of what function to go back to when a function finishes. In this case, the stack is filling up.
+
+
+
+This code will print "Hello" forever. Actually, CSharp will eventually stop with a RecursionError because the say_hello function was called too many times. Notice that in this function, the first call to say_hello never has a chance to finish. In software, when a function is called, it is put onto a stack. The stack is used to keep track of what function to go back to when a function finishes. In this case, the stack is filling up.
 ### Rules of Recursion
 
 When we use recursion, we need to make sure we follow two important rules:
@@ -40,6 +53,7 @@ When we use recursion, we need to make sure we follow two important rules:
 
 Applying these two rules to the say_hello function, we have the following modified code which is keeping track of how many times to say "Hello":
 
+<!-- TODO Python Remove 
 ```python
 
 def say_hello(count):
@@ -49,6 +63,18 @@ def say_hello(count):
 		print("Hello")
 		say_hello(count-1)  # Smaller Problem
 
+```
+-->
+<!--Csharp -->
+```csharp
+void SayHello(int count){
+    if (count <=0) {
+        return;
+        } else {
+        Console.WriteLine("Hello");
+		SayHello(count-1);
+        }
+    }
 ```
 In this new code, the smaller problem is count-1 and the base case is 
 when count is equal (or less than) zero. When we look at this code, we should probably question the use of recursion when this could have been done with a simple for loop. Recursion should not be used with everything. When used inappropriately, recursion can result is significant performance degradation. However, when used wisely, a simple code solution can be found for complex problems.
@@ -63,6 +89,7 @@ n! = n * (n-1)!
 This solution above satisfies the first rule of recursion. To satisfy the second rule of recursion, we need to define n! for some value of n without using recursion so that our solution does not run forever. Without much math, we can solve 1! and say that it is equal to 1. We now have a base case. With our solution and base case, we can write the code:
 
 	
+<!-- TODO Python Remove 
 ```python
 def factorial(n):
 	if n <= 1:
@@ -70,6 +97,18 @@ def factorial(n):
 	else:
 		return n * factorial(n-1)  # n! = n * (n-1)!
 ```
+-->
+
+<!--Csharp -->
+```csharp
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;                     // 1! = 1 (no recursion)
+    } else {
+        return (n * factorial(n-1));  // n! = n * (n-1)!
+        }
+```
+
 ### Sample Problems - Fibonacci
 
 The Fibonacci numbers are: 1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth. The sequence starts with two 1's. Each subsequent number is the sum of the two previous values. If we wanted to write a function fib(n) which would give us the nth Fibonacci number, instead of thinking about loops, let's define fib(n) in terms of the same fib problem but with smaller values:
@@ -78,11 +117,12 @@ fib(n) = fib(n-1) + fib(n-2)
 
 If we implement this, eventually we will get to calls of the fib function with smaller values of n. These smaller values of n represent the base case for recursion solution. Usually we try to think about solutions that we can easily calculate such as fib(1) which will equal 1. However, if we look at our formula above, we will need more than one base case. Consider n=3 which will require us to use fib(2) and fib(1). If we then recursively solve for fib(2), we will need fib(1) and fib(0). In cases like this, we will need more than one base case representing the first two Fibonacci numbers:
 
-fib(2) = 1
-
-fib(1) = 1
+- fib(2) = 1
+- fib(1) = 1
 
 Our resulting code will be as follows:
+
+<!-- TODO Python Remove 
 ```python
 	
 def fib(n):
@@ -91,6 +131,19 @@ def fib(n):
 	else:
 		return fib(n-1) + fib(n-2)  # fib(n) = fib(n-1) + fib(n-2)
 
+```
+-->
+
+
+<!--Csharp -->
+```csharp
+int fib(int n) {
+    if (n <= 2) {
+        return 1;                   // fib(2) = 1 and fib(1) = 1
+    } else {
+        return fib(n-1) + fib(n-2); // fib(n) = fib(n-1) + fib(n-2)
+    }
+}
 ```
 
 It is a useful exercise to analyze what happens when we call the fib function. The diagram below shows the functions that are called when we run fib(6). Notice that the call to fib(n-1) is called before fib(n-2) and, therefore, the fib(n-1) must finish first. Also notice that there are many duplicate calls to the fib function for the same value of n.
@@ -110,6 +163,7 @@ We can improve the performance of the fib function by remembering previous resul
 The dictionary will only be used by the fib function and not be returned. Since the dictionary needs to be shared for all recursive calls, we will write code to create the dictionary on the first recursive call only.
 
 
+<!-- TODO Python Remove 
 ```python
 
 def fibonacci(n, remember = None):
@@ -117,22 +171,17 @@ def fibonacci(n, remember = None):
     # we need to create the dictionary.
     if remember is None:
         remember = dict()
-
     # Base Case
     if n <= 2:
         return 1
-
     # Check if we have solved this one before
     if n in remember:
         return remember[n]
-
     # Otherwise solve with recursion
     result = fibonacci(n-1, remember) + fibonacci(n-2, remember)
-
     # Remember result for potential later use
     remember[n] = result
     return result
-
 print(fibonacci(1))    # 1
 print(fibonacci(2))    # 1
 print(fibonacci(3))    # 2
@@ -141,8 +190,37 @@ print(fibonacci(10))   # 55
 print(fibonacci(100))  # 354224848179261915075 (This one will
                        # not work if you don't have the 
                        # 'remember' dictionary implemented).
-
 ```
+-->
+
+<!--Csharp -->
+```csharp
+int fibonacci(int n, Dictionary<int,int> remember) {
+//  Base Case
+if (n <= 2) {
+    return 1;
+    }
+// Check if we have solved this one before
+if (remember.ContainsKey(n)){
+    return remember[n];  // No compute needed, we already know this one
+    }
+    else {
+    // Otherwise solve with recursion and
+    // Remember result for potential later use
+    remember[n] = fibonacci(n-1, remember) + fibonacci(n-2, remember);
+    return remember[n];
+    }
+}
+Dictionary<int,int> dictStore = new Dictionary<int, int>();
+Console.WriteLine(fibonacci(1,dictStore));    // 1
+Console.WriteLine(fibonacci(2,dictStore));    // 1
+Console.WriteLine(fibonacci(3,dictStore));    // 2
+Console.WriteLine(fibonacci(4,dictStore));    // 3
+Console.WriteLine(fibonacci(10,dictStore));   // 55
+Console.WriteLine(fibonacci(100,dictStore));  /*  354224848179261915075
+                (This one will # not work if you don't have the # 'remember' dictionary implemented).  */
+```
+
 ### Sample Problems - Find Permutations
 
 The problem is to calculate the number of ways to reorganize the letters in a word (i.e. the permutations). Mathematically, this should be n! where n is the number of letters in the word. However, using recursion, we can also display each of the permutations (so long as the number of letters is small, otherwise it will take a long time to display all the results).
@@ -164,8 +242,9 @@ caption="Recursive Function Calls for permutations([A,B,C,D])"
 
 We also need a base case. The simplest scenario is a list with zero letters. Here is our code:
 
+<!-- TODO Python Remove 
 ```python
-ef permutations(letters, word=""):
+def permutations(letters, word=""):
 
 	if len(letters) == 0:   # Base Case
 		print(word)  
@@ -188,7 +267,7 @@ ef permutations(letters, word=""):
 			permutations(letters_left, word + letters[index])
 
 permutations(list("ABC"))
-""" 
+
 Results:
 ABC
 ACB
@@ -196,10 +275,77 @@ BAC
 BCA
 CAB
 CBA
-"""
 
 permutations(list("ABCD"))
+Results:
+ABCD
+ABDC
+ACBD
+ACDB
+ADBC
+ADCB
+BACD
+BADC
+BCAD
+BCDA
+BDAC
+BDCA
+CABD
+CADB
+CBAD
+CBDA
+CDAB
+CDBA
+DABC
+DACB
+DBAC
+DBCA
+DCAB
+DCBA
 """
+```
+-->
+<!--Csharp -->
+
+```csharp
+// TODO -- check this code
+void permutations(String letters,String word) {
+if (letters.Length == 0) {   // Base Case
+    Console.WriteLine(word);
+    } else {
+    // Try adding each of the available letters
+    // to the 'word_so_far' and add up all the
+    // resulting permutations.
+    string lettersLeft;
+    for(int i = 0 ; i < letters.Length ; i++) {
+	    /* Make a copy of the letters to pass to the
+	       the next call to permutations.  We need
+	       to remove the letter we just added before
+	       we call permutations again.  */
+
+	    lettersLeft += letters[i];
+	    lettersLeft = letters[:];
+	    lettersLeft = letters[:];
+	    del letters_left[index];
+	    }
+	//  Add the new letter to the word we have so far
+	permutations(letters_left, word + letters[index])
+        }
+    }
+return "";
+}
+/*** Run the code ***/
+permutations(list("ABC"));
+
+Results:
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+
+permutations(list("ABCD"))
 Results:
 ABCD
 ABDC
@@ -230,13 +376,19 @@ DCBA
 
 ### Sample Problems - Binary Search
 
-Recursion plays an important role in several searching and sorting algorithms. The binary search algorithm assumes that the data is already sorted. Just like a phone book, if you had sorted data, then the best way to find something is to look in the middle of the data set. By looking in the middle of the sorted data, we can quickly exclude half of the data with a single comparison. The binary search algorithm is as follows:
+Recursion plays an important role in several searching and sorting algorithms. The binary search algorithm assumes that the data is ***already sorted***. Just like a phone book, if you had sorted data, then the best way to find something is to look in the middle of the data set. By looking in the middle of the sorted data, we can quickly exclude half of the data with a single comparison. The binary search algorithm is as follows:
 
 -- Base Case: If the list has just one item, then check it and return the result.
+
 -- Base Case: If the number in the middle of the list is what we are looking for, then the value is in the list
--- Recursion: If the number in the middle of the list is not what we are looking for, then search in either the first half (lower values) or the second half (higher values). Calling the binary search function recursively on the list subset can either be done by creating a new list or by providing the function with the starting and ending index. The first approach will take more memory.
+
+-- Recursion: If the number in the middle of the list is not what we are looking for, then search in either the first half (lower values) or the second half (higher values).
+
+Calling the binary search function recursively on the list subset can either be done by creating a new list or by providing the function with the starting and ending index. The first approach will take more memory.
 
 Here is the code for the binary search.
+
+<!-- TODO Python Remove 
 ```python
 
 def binary_search(sorted_list, target):
@@ -270,6 +422,37 @@ def binary_search(sorted_list, target):
 print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 89)) # True
 print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 1))  # True
 print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 17)) # False
+
+```
+-->
+<!--Csharp -->
+```csharp
+
+Object BinarySearch(int[] arrayIn, int key) {
+   int minNum = 0;
+   int maxNum = arrayIn.Length - 1;
+   int min,max;
+
+   while (minNum <=maxNum) {
+      int mid = (minNum + maxNum) / 2;
+      if (key == arrayIn[mid]) {
+         return ++mid;
+      } else if (key < arrayIn[mid]) {
+         max = mid - 1;
+      } else {
+         min = mid + 1;
+      }
+   }
+   return "Not Found";
+   /* Note that the return class of the method is Object so that
+      a string of "Not Found" can be returned, not just an integer */
+}
+int[] myArray = {1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100};
+
+//* Look for different numbers in the array
+Console.WriteLine(BinarySearch(myArray,89 ));
+Console.WriteLine(BinarySearch(myArray,1));
+Console.WriteLine(BinarySearch(myArray,17));  // Won't be found
 
 ```
 

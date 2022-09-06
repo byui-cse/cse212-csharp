@@ -20,7 +20,7 @@ title: "W06 Prepare: Reading"
 
 The **map** is most commonly viewed as a table. In the map below, the first column contains a unique value called the **key**. The second column contains a **value** (not necessarily unique) called the value. The key forms a set because all the values are unique. A map is created in software by associating a value with each item in the key set. In the picture below, the table shows the key and value pairs. The keys are hashed into what looks like a set. The values are then stored with each key value.
 
-<!--- Image x here   orig 750 x 507-->
+<!--- Image 1-->
 {% include image.html url="map.jpg"
 description="Shows a table with Color (the key) equal to Green (the value), Quantity equal to 25, Price equal to 1.99, Name equal to Pencil, and ID equal to 3924A-3.  Each key/value pair is then stored in the data structure.  The keys are hashed (index(n) = hash(key) % 10) into a list of size 10.  For demonstration purposes, Quantity has been put in Index 1, the Name has been put in Index 3, the Color has been put in Index 4, then Price has been put in Index 7, and the ID has been put in Index 9.  The values for each key value have been placed in the same location as the Key."
 caption="Map of Colors"
@@ -33,7 +33,7 @@ caption="Map of Colors"
 The performance of the map is the same for the set. Some programming languages call this a hashtable or a hashmap. In Python, this is called a dictionary. The dictionary (like the set) can be represented using a curly braces to specify a comma separated list of key/value pairs:
 
 	
-```pytyon 
+```python 
 my_map = {"key1" : value1, "key2" : value2, "key3" : value3}
 empty_map1 = {}
 empty_map2 = dict()
@@ -69,8 +69,8 @@ Notice how "iss_position" is a key in the dictionary. The value for this key is 
 
 Here is another example of data that was received about the number of people that are in space. 
 
+<!--
 ```python
-
 astronauts = {"people": [
                 {"craft": "ISS", "name": "Andrew Morgan"}, 
                 {"craft": "ISS", "name": "Oleg Skripochka"}, 
@@ -78,6 +78,19 @@ astronauts = {"people": [
               "message": "success", 
               "number": 3}
 
+for person in astronauts["people"]:
+    print(person["name"])
+```
+
+-->
+<!-- CSharp Version -->
+```csharp
+astronauts = {"people": [
+                {"craft": "ISS", "name": "Andrew Morgan"}, 
+                {"craft": "ISS", "name": "Oleg Skripochka"}, 
+                {"craft": "ISS", "name": "Jessica Meir"}], 
+              "message": "success", 
+              "number": 3}
 for person in astronauts["people"]:
     print(person["name"])
 ```

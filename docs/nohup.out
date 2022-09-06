@@ -1,0 +1,140 @@
+Configuration file: /Users/lynnrwatson/Repositories/cse212-csharp/docs/local-config.yml
+ Theme Config file: /Users/lynnrwatson/Repositories/cse212-csharp/docs/_config.yml
+            Source: /Users/lynnrwatson/Repositories/cse212-csharp/docs
+       Destination: /Users/lynnrwatson/Repositories/cse212-csharp/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 3.122 seconds.
+ Auto-regeneration: enabled for '/Users/lynnrwatson/Repositories/cse212-csharp/docs'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2022-09-01 14:55:28
+                    nohup.out
+                    ...done in 1.623552 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 14:55:29
+                    nohup.out
+                    ...done in 0.24098 seconds.
+                    
+[2022-09-01 14:56:29] ERROR bad Request-Line `\x16\x03\x01\x02¨\x01\x00\x02®\x03\x03ŒövK\x0FÚ•°¯®*∏Y0\x16lÄ¨x\x02B/\x02sZÅ·\fÚ◊ÔÂ (¬8ÉíÑ) ¬jîL•’ÎW◊É˚˝?np„=æü´ùtcH\x00"\x13\x01\x13\x03\x13\x02¿+¿/Ã©Ã®¿,¿0¿'.
+[2022-09-01 14:56:29] ERROR bad Request-Line `\x16\x03\x01\x02\x00\x01\x00\x01¸\x03\x03zvÀoS\x1E–ªuØ\fêG~ñÒ¨—~ÅR˛GgL\x1A¶\x17A∏cÇ ‘J\x15Ñ◊ı≈Äı§∞@á\x05õå8\tá\bZXü\x06Rl\x12)j"Ö\a\x00"\x13\x01\x13\x03\x13\x02¿+¿/Ã©Ã®¿,¿0¿'.
+      Regenerating: 1 file(s) changed at 2022-09-01 14:59:57
+                    lesson08/prepare.md
+                    ...done in 0.567039 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:00:17
+                    lesson08/prepare.md
+                    ...done in 0.254467 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:06:27
+                    lesson08/prepare.md
+                    ...done in 0.592043 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:12:43
+                    lesson08/prepare.md
+                    ...done in 0.352487 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:13:57
+                    lesson08/prepare.md
+                    ...done in 0.456474 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:01
+                    lesson08/prepare.md
+                    ...done in 0.229029 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:15
+                    lesson08/prepare.md
+                    ...done in 0.4004 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:47
+                    lesson08/prepare.md
+                    ...done in 0.267655 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:14:53
+                    lesson08/prepare.md
+                    ...done in 0.364611 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-01 15:17:02
+                    lesson08/prepare.md
+                    ...done in 0.316927 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 16:32:08
+                    nohup.out
+                    ...done in 1.551177 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 16:34:52
+                    lesson09/prepare.md
+                    ...done in 0.365444 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 17:15:01
+                    nohup.out
+                    ...done in 3.568071 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 19:26:09
+                    nohup.out
+                    ...done in 0.369576 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:35:16
+                    lesson09/prepare.md
+                    ...done in 0.492303 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:36:44
+                    lesson09/prepare.md
+                    ...done in 1.09465 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:38:02
+                    lesson09/prepare.md
+                    ...done in 0.418281 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:38:23
+                    lesson09/prepare.md
+                    ...done in 0.462609 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:38:35
+                    lesson09/prepare.md
+                    ...done in 0.280819 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:38:49
+                    lesson09/prepare.md
+                    ...done in 0.598103 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:39:25
+                    lesson09/prepare.md
+                    ...done in 0.310977 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 21:39:29
+                    lesson09/prepare.md
+                    ...done in 0.447824 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:45:45
+                    lesson09/prepare.md
+                    ...done in 0.403327 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:47:58
+                    lesson09/prepare.md
+                    ...done in 0.650814 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:48:37
+                    lesson09/prepare.md
+                    ...done in 0.27416 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:56:39
+                    lesson09/prepare.md
+                    ...done in 0.43988 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:56:49
+                    lesson09/prepare.md
+                    ...done in 0.267261 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:57:24
+                    lesson09/prepare.md
+                    ...done in 0.411628 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:57:28
+                    lesson09/prepare.md
+                    ...done in 0.238905 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2022-09-05 22:58:13
+                    lesson09/prepare.md
+                    ...done in 0.460997 seconds.
+                    
