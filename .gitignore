@@ -5,4 +5,4 @@ Gemfile.lock
 .jekyll-cache
 .DS_Store
 *.swp
-docs/nohup.out
+nohup.out
