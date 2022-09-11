@@ -11,10 +11,6 @@ title: "W10 Prepare: Reading"
     - [Project Requirements](#project-requirements)
     - [Guidance](#guidance)
     - [Using Markdown Language](#using-markdown-language)
-- [Title](#title)
-- [Header](#header)
-  - [Section](#section)
-    - [Sub-Section](#sub-section)
     - [Milestone Submissions](#milestone-submissions)
     - [Grading Rubric](#grading-rubric)
     - [Working Independently](#working-independently)
@@ -57,7 +53,7 @@ When you write each of the data structure modules, you will want to consider the
 
 This list of questions is not an exhaustive list but will be helpful to get you started.
 
-To help you visualize what this project requires, a complete [CSharp Fundamentals Tutorial](https://github.com/byui-cse/cse212-course/blob/master/CSharp_fundamentals/0-welcome.md) example written in Markdown has been provided. This example covers three fundamental topics in CSharp programming: decisions, loops, and functions. Please note that your tutorial will not be on these basic CSharp topics. Your tutorial will be on data structures as described in project requirements shown in the previous section. The structure of this example tutorial follows the project requirements for structure, technical depth, and sample problems.
+To help you visualize what this project requires, a complete [CSharp Fundamentals Tutorial](https://github.com/byui-cse/cse212-csharp/blob/master/CSharpFundamentals/0-welcome.md) example written in Markdown has been provided. This example covers three fundamental topics in CSharp programming: decisions, loops, and functions. Please note that your tutorial will not be on these basic CSharp topics. Your tutorial will be on data structures as described in project requirements shown in the previous section. The structure of this example tutorial follows the project requirements for structure, technical depth, and sample problems.
 
 ### Using Markdown Language
 The Markdown language is commonly used to develop documentation. The purpose of requiring Markdown for your tutorial is to give you experience using this language. Using a simple editor and the knowledge of a little bit of syntax, you can create documents with headers, bulleted lists, links, bold text, tables and pictures. A common place to see Markdown documents is in GitHub repositories. The link above for the example tutorial was shown to you in GitHub. GitHub automatically interprets the Markdown file and displays as intended.
