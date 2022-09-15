@@ -6,3 +6,7 @@ Gemfile.lock
 .DS_Store
 *.swp
 nohup.out
+
+# Rider files
+.idea
+*.iml
