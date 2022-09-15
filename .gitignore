@@ -6,7 +6,7 @@ Gemfile.lock
 .DS_Store
 *.swp
 docs/nohup.out
-cse212-csharp.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+
+# Rider files
+.idea
+*.iml
