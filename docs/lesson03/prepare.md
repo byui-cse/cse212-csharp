@@ -5,17 +5,17 @@ title: "W03 Prepare: Reading"
 
 # W03 Prepare: Reading
 ## Table of Contents
-- [Stacks](#stacks)<br>
--- I. [Stack of Pancakes](#stack-of-pancakes)<br>
--- II. [The "Undo" Option and the Stack](#the-undo-option-and-the-stack)<br>
--- III. [Software and the Function Stack](#software-and-the-function-stack)<br>
--- IV. [Stacks in C-Sharp](#stacks-in-c-sharp)<br>
-- [Understanding Code Using Reviews](#understanding-code-using-reviews)<br>
--- I. [Code Reviews](#code-reviews)<br>
--- II. [Read code "cover-to-cover"](#read-code-cover-to-cover)<br>
--- III. ["Execute" the Code Manually](#execute-the-code-manually)<br>
--- IV. [Analyze the use of Data Structures](#analyze-the-use-of-data-structures)<br>
-- [Key Terms](#key-terms)<br>
+* [Stacks](#stacks)
+    * [Stack of Pancakes](#stack-of-pancakes)
+    * [The "Undo" Option and the Stack](#the-undo-option-and-the-stack)
+    * [Software and the Function Stack](#software-and-the-function-stack)
+    * [Stacks in C#](#stacks-in-c)
+* [Understanding Code Using Reviews](#understanding-code-using-reviews)
+    * [Code Reviews](#code-reviews)
+    * [Read code "cover-to-cover"](#read-code-cover-to-cover)
+    * ["Execute" the Code Manually](#execute-the-code-manually)
+    * [Analyze the use of Data Structures](#analyze-the-use-of-data-structures)
+* [Key Terms](#key-terms)
 
 ---
 ## Stacks
@@ -37,27 +37,25 @@ caption="Stack of Pancakes"
 
 ### The "Undo" Option and the Stack
 
-One of the most common stacks that people use on a computer is related to the Undo option in word processors and editors. When we type something on the keyboard, the item is both displayed to the screen and also added to a stack. If we type the phrase **`"The rain in Spain stays mainly in the plain"`**, we would expect the following commands to be put pushed onto the stack:
-**`Type "The", Type "rain", Type "in"`**, and so forth. The last item to be pushed would be **`Type "plain"`**. If we press the Undo button, the software will pop the stack and receive: **`Type "plain"`**. The software will then do the opposite of this which would result in the word **`"plain"`** being removed from the screen.
+One of the most common stacks that people use on a computer is related to the Undo option in word processors and editors. When we type something on the keyboard, the item is both displayed to the screen and also added to a stack. If we type the phrase `"The rain in Spain stays mainly in the plain"`, we would expect the following commands to be put pushed onto the stack:
+`Type "The", Type "rain", Type "in"`, and so forth. The last item to be pushed would be `Type "plain"`. If we press the Undo button, the software will pop the stack and receive: `Type "plain"`. The software will then do the opposite of this which would result in the word `"plain"` being removed from the screen.
 
-
-<!--- Image x here   orig size was: 750 x 507-->
 {% include image.html url="undo_stack.jpg"
 description="Shows a computer screen and history stack with the initial text of The rain in Spain stays mainly in the plain. Changes to the screen and stack are shown as described in the text of this section."
 caption="Stack used to Undo Text"
 %}
 
 
-Since the stack is maintaining a history of what was typed, we can guarantee that pressing the Undo button will revert changes in the right order. If we popped five additional times, we would have **`"The rain in"`** remaining on the screen. If we type **`"Idaho stays mainly in Rexburg"`**, we would see five new pushes to the stack. The original first three commands to display **`"The rain in"`** still remains at the front of the stack. If the Undo button is pressed enough times, then these initial words would eventually be removed.
+Since the stack is maintaining a history of what was typed, we can guarantee that pressing the Undo button will revert changes in the right order. If we popped five additional times, we would have `"The rain in"` remaining on the screen. If we type `"Idaho stays mainly in Rexburg"`, we would see five new pushes to the stack. The original first three commands to display `"The rain in"` still remains at the front of the stack. If the Undo button is pressed enough times, then these initial words would eventually be removed.
 
 Stacks are useful when we need to maintain history and perform an operation (eg. Undo function in an editor) backwards.
+
 ### Software and the Function Stack
 
 Even if we didn't know what a stack was before today, we have actually been using stacks in all software we have written. When we call a function in our code, we are telling the computer two things:
 
- - Which function we want to call
-
- - Which function to go back to when we are done
+* Which function we want to call
+* Which function to go back to when we are done
 
 The first of these is clear in our code. If we are currently in function A, then we expect to call function B. However, how do we tell the computer that we want to return to function A when function B is finished. This can be even more complicated by the fact that function B will need to call functions C, D, and E before it can finish. The computer accomplishes this by using a function stack. When a function is called, it is pushed to the stack. The current function running is always on the back of the stack. When the function finishes, it is popped off the stack. The result is that the function to return to is the one that is on the back of the stack.
 
@@ -65,20 +63,15 @@ The first of these is clear in our code. If we are currently in function A, then
 <!--- Image x here   orig size was: 750 x 507-->
 {% include image.html url="function_stack.jpg"
 description="Shows a structure chart of function A calling function B, function B called functions C and D (in order), and function D calling function E. Shows the function stack (front to back) when B is running (A, B), when C is running (A, B, C), when C finishes (A, B), when D is running (A, B, D), when E is running (A, B, D, E) and when B finishes. (A)"
-
 caption="Function Stack in Programming"
 %}
 
-
-
-
 In addition to keeping track of the function name that is running, the stack also allows us to see where in the function we were when a function was originally called as well as the memory that we were using in our function. Stacks work well for remembering where we've been and the circumstances we were in during that previous time.
 
-When using Python or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function stack.  Here's an example of a Python dump from an error during runtime:
+When using C# or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function stack.  Here's an example of a Python dump from an error during runtime:
 
 
-<!--- Image x here   orig size was: 750 x 507-->
-{% include image.html url="exception_function_stack.jpg"
+{% include image.html url="exception_function_stack.png"
 description="Shows the call stack from a Python program running in Visual Studio Code when a breakpoint was reached an paused the software."
 caption="Python Exception showing Function Stack"
 %}
@@ -87,8 +80,7 @@ caption="Python Exception showing Function Stack"
 Many code editors also include a debugger. Debuggers can be used to pause execution of software so that we can see what is occurring within our code step-by-step. Part of the debugger capability is the display of the function stack (or frequently called the call stack) when the software is paused (due to a breakpoint or an exception).
 
 
-<!--- Image x here   orig size was: 750 x 507-->
-{% include image.html url="debugger_call_stack.jpg"
+{% include image.html url="debugger_call_stack.png"
 description="Shows the call stack from a Python program running in Visual Studio Code when a breakpoint was reached an paused the software."
 caption="Debugger showing Function Stack"
 %}
@@ -112,7 +104,7 @@ In Python, a stack can be represented using a list. To push an item to the back 
 
 
 <!-- C-Sharp Version -->
-### Stacks in C-Sharp
+### Stacks in C#
 In C-Sharp, a stack can be represented using an array of various data types. The methods associated with changing elements on the stack (push/pop/size/empty) would have to be written manually. CSharp (dotnet implementation) does include a built-in class that has associated methods (See [HERE](https://docs.microsoft.com/en-us/dotnet/api/system.collections.stack?view=net-6.0)).  These methods are shown in the table below, along with the ***Big O*** performance of them.  To use the built-in class, it has to be included like:
 ```csharp
 // Creating a Stack of Integers
