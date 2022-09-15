@@ -11,12 +11,13 @@ title: "W01 Welcome"
     * [.NET Core - C#](#net-core---c)
     * [JetBrains Rider](#jetbrains-rider)
     * [Visual Studio Code](#visual-studio-code)
+    * [GitHub Desktop](#github-desktop)
     * [GitHub Classroom](#github-classroom)
 * [Downloading Course Files](#downloading-course-files)
 * [Preparing for the Final Project](#preparing-for-the-final-project)
 
 ## About CSE 212
-Welcome to CSE 212 - Programming with Data Structures. This course is intended for students who have studied Python including functions and classes. As you progress towards a career as a software engineer, this course will prepare you to effectively use data structures and increase your programming skills. The successful CSE 212 student will develop the following skills:
+Welcome to CSE 212 - Programming with Data Structures. This course is intended for students who have studied programming including functions and classes whether in C# or Python. As you progress towards a career as a software engineer, this course will prepare you to effectively use data structures and increase your programming skills. The successful CSE 212 student will develop the following skills:
 
 * Problem Solver: Apply a systematic approach to writing code to solve problems involving data structures.
 * Evaluator: Evaluate the performance of alternative solutions for code containing data structures using big O notation.
@@ -43,45 +44,46 @@ The course is divided into three phases:
 
 This course is designed to provide opportunities for you to learn with your peers while at the same time demonstrating your personal mastery of the material. You should only collaborate with other students as directed in the assignments. When working with TA's, tutors, and other individuals outside of class, you should not seek or receive direct help in answering a problem that you were expected to answer on your own. You should seek help to learn course material and then demonstrate your understanding on your own.
 
-Many programming problems in this course have solutions that with some effort could be found online. You should resist the temptation to use online solutions in favor of solving the problems on your own. For this purpose, many of the assignments will require written responses in addition to Python code. When you interview with potential employers, you will not have the luxury of a web search engine to help you answer the question. You will need to be prepared to articulate your answers clearly to others. The successful CSE 212 student will gain this skill.
+Many programming problems in this course have solutions that with some effort could be found online. You should resist the temptation to use online solutions in favor of solving the problems on your own. For this purpose, many of the assignments will require written responses in addition to C# code. When you interview with potential employers, you will not have the luxury of a web search engine to help you answer the question. You will need to be prepared to articulate your answers clearly to others. The successful CSE 212 student will gain this skill.
 
-This course requires that you already know how to write software in Python. If you need a review of Python, you should look at the [W3Schools Python Tutorials](https://www.w3schools.com/python/default.asp). Focus should be given to the following modules: variables, data types, strings, functions, loops, and classes.
+This course requires that you already know how to write software in some programming language. We will do all of our assignments in C#, and we will cover syntax for those new to C#. If you'd like a review of C#, you should look at the [W3Schools C# Tutorials](https://www.w3schools.com/cs/index.php). Focus should be given to the following modules: variables, data types, strings, methods, loops, and classes.
 
 ## Course Reading
 Each lesson will have reading in I-Learn. During the Prepare phase of the course, the reading will include material for a new data structure and new programming skill. During the Teach phase of the course, only a new data structure will be presented. No new material will be presented during the Prove phase except for the details of the final project.
 
-Each of the readings will include an overview of the topic including several examples. The application of the topic to Python and the performance implications will also be discussed. Key terms will be highlighted when first used in each of the readings. Definitions for these key terms is summarized in the last section of each reading.
+Each of the readings will include an overview of the topic including several examples. The application of the topic to C# and the performance implications will also be discussed. Key terms will be highlighted when first used in each of the readings. Definitions for these key terms is summarized in the last section of each reading.
 
 In addition to the reading provided, there is plenty of documentation on the internet and in libraries, including the BYU-Idaho online databases. You may want to visit the [Safari Books Online](http://go.oreilly.com/byu-idaho) database supported by the BYU-Idaho library and search for various books on the subject of data structures.
 
 ## Development Environment
-The development environment for this course is similar to previous Python courses. Your development environment must be functional to successfully submit assignments during the first lesson.
+The development environment for this course will be using C#. Although initially developed by Microsoft, it has become standard across the computer industry for cross-platform development. Your development environment must be functional to successfully submit assignments during the first lesson. We will use [.NET Core](#net-core---c), [Rider](#jetbrains-rider), [GitHub Desktop](#github-desktop), and [GitHub Classroom](#github-classroom). Please install these tools on your laptops as we will require them the first week of class.
 
 ### .NET Core - C#
+We will be using the platform independent version of C# called [.NET Core](https://dotnet.microsoft.com/en-us/download). Please download the version for your operating system and install it so that you're ready for class to begin.
+
 ### JetBrains Rider
+While you can use other integrated development environments for .NET development, we will use [JetBrains Rider](https://www.jetbrains.com/rider/) for this class. It is fully cross-platform and will speed up development and give you experience that will prepare you for other technologies in the future. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). In order to use Rider, you will need to activate a [student license](https://www.jetbrains.com/community/education/#students).
+
 ### Visual Studio Code
-**TODO MODIFY FOR C#**
+We will not be using Visual Studio Code in this class for any examples. It can work to edit files, but it does not allow you an integrated environment for building and running your code.
 
-The preferred integrated development environment (IDE) for BYU-Idaho programming classes is Visual Studio Code. If you already have this tool installed from a previous class, then you will not need to take any additional action. If you don't have Visual Studio Code installed, you should visit the [Visual Studio Code Download](https://code.visualstudio.com/) website and follow the instructions. After installation, you should install the Python Extension for Visual Studio Code. Visual Studio Code should prompt you to install this after you create your first Python (.py) file.
-
-The following websites may be useful for installing these tools:
-
-* Visual Studio Code Tutorial
-* Visual Studio Code Videos (the first four videos provide a good introduction)
+### GitHub Desktop
+For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/) over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
 
 ### GitHub Classroom
+We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/).
 
 ## Downloading Course Files
-In the Teach activities and Prove assignments, you will frequently be asked to download documents and files. Depending on the browser you are using, the file may cause additional tabs to open. If a file is displayed in a tab instead of downloading, then you may need to right click on the link to download the file. When downloading Python files (with a .py extension) your browser may give you a warning about a potential dangerous files. If you were not a programmer, you would not want to download Python files since you may be receiving one from an untrusted person. However, since you are a programmer and are taking a programming class, you should trust these files for download.
+In the Teach activities and Prove assignments, you will frequently be asked to download documents and files. The instructions will be a page like this one, but the code will be a link to GitHub Classroom for you to "Accept the Assignment". This will create your own personal GitHub repository with a copy of the starting files. It is expected that you make the appropriate changes to the files and then commit and push those changes back to that same repository.
 
 Every file that you download contains the following warning: "It is a violation of BYU-Idaho Honor Code to post or share this code with others or to post it online. Storage into a personal and private repository (e.g. private GitHub repository, unshared Google Drive folder) is acceptable." It is very important that you follow these rules for all material in the course.
 
-The Prove assignments will include a Response Document that you must use to provide your responses to questions. When you submit your assignment, you will need to submit the completed Response Document along with any required python code files.
+The Prove assignments will include a Response Document that you must use to provide your responses to questions. When you submit your assignment, you will need to submit the completed Response Document along with any required code files.
 
 ## Preparing for the Final Project
 Starting in Week 10, the course will be devoted to working on your final project. The [Week 10 Prepare](../lesson10/prepare) contains the full description of the project. You will be asked to create a detailed tutorial about some of the data structures you have learned during the course. To prepare for the project, you are encouraged to begin taking weekly notes about each data structure with special attention to the following:
 * What is the purpose of this data structure and when is it used?
 * What is the performance of this data structure (you learn about performance in Week 2)?
-* How does the data structure work and how do you use it with Python?
+* How does the data structure work and how do you use it with C#?
 * What are some common errors you may encounter while using the data structure?
 * The reading and the assignments contain several problem that require the use of data structures. Can you write additional problems on your own to solve?

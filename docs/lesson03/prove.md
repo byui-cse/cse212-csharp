@@ -10,7 +10,7 @@ This assignment **must be completed individually** to ensure you are meeting all
 Download the [03-prove_response.docx](03-prove_response.docx) document to provide your answers to questions asked in the steps below.
 
 ### Part 1 - First Mystery Stack
-1. Open the following PDF copy of code: [03-prove_mystery_stack_1.pdf]()
+1. Open the following PDF copy of code: [mystery-stack-1.pdf](mystery-stack-1.pdf)
 2. Using techniques learned in the reading and practice this week, determine what this code does and how the use of a stack helps in the implementation. Record the answer in your response document.
 3. In your response document, write down the output of the function if the input text is equal to the following:
     * racecar
@@ -18,7 +18,7 @@ Download the [03-prove_response.docx](03-prove_response.docx) document to provid
     * a nut for a jar of tuna
 
 ### Part 2 - Second Mystery Stack
-1. Open the following PDF copy of code: [03-prove_mystery_stack_2.pdf]()
+1. Open the following PDF copy of code: [mystery-stack-2.pdf](mystery-stack-2.pdf)
 2. Using techniques learned in the reading and practice this week, determine what this code does and how the use of a stack helps in the implementation. Record the answer in your response document.
 3. Determine the result of the function and record the result in the response document if the following inputs were provided:
     * 5 3 7 + *
