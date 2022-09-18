@@ -26,7 +26,7 @@ Examine the `01-prove_response.docx` document to provide your answers to questio
         * `Add(value)`
         * `Insert(index, value)`
         * `RemoveAt(index)`
-    * See the [documentation for a C# List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0#methods) to see all the methods available.
+    * See the [documentation for a C# List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0#methods){:target="_blank"} to see all the methods available.
 2. Implement the `RotateListRight` function. Remember to add useful comments to your code.
 3. In your response document, give a description (including a picture) of how the code is solving the problem. For the picture, you may use the computer or a white board and just snap a picture with your phone.
 
