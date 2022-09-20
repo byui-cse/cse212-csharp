@@ -163,23 +163,6 @@ If we created diagrams in the previous step from our reading of the code "cover 
 
 To execute code manually in our minds and on paper, we must start at the beginning (or if we are looking at one piece of the software, perhaps start at the beginning of one of the functions). If inputs are provided at the beginning (or at any other place along the way), we will have to develop useful inputs to see what will happen. For example, consider the following code:
 
-	
-<!-- Python Version
-```python
-def do_something(text):
-    new_text = ""
-    for letter in text:
-        if letter != " ":
-            number = ord(letter)
-            new_letter = chr(number + 1)
-            new_text += new_letter
-        else:
-            new_text += letter
-    return new_text
-```
--->
-
-<!-- C-Sharp Version -->
 ```csharp
 public static string DoSomething(string text) {
     var newText = "";
