@@ -22,7 +22,6 @@ During the last lesson, we learned about the stack. The Stack was "Last In, Firs
 
 In the example below, we can see a line at a busy grocery store used to represent a queue. The person next in line for the cashier is called the **front** and the person at the end of the line is called the **back**. When the person at the front is removed from the queue we call this a **dequeue** operation. When a new person joins the queue at the back, we call this an **enqueue** operation. Note that someone cannot cheat and enter the line in the middle of the queue. 
 
-<!--- Image x here  -->
 {% include image.html url="queue.jpg"
 description="Shows a line at a grocery store with the next person be dequeued from the front and a new person being enqueued into the back."
 caption="Grocery Store Line Queue"
@@ -80,7 +79,6 @@ The best time to find a **defect** is while you are *"in-phase."* This means tha
 * Code Review
 * Testing
 
-
 ### Testing Code From Requirements
 Even the best code reviewers may not be able to analyze all the different scenarios that the software will execute within. **Testing** is a process of demonstrating that specific inputs will result in expected outputs. The selection of inputs can be done systematically. We do not need to test all input combination. Often times we will write code to test your code. Consider a program that was supposed to determine if a year was a leap year. The **requirements** of a program would include the following:
 
@@ -131,28 +129,6 @@ Trace.Assert(!IsLeapYear(2003), "2003 should not have been a leap year"); // fal
 
 For more complicated programs, a single test scenario may require you to call multiple functions to properly set up the scenario. For example, if we were testing the enqueue and dequeue functions of a queue class, we might enqueue three numbers and then dequeue the three numbers to ensure that they came out in the correct order. The test code may look like the following:
 
-
-<!--  Python
-```python
-# Test 1
-# Scenario: Ensure that after adding 3 items to the queue, they can be 
-#           removed in the proper order
-# Expected Result: 100, 200, 300
-print("Test 1")
-queue = Queue()
-queue.enqueue(100)
-queue.enqueue(200)
-queue.enqueue(300)
-result = queue.dequeue()
-print(result)
-result = queue.dequeue()
-print(result)
-result = queue.dequeue()
-print(result)
-```
--->
-
-<!--  C# version -->
 ```csharp
 // Test 1
 // Scenario: Ensure that after adding 3 items to the queue, they can be removed in the proper order
