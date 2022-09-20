@@ -46,7 +46,7 @@ This course is designed to provide opportunities for you to learn with your peer
 
 Many programming problems in this course have solutions that with some effort could be found online. You should resist the temptation to use online solutions in favor of solving the problems on your own. For this purpose, many of the assignments will require written responses in addition to C# code. When you interview with potential employers, you will not have the luxury of a web search engine to help you answer the question. You will need to be prepared to articulate your answers clearly to others. The successful CSE 212 student will gain this skill.
 
-This course requires that you already know how to write software in some programming language. We will do all of our assignments in C#, and we will cover syntax for those new to C#. If you'd like a review of C#, you should look at the [W3Schools C# Tutorials](https://www.w3schools.com/cs/index.php). Focus should be given to the following modules: variables, data types, strings, methods, loops, and classes.
+This course requires that you already know how to write software in some programming language. We will do all of our assignments in C#, and we will cover syntax for those new to C#. If you'd like a review of C#, you should look at the [W3Schools C# Tutorials](https://www.w3schools.com/cs/index.php){:target="_blank"}. Focus should be given to the following modules: variables, data types, strings, methods, loops, and classes.
 
 ## Course Reading
 Each lesson will have reading in I-Learn. During the Prepare phase of the course, the reading will include material for a new data structure and new programming skill. During the Teach phase of the course, only a new data structure will be presented. No new material will be presented during the Prove phase except for the details of the final project.
@@ -59,19 +59,19 @@ In addition to the reading provided, there is plenty of documentation on the int
 The development environment for this course will be using C#. Although initially developed by Microsoft, it has become standard across the computer industry for cross-platform development. Your development environment must be functional to successfully submit assignments during the first lesson. We will use [.NET Core](#net-core---c), [Rider](#jetbrains-rider), [GitHub Desktop](#github-desktop), and [GitHub Classroom](#github-classroom). Please install these tools on your laptops as we will require them the first week of class.
 
 ### .NET Core - C#
-We will be using the platform independent version of C# called [.NET Core](https://dotnet.microsoft.com/en-us/download). Please download the version for your operating system and install it so that you're ready for class to begin.
+We will be using the platform independent version of C# called [.NET Core](https://dotnet.microsoft.com/en-us/download){:target="_blank"}. Please download the version for your operating system and install it so that you're ready for class to begin.
 
 ### JetBrains Rider
-While you can use other integrated development environments for .NET development, we will use [JetBrains Rider](https://www.jetbrains.com/rider/) for this class. It is fully cross-platform and will speed up development and give you experience that will prepare you for other technologies in the future. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). In order to use Rider, you will need to activate a [student license](https://www.jetbrains.com/community/education/#students).
+While you can use other integrated development environments for .NET development, we will use [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} for this class. It is fully cross-platform and will speed up development and give you experience that will prepare you for other technologies in the future. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). In order to use Rider, you will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"}.
 
 ### Visual Studio Code
 We will not be using Visual Studio Code in this class for any examples. It can work to edit files, but it does not allow you an integrated environment for building and running your code.
 
 ### GitHub Desktop
-For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/) over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
+For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/){:target="_blank"} over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
 
 ### GitHub Classroom
-We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/).
+We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/){:target="_blank"}.
 
 ## Downloading Course Files
 In the Teach activities and Prove assignments, you will frequently be asked to download documents and files. The instructions will be a page like this one, but the code will be a link to GitHub Classroom for you to "Accept the Assignment". This will create your own personal GitHub repository with a copy of the starting files. It is expected that you make the appropriate changes to the files and then commit and push those changes back to that same repository.
