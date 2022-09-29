@@ -8,6 +8,7 @@ title: "W06 Prepare: Reading"
 * [Maps](#maps)
     * [Making the Map from the Set](#making-the-map-from-the-set)
     * [Maps in C#](#maps-in-c)
+    * [Objects are Maps](#objects-are-maps)
     * [Complex Dictionary Data](#complex-dictionary-data)
     * [Building Summary Tables](#building-summary-tables)
 * [Key Terms](#key-terms)
