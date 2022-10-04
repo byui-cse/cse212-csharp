@@ -33,8 +33,7 @@ Implement the `Replace` function in the LinkedList class. The function should se
 The `GetEnumerator` function provides the ability to iterate forward through a LinkedList object using a `foreach` loop such as `foreach (var item in myLinkedList)`. When a `foreach` loop starts, the `GetEnumerator` function will start. Each time the `yield return` statement runs, it will provide a new value to the `foreach` loop and pause the `GetEnumerator` function. When the `foreach` loop goes to the next iteration, it will continue running the `GetEnumerator` function again until it gets to the next `yield return` which will provide the next value to the `foreach` loop. You can use the following test code to see how the `GetEnumerator` function works:
 
 ```csharp
-foreach(var item in myLinkedList)
-{
+foreach(var item in myLinkedList) {
 	Console.WriteLine(item);
 }
 ```
@@ -42,8 +41,7 @@ foreach(var item in myLinkedList)
 The `Reverse` function is used to iterate backwards. Implement the `Reverse` function in the LinkedList class. **Hint**: Pattern your solution after the `GetEnumerator` function that was already written for you and that was described above. To test the `Reverse` function, you can use the following code:
 
 ```csharp
-foreach(var item in myLinkedList.Reverse())
-{
+foreach(var item in myLinkedList.Reverse()) {
 	Console.WriteLine(item);
 }
 ```
