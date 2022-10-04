@@ -5,467 +5,283 @@ title: "W08 Prepare: Reading"
 
 # W08 Prepare: Reading
 
-
 ## Table of Contents
-- [Recursion](#recursion)<br>
--- I. [Recursive Function Calls](#recursive-function-calls)<br>
--- II. [Rules of Recursion](#rules-of-recursion)<br>
--- III. [Sample Problems - Factorials](#sample-problems---factorials)<br>
--- IV. [Sample Problems - Fibonacci](#sample-problems---fibonacci)<br>
--- V. [Memoization](#memoization)<br>
--- VI. [Sample Problems - Find Permutations](#sample-problems---find-permutations)<br>
--- VII. [Sample Problems - Binary Search](#sample-problems---binary-search)<br>
-- [Key Terms](#key-terms)<br>
+* [Recursion](#recursion)
+    * [Recursive Function Calls](#recursive-function-calls)
+    * [Rules of Recursion](#rules-of-recursion)
+    * [Sample Problems - Factorials](#sample-problems---factorials)
+    * [Sample Problems - Fibonacci](#sample-problems---fibonacci)
+    * [Memoization](#memoization)
+    * [Sample Problems - Find Permutations](#sample-problems---find-permutations)
+    * [Sample Problems - Binary Search](#sample-problems---binary-search)
+* [Key Terms](#key-terms)
 
 ## Recursion
 ### Recursive Function Calls
 
+Usually when we write functions, we design them so they call different functions. **Recursion** is a technique where a function calls itself. For example, consider the following code:
 
-Usually when we write functions, we design them so they call different functions. Recursion is a technique where a function calls itself. For example, consider the following code:
-
-<!-- TODO Python Remove 
-```python
-
-def say_hello():
-	print("Hello")
-	say_hello()  # This is the recursive call
--->
-
-<!--Csharp -->
 ```csharp
-void SayHello(){
+public void SayHello() {
 	Console.WriteLine("Hello");
-	SayHello();
-	}
+	SayHello(); // This is the recursive call
+}
 ```
 
+This code will print "Hello" forever. Actually, C# will eventually stop with a Stack overflow because the SayHello function was called too many times. Notice that in this function, the first call to SayHello never has a chance to finish. In software, when a function is called, it is put onto a stack. The stack is used to keep track of what function to go back to when a function finishes. In this case, the stack is filling up.
 
-
-
-This code will print "Hello" forever. Actually, CSharp will eventually stop with a RecursionError because the say_hello function was called too many times. Notice that in this function, the first call to say_hello never has a chance to finish. In software, when a function is called, it is put onto a stack. The stack is used to keep track of what function to go back to when a function finishes. In this case, the stack is filling up.
 ### Rules of Recursion
 
 When we use recursion, we need to make sure we follow two important rules:
 
--- Smaller Problem - When we call the function recursively, we need to make sure we are calling the function on a smaller problem. Without this rule, our function will run forever.
+* Smaller Problem - When we call the function recursively, we need to make sure we are calling the function on a smaller problem. Without this rule, our function will run forever.
+* Base Case - As we continue to call the function on a smaller problem, we need a place to stop. We must define a scenario in which recursion is not required. This is called the base case.
 
--- Base Case - As we continue to call the function on a smaller problem, we need a place to stop. We must define a scenario in which recursion is not required. This is called the base case.
+Applying these two rules to the `SayHello` function, we have the following modified code which is keeping track of how many times to say "Hello":
 
-Applying these two rules to the say_hello function, we have the following modified code which is keeping track of how many times to say "Hello":
-
-<!-- TODO Python Remove 
-```python
-
-def say_hello(count):
-	if count <= 0:  # Base Case
-		return
-	else:
-		print("Hello")
-		say_hello(count-1)  # Smaller Problem
-
-```
--->
-<!--Csharp -->
 ```csharp
-void SayHello(int count){
-    if (count <=0) {
+public void SayHello(int count) {
+    if (count <= 0) {
         return;
-        } else {
-        Console.WriteLine("Hello");
-		SayHello(count-1);
-        }
     }
+    else {
+        Console.WriteLine("Hello");
+        SayHello(count - 1);
+    }
+}
 ```
-In this new code, the smaller problem is count-1 and the base case is 
-when count is equal (or less than) zero. When we look at this code, we should probably question the use of recursion when this could have been done with a simple for loop. Recursion should not be used with everything. When used inappropriately, recursion can result is significant performance degradation. However, when used wisely, a simple code solution can be found for complex problems.
+
+In this new code, the smaller problem is `count-1` and the base case is 
+when count is equal (or less than) zero. When we look at this code, we should probably question the use of recursion when this could have been done with a simple `for` loop. Recursion should not be used with everything. When used inappropriately, recursion can result is significant performance degradation. However, when used wisely, a simple code solution can be found for complex problems.
+
 ### Sample Problems - Factorials
 
 Solving problems using recursion requires us to state the solution of a problem in terms of the problem itself (i.e., calling the function recursively). Some problems in mathematics offer good examples of recursion (performance is questionable, but the examples are sound).
 
-A factorial involves multiplying a series of numbers. For a positive integer n (greater than 0), n! (read as n factorial) is defined as n * (n-1) * (n-2) * ... * 3 * 2 * 1. If we wanted to calculate n! using recursion, we need to define the answer in terms of the problem again. The "problem" here is the factorial function. We can rewrite n! as follows:
+A factorial involves multiplying a series of numbers. For a positive integer `n` (greater than 0), `n!` (read as `n` factorial) is defined as `n * (n-1) * (n-2) * ... * 3 * 2 * 1`. If we wanted to calculate `n!` using recursion, we need to define the answer in terms of the problem again. The "problem" here is the factorial function. We can rewrite `n!` as follows:
 
-n! = n * (n-1)!
+`n! = n * (n-1)!`
 
-This solution above satisfies the first rule of recursion. To satisfy the second rule of recursion, we need to define n! for some value of n without using recursion so that our solution does not run forever. Without much math, we can solve 1! and say that it is equal to 1. We now have a base case. With our solution and base case, we can write the code:
+This solution above satisfies the first rule of recursion. To satisfy the second rule of recursion, we need to define `n!` for some value of `n` without using recursion so that our solution does not run forever. Without much math, we can solve 1! and say that it is equal to 1. We now have a base case. With our solution and base case, we can write the code:
 
-	
-<!-- TODO Python Remove 
-```python
-def factorial(n):
-	if n <= 1:
-		return 1  # 1! = 1 (no recursion)
-	else:
-		return n * factorial(n-1)  # n! = n * (n-1)!
-```
--->
-
-<!--Csharp -->
 ```csharp
-int factorial(int n) {
+public int Factorial(int n) {
     if (n <= 1) {
-        return 1;                     // 1! = 1 (no recursion)
-    } else {
-        return (n * factorial(n-1));  // n! = n * (n-1)!
-        }
+        return 1;                      // 1! = 1 (no recursion)
+    }
+    else {
+        return (n * Factorial(n - 1)); // n! = n * (n - 1)!
+    }
+}
 ```
 
 ### Sample Problems - Fibonacci
 
-The Fibonacci numbers are: 1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth. The sequence starts with two 1's. Each subsequent number is the sum of the two previous values. If we wanted to write a function fib(n) which would give us the nth Fibonacci number, instead of thinking about loops, let's define fib(n) in terms of the same fib problem but with smaller values:
+The Fibonacci numbers are: 1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth. The sequence starts with two 1's. Each subsequent number is the sum of the two previous values. If we wanted to write a function `Fib(n)` which would give us the nth Fibonacci number, instead of thinking about loops, let's define `Fib(n)` in terms of the same `Fib` problem but with smaller values:
 
-fib(n) = fib(n-1) + fib(n-2)
+`Fib(n) = Fib(n-1) + Fib(n-2)`
 
-If we implement this, eventually we will get to calls of the fib function with smaller values of n. These smaller values of n represent the base case for recursion solution. Usually we try to think about solutions that we can easily calculate such as fib(1) which will equal 1. However, if we look at our formula above, we will need more than one base case. Consider n=3 which will require us to use fib(2) and fib(1). If we then recursively solve for fib(2), we will need fib(1) and fib(0). In cases like this, we will need more than one base case representing the first two Fibonacci numbers:
+If we implement this, eventually we will get to calls of the `Fib` function with smaller values of n. These smaller values of n represent the base case for recursion solution. Usually we try to think about solutions that we can easily calculate such as `Fib(1)` which will equal 1. However, if we look at our formula above, we will need more than one base case. Consider n=3 which will require us to use `Fib(2)` and `Fib(1)`. If we then recursively solve for `Fib(2)`, we will need `Fib(1)` and `Fib(0)`. In cases like this, we will need more than one base case representing the first two Fibonacci numbers:
 
-- fib(2) = 1
-- fib(1) = 1
+`Fib(2) = 1`
+
+`Fib(1) = 1`
 
 Our resulting code will be as follows:
 
-<!-- TODO Python Remove 
-```python
-	
-def fib(n):
-	if n <= 2:   
-		return 1    # fib(2) = 1 and fib(1) = 1
-	else:
-		return fib(n-1) + fib(n-2)  # fib(n) = fib(n-1) + fib(n-2)
-
-```
--->
-
-
-<!--Csharp -->
 ```csharp
-int fib(int n) {
-    if (n <= 2) {
-        return 1;                   // fib(2) = 1 and fib(1) = 1
-    } else {
-        return fib(n-1) + fib(n-2); // fib(n) = fib(n-1) + fib(n-2)
-    }
+public int Fib(int n) {
+    if (n <= 2)
+        return 1;                       // Fib(2) = 1 and Fib(1) = 1
+    else
+        return Fib(n - 1) + Fib(n - 2); // Fib(n) = Fib(n - 1) + Fib(n - 2)
 }
 ```
 
-It is a useful exercise to analyze what happens when we call the fib function. The diagram below shows the functions that are called when we run fib(6). Notice that the call to fib(n-1) is called before fib(n-2) and, therefore, the fib(n-1) must finish first. Also notice that there are many duplicate calls to the fib function for the same value of n.
+It is a useful exercise to analyze what happens when we call the `Fib` function. The diagram below shows the functions that are called when we run `Fib(6)`. Notice that the call to `Fib(n-1)` is called before `Fib(n-2)` and, therefore, the `Fib(n-1)` must finish first. Also notice that there are many duplicate calls to the `Fib` function for the same value of `n`.
 
 <!--- Figure 1-->
-{% include image.html url="fib6_recursion.jpg"
-description="Shows all the functions called by fib(6).  fib(6) calls fib(5) and fib(4).  fib(5) calls fib(4) and fib(3).  fib(4) calls fib(3) and fib(2).  fib(3) calls fib(2) and fib(1).  The total calls to the fib function (including the original fib(6)) is 15."
-caption="Recursive Function Calls for fib(6)"
+{% include image.html url="Fib6_recursion.jpg"
+description="Shows all the functions called by Fib(6).  Fib(6) calls Fib(5) and Fib(4).  Fib(5) calls Fib(4) and Fib(3).  Fib(4) calls Fib(3) and Fib(2).  Fib(3) calls Fib(2) and Fib(1).  The total calls to the fib function (including the original Fib(6)) is 15."
+caption="Recursive Function Calls for Fib(6)"
 %}
 
-The fib function was called a total of 15 times! This is an O(2^n) algorithm.
+The `Fib` function was called a total of 15 times! This is an O(2^n) algorithm.
 
 ### Memoization
 
-We can improve the performance of the fib function by remembering previous results as we traverse through the recursive call. Memoization is the process of remembering these previous results so that additional recursive calls are not needed. For example, once we discover that fib(3) is equal to 2, we can store this into a Python dictionary with a key equal to 3 and the value of 2. This becomes a base case. If we need to calculate fib(3) again, we will just look up the 3 in the dictionary to get the answer.
+We can improve the performance of the `Fib` function by remembering previous results as we traverse through the recursive call. **Memoization** is the process of remembering these previous results so that additional recursive calls are not needed. For example, once we discover that `Fib(3)` is equal to 2, we can store this into a dictionary with a key equal to 3 and the value of 2. This becomes a base case. If we need to calculate `Fib(3)` again, we will just look up the 3 in the dictionary to get the answer.
 
-The dictionary will only be used by the fib function and not be returned. Since the dictionary needs to be shared for all recursive calls, we will write code to create the dictionary on the first recursive call only.
+The dictionary will only be used by the `Fib` function and not be returned. Since the dictionary needs to be shared for all recursive calls, we will write code to create the dictionary on the first recursive call only.
 
-
-<!-- TODO Python Remove 
-```python
-
-def fibonacci(n, remember = None):
-    # If this is the first time calling the function, then
-    # we need to create the dictionary.
-    if remember is None:
-        remember = dict()
-    # Base Case
-    if n <= 2:
-        return 1
-    # Check if we have solved this one before
-    if n in remember:
-        return remember[n]
-    # Otherwise solve with recursion
-    result = fibonacci(n-1, remember) + fibonacci(n-2, remember)
-    # Remember result for potential later use
-    remember[n] = result
-    return result
-print(fibonacci(1))    # 1
-print(fibonacci(2))    # 1
-print(fibonacci(3))    # 2
-print(fibonacci(4))    # 3
-print(fibonacci(10))   # 55
-print(fibonacci(100))  # 354224848179261915075 (This one will
-                       # not work if you don't have the 
-                       # 'remember' dictionary implemented).
-```
--->
-
-<!--Csharp -->
 ```csharp
-int fibonacci(int n, Dictionary<int,int> remember) {
-//  Base Case
-if (n <= 2) {
-    return 1;
-    }
-// Check if we have solved this one before
-if (remember.ContainsKey(n)){
-    return remember[n];  // No compute needed, we already know this one
-    }
-    else {
-    // Otherwise solve with recursion and
+public long Fibonacci(int n, Dictionary<int, long> remember = null) {
+    // If this is the first time calling the function, then
+    // we need to create the dictionary.
+    if (remember == null)
+        remember = new Dictionary<int, long>();
+
+    // Base Case
+    if (n <= 2)
+        return 1;
+
+    // Check if we have solved this one before
+    if (remember.ContainsKey(n))
+        return remember[n];
+
+    // Otherwise solve with recursion
+    var result = Fibonacci(n - 1, remember) + Fibonacci(n - 2, remember);
+
     // Remember result for potential later use
-    remember[n] = fibonacci(n-1, remember) + fibonacci(n-2, remember);
-    return remember[n];
-    }
+    remember[n] = result;
+    return result;
 }
-Dictionary<int,int> dictStore = new Dictionary<int, int>();
-Console.WriteLine(fibonacci(1,dictStore));    // 1
-Console.WriteLine(fibonacci(2,dictStore));    // 1
-Console.WriteLine(fibonacci(3,dictStore));    // 2
-Console.WriteLine(fibonacci(4,dictStore));    // 3
-Console.WriteLine(fibonacci(10,dictStore));   // 55
-Console.WriteLine(fibonacci(100,dictStore));  /*  354224848179261915075
-                (This one will # not work if you don't have the # 'remember' dictionary implemented).  */
+
+...
+
+Console.WriteLine(Fibonacci(1));   // 1
+Console.WriteLine(Fibonacci(2));   // 1
+Console.WriteLine(Fibonacci(3));   // 2
+Console.WriteLine(Fibonacci(4));   // 3
+Console.WriteLine(Fibonacci(10));  // 55
+Console.WriteLine(Fibonacci(90));  // 2880067194370816120 (This one will
+                                   // not work if you don't have the
+                                   // 'remember' dictionary implemented).
 ```
 
 ### Sample Problems - Find Permutations
 
-The problem is to calculate the number of ways to reorganize the letters in a word (i.e. the permutations). Mathematically, this should be n! where n is the number of letters in the word. However, using recursion, we can also display each of the permutations (so long as the number of letters is small, otherwise it will take a long time to display all the results).
+The problem is to calculate the number of ways to reorganize the letters in a word (i.e. the permutations). Mathematically, this should be `n!` where `n` is the number of letters in the word. However, using recursion, we can also display each of the permutations (so long as the number of letters is small, otherwise it will take a long time to display all the results).
 
 Let's assume that our list of letters is ["A", "B", "C", "D"]. Thinking about smaller problems being solved recursively, we could say that the number of permutations would be the sum of the following four things:
 
-1.) The number of permutations of A followed by all the different permutations of B, C, and D<br>
-2.) The number of permutations of B followed by all the different permutations of A, C, and D<br>
-3.) The number of permutations of C followed by all the different permutations of A, B, and D<br>
-4.) The number of permutations of D followed by all the different permutations of A, B, and C<br>
+* The number of permutations of A followed by all the different permutations of B, C, and D
+* The number of permutations of B followed by all the different permutations of A, C, and D
+* The number of permutations of C followed by all the different permutations of A, B, and D
+* The number of permutations of D followed by all the different permutations of A, B, and C
 
-Each recursive call to the permutations function will need to know two things: what letters have not been used yet, and the current string that has been built so far. In the four scenarios above, after we add the A, we are left with the letters B, C, and D (the letters that have not been used yet). Additionally, after we add the A, the A should be added to the current string that we have built. The diagram below shows how these function calls will be called and how the resulting permutations will be displayed:
+Each recursive call to the `Permutations` function will need to know two things: what letters have not been used yet, and the current string that has been built so far. In the four scenarios above, after we add the A, we are left with the letters B, C, and D (the letters that have not been used yet). Additionally, after we add the A, the A should be added to the current string that we have built. The diagram below shows how these function calls will be called and how the resulting permutations will be displayed:
 
 <!--- Figure 2-->
 {% include image.html url="permutations.jpg"
-description="Shows some of the functions called by permutations([A,B,C,D]). This first function calls permutations([B,C,D],'A'), permutations([A,C,D],'B'), permutations([A,B,D],'C') and permutations([A,B,C],'D').  The permutations([B,C,D],'A') will call permutations([C,D],'AB'), permutations([B,D],'AC'), and permutations([B,C],'AD').  The permutations ([C,D],'AB') will call permutations([D],'ABC') and permutations([C],'ABD').  Each of these last 2 functions will call permutations([],'ABCD') and permutatoins([],'ABDC'), respectively.  In these last functions, the strings 'ABCD' and 'ABDC' will be printed out in each functions respectively. "
-caption="Recursive Function Calls for permutations([A,B,C,D])"
+description="Shows some of the functions called by Permutations([A,B,C,D]). This first function calls Permutations([B,C,D],'A'), Permutations([A,C,D],'B'), Permutations([A,B,D],'C') and Permutations([A,B,C],'D').  The Permutations([B,C,D],'A') will call Permutations([C,D],'AB'), Permutations([B,D],'AC'), and Permutations([B,C],'AD').  The permutations ([C,D],'AB') will call Permutations([D],'ABC') and Permutations([C],'ABD').  Each of these last 2 functions will call Permutations([],'ABCD') and Permutations([],'ABDC'), respectively.  In these last functions, the strings 'ABCD' and 'ABDC' will be printed out in each functions respectively. "
+caption="Recursive Function Calls for Permutations([A,B,C,D])"
 %}
 
 We also need a base case. The simplest scenario is a list with zero letters. Here is our code:
 
-<!-- TODO Python Remove 
-```python
-def permutations(letters, word=""):
-
-	if len(letters) == 0:   # Base Case
-		print(word)  
-
-	else:
-		# Try adding each of the available letters
-		# to the 'word_so_far' and add up all the
-		# resulting permutations.
-
-		for index in range(len(letters)):
-			# Make a copy of the letters to pass to the
-			# the next call to permutations.  We need
-			# to remove the letter we just added before
-			# we call permutations again.
-
-			letters_left = letters[:]
-			del letters_left[index]
-
-			# Add the new letter to the word we have so far
-			permutations(letters_left, word + letters[index])
-
-permutations(list("ABC"))
-
-Results:
-ABC
-ACB
-BAC
-BCA
-CAB
-CBA
-
-permutations(list("ABCD"))
-Results:
-ABCD
-ABDC
-ACBD
-ACDB
-ADBC
-ADCB
-BACD
-BADC
-BCAD
-BCDA
-BDAC
-BDCA
-CABD
-CADB
-CBAD
-CBDA
-CDAB
-CDBA
-DABC
-DACB
-DBAC
-DBCA
-DCAB
-DCBA
-"""
-```
--->
-<!--Csharp -->
-
 ```csharp
-// TODO -- check this code
-void permutations(String letters,String word) {
-if (letters.Length == 0) {   // Base Case
-    Console.WriteLine(word);
-    } else {
+public void Permutations(string letters, string word = "") {
     // Try adding each of the available letters
-    // to the 'word_so_far' and add up all the
+    // to the 'word' and add up all the
     // resulting permutations.
-    string lettersLeft;
-    for(int i = 0 ; i < letters.Length ; i++) {
-	    /* Make a copy of the letters to pass to the
-	       the next call to permutations.  We need
-	       to remove the letter we just added before
-	       we call permutations again.  */
+    if (letters.Length == 0) {
+        Console.WriteLine(word);
+    }
+    else {
+        for (var i = 0; i < letters.Length; i++) {
+            // Make a copy of the letters to pass to the
+            // the next call to permutations.  We need
+            // to remove the letter we just added before
+            // we call permutations again.
+            var lettersLeft = letters.Remove(i, 1);
 
-	    lettersLeft += letters[i];
-	    lettersLeft = letters[:];
-	    lettersLeft = letters[:];
-	    del letters_left[index];
-	    }
-	//  Add the new letter to the word we have so far
-	permutations(letters_left, word + letters[index])
+            // Add the new letter to the word we have so far
+            Permutations(lettersLeft, word + letters[i]);
         }
     }
-return "";
 }
-/*** Run the code ***/
-permutations(list("ABC"));
 
-Results:
-ABC
-ACB
-BAC
-BCA
-CAB
-CBA
+...
 
-permutations(list("ABCD"))
-Results:
-ABCD
-ABDC
-ACBD
-ACDB
-ADBC
-ADCB
-BACD
-BADC
-BCAD
-BCDA
-BDAC
-BDCA
-CABD
-CADB
-CBAD
-CBDA
-CDAB
-CDBA
-DABC
-DACB
-DBAC
-DBCA
-DCAB
-DCBA
-"""
+Permutations(list("ABC"));
+// Results:
+// ABC
+// ACB
+// BAC
+// BCA
+// CAB
+// CBA
+
+Permutations(list("ABCD"));
+// Results:
+// ABCD
+// ABDC
+// ACBD
+// ACDB
+// ADBC
+// ADCB
+// BACD
+// BADC
+// BCAD
+// BCDA
+// BDAC
+// BDCA
+// CABD
+// CADB
+// CBAD
+// CBDA
+// CDAB
+// CDBA
+// DABC
+// DACB
+// DBAC
+// DBCA
+// DCAB
+// DCBA
 ```
 
 ### Sample Problems - Binary Search
 
-Recursion plays an important role in several searching and sorting algorithms. The binary search algorithm assumes that the data is ***already sorted***. Just like a phone book, if you had sorted data, then the best way to find something is to look in the middle of the data set. By looking in the middle of the sorted data, we can quickly exclude half of the data with a single comparison. The binary search algorithm is as follows:
+Recursion plays an important role in several searching and sorting algorithms. The binary search algorithm assumes that the data is already sorted. Just like a phone book, if you had sorted data, then the best way to find something is to look in the middle of the data set. By looking in the middle of the sorted data, we can quickly exclude half of the data with a single comparison. The binary search algorithm is as follows:
 
--- Base Case: If the list has just one item, then check it and return the result.
-
--- Base Case: If the number in the middle of the list is what we are looking for, then the value is in the list
-
--- Recursion: If the number in the middle of the list is not what we are looking for, then search in either the first half (lower values) or the second half (higher values).
+* Base Case: If the list has just one item, then check it and return the result.
+* Base Case: If the number in the middle of the list is what we are looking for, then the value is in the list
+* Recursion: If the number in the middle of the list is not what we are looking for, then search in either the first half (lower values) or the second half (higher values).
 
 Calling the binary search function recursively on the list subset can either be done by creating a new list or by providing the function with the starting and ending index. The first approach will take more memory.
 
 Here is the code for the binary search.
 
-<!-- TODO Python Remove 
-```python
-
-def binary_search(sorted_list, target):
-    """
-    This function uses list slicing.  A list slice will create a list from another list
-    This is useful when we want to create new sublists.  Here is how list slicing works:
-    
-    data[:a] - Creates a new list from index 0 to index a-1
-    data[a:] - Creates a new list from index a to len(data)-1
-    data[a:b] - Creates a new list from index a to index b-1
-    data[a:b:c] - Creates a new list from index a to index b-1 stepping by c
-    """
-    if len(sorted_list) == 1:  
-        # Base Case
-        return target == sorted_list[0]
-    else:
-        # Find the middle and compare
-        middle = len(sorted_list) // 2
-        if target == sorted_list[middle]:
-            # We got lucky and the middle was the match
-            return True
-        elif target < sorted_list[middle]:
-            # Search the first half (index 0 to middle-1) and 
-            # return the result
-            return binary_search(sorted_list[:middle],target)
-        else:
-            # Search the second half (index middle to end) and 
-            # return the result
-            return binary_search(sorted_list[middle:],target)
-
-print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 89)) # True
-print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 1))  # True
-print(binary_search([1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100], 17)) # False
-
-```
--->
-<!--Csharp -->
 ```csharp
-
-Object BinarySearch(int[] arrayIn, int key) {
-   int minNum = 0;
-   int maxNum = arrayIn.Length - 1;
-   int min,max;
-
-   while (minNum <=maxNum) {
-      int mid = (minNum + maxNum) / 2;
-      if (key == arrayIn[mid]) {
-         return ++mid;
-      } else if (key < arrayIn[mid]) {
-         max = mid - 1;
-      } else {
-         min = mid + 1;
-      }
-   }
-   return "Not Found";
-   /* Note that the return class of the method is Object so that
-      a string of "Not Found" can be returned, not just an integer */
+public bool BinarySearch(int[] sortedArray, int target) {
+    if (sortedArray.Length == 1) {
+        // Base case
+        return target == sortedArray[0];
+    }
+    else {
+        // Find the middle and compare
+        var middle = sortedArray.Length / 2;
+        if (target == sortedArray[middle]) {
+            // We got lucky and the middle was the match
+            return true;
+        }
+        else if (target < sortedArray[middle]) {
+            // Search the first half (index 0 to middle-1) and return the result
+            return BinarySearch(sortedArray[..middle], target);
+        }
+        else {
+            // Search the second half (index middle to end) and return the result
+            return BinarySearch(sortedArray[middle..], target);
+        }
+    }
 }
-int[] myArray = {1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100};
 
-//* Look for different numbers in the array
-Console.WriteLine(BinarySearch(myArray,89 ));
-Console.WriteLine(BinarySearch(myArray,1));
-Console.WriteLine(BinarySearch(myArray,17));  // Won't be found
+...
 
+Console.WriteLine(BinarySearch(new[]{1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100}, 89)); // true
+Console.WriteLine(BinarySearch(new[]{1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100}, 1));  // true
+Console.WriteLine(BinarySearch(new[]{1, 3, 6, 18, 20, 25, 34, 38, 89, 95, 99, 100}, 17)); // false
 ```
 
 The performance of this recursive algorithm is O(log n) because we are excluding half of the list with each comparison.
 
-
----
 ## Key Terms
----
-- **base case** - The scenario that will terminate (or stop) the recursive calls. If this is not designed properly, then the recursion will run forever.
-
-- **memoization** - The technique of remembering previous results found through recursion so that repetitive recursion can be avoided.
-
-- **recursion** - The calling of a function with the same function. This can be used to solve problems by identifying a solution which is written in terms of solving the same problem using smaller values. A base case is needed to ensure that the recursion eventually stops. The base cases are solved in the function without using recursion.
-
-
+<dl>
+<dt>base case</dt>
+<dd>The scenario that will terminate (or stop) the recursive calls. If this is not designed properly, then the recursion will run forever.</dd>
+<dt>memoization</dt>
+<dd>The technique of remembering previous results found through recursion so that repetitive recursion can be avoided.</dd>
+<dt>recursion</dt>
+<dd>The calling of a function with the same function. This can be used to solve problems by identifying a solution which is written in terms of solving the same problem using smaller values. A base case is needed to ensure that the recursion eventually stops. The base cases are solved in the function without using recursion.</dd>
+</dl>
