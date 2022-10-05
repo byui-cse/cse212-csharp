@@ -29,6 +29,6 @@ All of the files for this assignment will be found in the GitHub classroom ***te
    4. The ServeCustomer function shall dequeue the next customer from the queue and display the details.
    5. If the queue is empty when trying to serve a customer, then an error message will be displayed.
 2. Write test cases based on the requirements above and then implement the tests. Ensure that your tests cover all of the requirements listed above.
-3. Run your test cases. If the test case fails, then look in the related code for the errors and fix them. All your test cases should pass when the code is fixed. There are three major errors in the code oyu were given.
+3. Run your test cases. If the test case fails, then look in the related code for the errors and fix them. All your test cases should pass when the code is fixed. There are three major errors in the code you were given.
 4. When you are done, uncomment the lines in **Program.cs** to include running the CustomerServiceSolution and take a look at the **CustomerServiceSolution.cs** file and discuss it together.
 
