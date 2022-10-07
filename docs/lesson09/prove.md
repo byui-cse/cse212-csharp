@@ -26,8 +26,7 @@ Implement the `Contains` function in the Node class. This function is called by 
 Implement the `TraverseBackward` function in the BinarySearchTree class. This function is called by the `Reversed` function to loop through the tree backwards (largest value down to the smallest value). The `Reversed` function allows you to write code using the `foreach` syntax like the following:
 
 ```csharp	
-foreach(var value in myTree.Reversed())
-{
+foreach(var value in myTree.Reversed()) {
 	Console.WriteLine(value);
 }
 ```
