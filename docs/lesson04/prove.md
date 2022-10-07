@@ -25,9 +25,9 @@ All of the files for this assignment will be found in the GitHub classroom ***pr
 ### Part 2 - Priority Queue
 1. Examine the following code file: **Priority.cs** (Note: Do not read through the referenced code first. Instead, proceed with the instructions below).
 2. The PriorityQueue class maintains a queue where each value put in the queue also has a priority (higher numbers have a higher priority). When you add to the queue, it goes to the back as expected. When you remove from the queue, the highest priority item is removed. If there are multiple values with the same high priority, then the first one (following the FIFO strategy) is removed first. Here are the detailed requirements (**which can not be changed**):
-    1. The Enqueue function shall add a node to the back of the queue.
-    2. The Dequeue function shall remove the node with the highest priority and return its value.
-    3. If there are more than one node with the highest priority, then the item closest to the front of the queue will be removed and its value returned.
+    1. The Enqueue function shall add an item (which contains both data and priority) to the back of the queue.
+    2. The Dequeue function shall remove the item with the highest priority and return its value.
+    3. If there are more than one item with the highest priority, then the item closest to the front of the queue will be removed and its value returned.
     4. If the queue is empty, then an error message will be displayed.
 3. Write your own test cases based on these requirements within the test case documentation in **Priority.cs**. Ensure that your tests cover all of the requirements listed above.
 4. Run your test cases and find the errors. If your tests were not sufficient, you might not find all the errors in the code. You should summarize the results of the tests and the errors found within the test case documentation at the end of each test.
