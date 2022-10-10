@@ -96,7 +96,7 @@ In C#, the class we use to represent this kind of set that we've talked about is
 |----------------------|-------------|---------|-------------|
 | add(value)    | Adds "value" to the set | mySet.Add(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) |
 | remove(value) | Removes the "value" from the set | mySet.Remove(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) |
-| member(value) | Determines if "value" is in the set | mySetContains(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) |
+| member(value) | Determines if "value" is in the set | mySet.Contains(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) |
 | size()        | Returns the number of items in the set | mySet.Count | O(1) - Performance of returning the size of the set |
 
 The following code demonstrates a couple of the mathematical operations (**intersection**, and **union**) that are available from methods in the class:
@@ -115,7 +115,7 @@ It can feel intimidating, but most interviews that relate to software engineerin
 
 * How would you describe the performance of a set?
 * What is hashing and why is it used with a set?
-* When would you use a set instead of a List?
+* When would you use a set instead of a list?
 
 You want to practice questions that relate the purpose, behavior, and performance of a data structure. Your responses should be concise, lasting perhaps no more than 30 seconds. Often, these questions are asked within the context of a problem to be solved. In your group practice and individual assignment this week, you will be asked to both respond to "how" you would solve the problem and actually solve the problem by writing code.
 
