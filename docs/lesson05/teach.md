@@ -16,7 +16,7 @@ All of the files for this assignment will be found in the GitHub classroom ***te
 1. Download the repository and load the `teach-05.csproj` in your code editor, and open the file **UniqueLetters.cs**
 2. This code will determine if a string has all unique letters. For example, "abcdefg" has unique letters but "abccdefg" does not because the "c" is repeated more than once. The code is implemented using loops which results in an O(n<sup>2</sup>) performance.
 3. Answer the question together: how can unique letter method be written with O(n) performance using a set? As you answer this question, talk about the behavior, purpose and/or performance of a set to help you arrive at an answer.
-4.  When you think you know how to solve the problem (tale no more than five minutes), [read the answer to the question](teach-part1-answer){:target="_blank"} and compare with your initial answer.
+4.  When you think you know how to solve the problem (take no more than five minutes), [read the answer to the question](teach-part1-answer){:target="_blank"} and compare with your initial answer.
 5. Based on your understanding, replace the code in the AreUniqueLetters method, so it achieves O(n) using a set.
 6. When you are done, uncomment the lines in **Program.cs** to include running the UniqueLettersSolution and take a look at the **UniqueLettersSolution.cs** file and discuss it together.
 
