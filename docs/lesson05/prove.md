@@ -20,7 +20,7 @@ Examine the `05-prove_response.docx` document to provide your answers to questio
     * `Remove`
     * `Contains` (checking membership)
     * Iterate through the set
-5. Do not use the built-in functions for C# Collections such as `IntersectWith` or `Union`.
+5. Do not use the built-in functions for C# Collections such as `IntersectWith`, `UnionWith`, etc..
 6. Remember to add useful comments to your code.
 
 ### Part 2 - Find Pairs
