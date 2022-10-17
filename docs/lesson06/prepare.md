@@ -148,7 +148,7 @@ var summaryTable = new Dictionary<char, int>();
 
 foreach (var letter in letters) {
 	// If the letter is not in our summary table yet, add it
-	if (summaryTable.ContainsKey(letter)) {
+	if (!summaryTable.ContainsKey(letter)) {
 		// The key is the letter since we want to summarize how
 		// many letters we have.  Since it the first time we 
 		// have seen this letter, we will set the value to 1.
