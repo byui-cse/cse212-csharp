@@ -1,6 +1,6 @@
-# Python Fundamentals Tutorial
+# C# Fundamentals Tutorial
 
-Welcome to the Python Fundamentals Tutorial.  Every beginning Python programmer should understand these basic topics:
+Welcome to the C# Fundamentals Tutorial.  Every beginning C# programmer should understand these basic topics:
 
 - [Conditionals](1-conditionals.md)
 - [Loops](2-loops.md)
@@ -12,7 +12,7 @@ Each module will contain descriptions and examples.  At the end of each module, 
 
 For questions or comments, please send them to:
 
-Chad Macbeth, BYU-Idaho, CSE 310, Section 3
+Aaron Kay, BYU-Idaho, CSE 212, Section 2
 
-macbethc@byui.edu
+kaya@byui.edu
 
