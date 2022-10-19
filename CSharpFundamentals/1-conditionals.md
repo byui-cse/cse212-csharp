@@ -192,7 +192,7 @@ You can test your program with the following scenarios:
 - Test 3: 12 year old, 1 child in the family, family income 80K per year will cost: $1500 (0% off)
 - Test 4: 18 year old, 3 children in the family, family income 23K per year will cost: N/A - They can't attend
 
-You can check your code with the solution here: [Solution](conditional-problem)
+You can check your code with the solution here: [Solution](conditional-problem-solution)
 
 
 
