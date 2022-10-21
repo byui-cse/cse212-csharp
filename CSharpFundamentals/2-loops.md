@@ -182,7 +182,7 @@ Sum = 2251799813685247.00000000000000000000
 Again (Y/N)? N
 ```
 
-You can check your code with the solution here: [Solution](loops-problem-solution){:target="_blank"}
+You can check your code with the solution here: [Solution](loops-problem-solution)
 
 
 
