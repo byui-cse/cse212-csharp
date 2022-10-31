@@ -13,7 +13,7 @@ Thinking of our favorite game again, you can think of common things which are do
 
 ## Functions are Methods
 
-In C#, we typically call functions methods and can only be defined within a class. A method definition can be broken down into the following parts:
+In C#, we often use the word "method" to refer to a function because functions can only be defined within a class. A method definition can be broken down into the following parts:
 
 * Method Signature
     * Access level
@@ -33,7 +33,7 @@ public static double ConvertTemp(double degF) {
 }
 ```
 
-The access level is `public` so that it can be accessed from outside the class. `static` allows the function to be called without creating an instance of the class in which the function resides. `double` refers to the type of data returned from the function.The name of the function is `ConvertTemp`. The function parameters is `degF`. The function body is the code with the curly braces `{ }`. The function return is in the function body with the keyword `return` that provides the value of `degC` as a result. 
+The access level is `public` so that it can be accessed from outside the class. `static` allows the function to be called without creating an instance of the class in which the function resides. `double` refers to the type of data returned from the function. The name of the function is `ConvertTemp`. The function parameters is `degF`. The function body is the code with the curly braces `{ }`. The function return is in the function body with the keyword `return` that provides the value of `degC` as a result. 
 
 When you write a function, you have to think about the inputs it needs, the outputs it will provide, and how it will perform the task. Inputs are listed in the function parameters. It is possible that a function will not need any information because it will obtain all the information it needs from within the function or the class. If there are no parameters, then the parenthesis are still provided but are kept empty. If there is more than one parameter, then commas are used to separate the parameters. C# can have an optional parameter using an `=` sign after the name of the parameter with the default value if the parameter is not supplied. The code below shows several examples of parameters:
 
