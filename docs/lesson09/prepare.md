@@ -13,7 +13,7 @@ title: "W09 Prepare: Reading"
 * [BST Operations ](#bst-operations)
 	* [Inserting into a BST](#inserting-into-a-bst)
 	* [Traversing a BST](#traversing-a-bst)
-	* [BST in Python](#bst-in-python)
+	* [BST in C-Sharp](#bst-in-C#)
 * [Key Terms](#key-terms)
 
 ## Trees
