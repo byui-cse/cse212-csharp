@@ -7,6 +7,8 @@ title: "W11 Prove: Final Project - Status Report 1"
 ## Instructions
 To ensure that you are making good progress on the final project and to receive feedback, you need to submit the draft of one of your data structure topic Markdown files for a grade and teacher review. Do not submit the entire tutorial.
 
+If I had worked on Loops (from the C# Fundamentals Tutorial) for my first topic, I would submit the link [https://github.com/byui-cse/cse212-csharp/blob/main/CSharpFundamentals/2-loops.md](https://github.com/byui-cse/cse212-csharp/blob/main/CSharpFundamentals/2-loops.md). It does not necessarily need to be the first data structure.
+
 For your example and sample problem on each data structure, here's a strategy for coming up with good ones:
 
 1. Identify the benefits of the data structure

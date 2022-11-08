@@ -5,4 +5,6 @@ title: "W14 Prove: Final Project - Submittal"
 
 # W14 Prove: Final Project - Submittal
 ## Instructions
-Unlike previous prove submittal, you need to combine all files in your tutorial into a single compressed file (e.g., zip, rar). This single combined file should include all Markdown (md) files, picture files, CSharp files, and any other file that is required for someone to read your tutorial. You should submit the single combined file.
+Similar to the prior draft submissions, rather than submitting a link to the whole repository, please submit a link to your welcome page.
+
+Example from C# Fundamentals: [https://github.com/byui-cse/cse212-csharp/blob/main/CSharpFundamentals/0-welcome.md](https://github.com/byui-cse/cse212-csharp/blob/main/CSharpFundamentals/0-welcome.md)

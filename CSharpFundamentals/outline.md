@@ -1,4 +1,4 @@
-# Python Fundamentals Tutorial
+# C# Fundamentals Tutorial
 ## I. Welcome
 * Introduction
 * Contact Information
@@ -10,14 +10,14 @@
 * Problem to Solve
 ## III. Loops
 * Introduction
-* For Loops (Iterators)
-* Using Range with For Loops
 * While Loops
+* For Loops
+* Foreach Loops
 * Example
 * Problem to Solve
 ## IV. Functions
 * Introduction
-* Structure of a Python Function
+* Functions are Methods
 * Organizing Functions
 * Example
 * Problem to Solve

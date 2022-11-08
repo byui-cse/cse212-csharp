@@ -84,7 +84,7 @@ if ((!alive) && (points > 30) && (name != "Bob")) {
 
 ## Multiple Conditions
 
-When we allow the software to make decisions, there might be more than one decision that should be made. Specifying multiple conditions in python uses the `else if` and `else` keywords. The "else if" and represents an additional condition. The `else` keyword represents all other possible conditions. Here is a complete example to consider:
+When we allow the software to make decisions, there might be more than one decision that should be made. Specifying multiple conditions in C# uses the `else if` and `else` keywords. The "else if" and represents an additional condition. The `else` keyword represents all other possible conditions. Here is a complete example to consider:
 
 ```csharp
 if (temp <= 32.0)
