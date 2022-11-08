@@ -13,7 +13,7 @@ title: "W09 Prepare: Reading"
 * [BST Operations ](#bst-operations)
 	* [Inserting into a BST](#inserting-into-a-bst)
 	* [Traversing a BST](#traversing-a-bst)
-	* [BST in C-Sharp](#bst-in-C#)
+	* [BST in C#](#bst-in-c)
 * [Key Terms](#key-terms)
 
 ## Trees
