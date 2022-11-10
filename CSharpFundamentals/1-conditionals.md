@@ -101,6 +101,16 @@ When this code runs, if will first consider the `temp <= 32.0` condition. If its
 
 Sometimes programmers think they always need to put an `else if` and an `else` when they write an `if` statement. This is not true. You should think about all the scenarios you want to check for and use the `else if` and `else` as needed. If we wrote the same code above  but without `else if` and `else`, we would have to write more complicated boolean expressions. It is better to use `else if` and `else` to simplify the code and ensure the result we want.
 
+## Ternary Operations
+
+One handy way of creating an if/else statement is to put both conditions in a single statement. The single statement encapsulates the condition, the value if the condition is true, and the value if the condition is false.
+
+```csharp
+var name = preferredName != null ? preferredName + " " + lastName : firstName + " " + lastName;
+```
+
+In this example, the condition is `preferredName != null`. If there is a preferred name set, the it will use `preferredName + " " + lastName`, otherwise it will use `firstName + " " + lastName`.
+
 ## Example : Geometry Calculator
 
 In the example below, we will write a simple Geometry Calculator. Before we write the code, we should first think about what we want the software to do. Writing a list of requirements is an important step in writing software. The requirements can help us ensure that we using conditionals correctly. 

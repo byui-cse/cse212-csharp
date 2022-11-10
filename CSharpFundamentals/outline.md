@@ -6,6 +6,7 @@
 * Introduction
 * Boolean Expressions
 * Multiple Conditions
+* Ternary Operations
 * Example
 * Problem to Solve
 ## III. Loops
