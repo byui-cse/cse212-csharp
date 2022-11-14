@@ -109,7 +109,9 @@ One handy way of creating an if/else statement is to put both conditions in a si
 var name = preferredName != null ? preferredName + " " + lastName : firstName + " " + lastName;
 ```
 
-In this example, the condition is `preferredName != null`. If there is a preferred name set, the it will use `preferredName + " " + lastName`, otherwise it will use `firstName + " " + lastName`.
+In this example, the condition is `preferredName != null`. If there is a preferred name set, then it will use `preferredName + " " + lastName`, otherwise it will use `firstName + " " + lastName`.
+
+The generalized form is `<condition> ? <value if true> : <value if false>`.
 
 ## Example : Geometry Calculator
 
