@@ -7,11 +7,11 @@ title: "W13 Prove: Final Project - Peer Review"
 ## Instructions
 During class you will be placed into groups to perform a peer review of your tutorial. In the same way we review code, software engineers also review documentation including requirements, design, test cases, and user guides. Use the following checklist to guide your review:
 
-* Are the stated performances of data structure operations correct?
+* Are the stated performances of the data structure operations correct?
 * Is recursion discussed correctly with the tree module?
-* Are there two problems presented for each module?
-* Are the instructions for problem clear for the student?
-* Are there any problem with the Markdown (e.g. links, pictures, tables, bullets) formatting?
+* Are there two problems presented for each module (example problem and student problem)?
+* Are the instructions for each problem clear to the student?
+* Are there any problems with the Markdown formatting (e.g. links, pictures, tables, bullets)?
 * Identify the best part of the tutorial.
 * Identify the one part of the tutorial that could be improved.
 
