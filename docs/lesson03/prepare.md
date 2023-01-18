@@ -183,13 +183,13 @@ public static string DoSomething(string text) {
 The method needs a string for an input, and so we will propose something like "Hello". We will then step through each line of code and record in our notebook the value of each variable. If we come across a code function that we don't understand
 (e.g. the `(char)` type casting), then go online to read about those. Each `char` is stored as an [ASCII](https://www.asciitable.com/) numeric code that represents a character. As soon as we add to a character `letter + 1`, it becomes an integer, so the `(char)` tells C# that it needs to consider whatever number the integer is as a `char` data type. When we finish evaluating our code, we get `Ifmmp` which appears to be a form of simple childhood encryption in which each letter in the original text is changed by one letter higher in the alphabet. When we ran the program, we noticed that you had to check if the letter was a space. It would be good to try to the test again with spaces. If we tried "Hello World", we end up with `Ifmmp Xpsme`. Not only does the function perform the encoding, but it also preserves the spaces.
 
-| textIn  | letter | letter + 1 | newLetter | newText |
-|---------|--------|------------|-----------|----------|
-| Hello   | H      | 73         | I         | I        |
-|         | e      | 102        | f         | If       |
-|         | l      | 109        | m         | Ifm      |
-|         | l      | 109        | m         | Ifmm     |
-|         | o      | 112        | p         | Ifmmp    |
+| text  | letter | letter + 1 | newLetter | newText |
+|-------|--------|------------|-----------|----------|
+| Hello | H      | 73         | I         | I        |
+|       | e      | 102        | f         | If       |
+|       | l      | 109        | m         | Ifm      |
+|       | l      | 109        | m         | Ifmm     |
+|       | o      | 112        | p         | Ifmmp    |
 
 This type of simple analysis by evaluating the variables, step-by-step, is often valuable to understand what the code is doing.
 
