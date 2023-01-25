@@ -1,4 +1,4 @@
-@import "rouge-github";
+@import "rouge-rider";
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.eot');
@@ -42,7 +42,7 @@ sub, sup {
   padding: 0;
   border: 0;
   font: inherit;
-  font-size: 11px;
+  font-size: 20px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -68,7 +68,7 @@ body {
   box-sizing: border-box;
   color:#373737;
   background: #162a3f;
-  font-size: 16px;
+  font-size: 32px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -84,19 +84,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 700;
 }
 
 h2 {
   padding-bottom: 10px;
-  font-size: 32px;
+  font-size: 36px;
   background: url('../images/bg_hr.png') repeat-x bottom;
   counter-reset: h3;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 h3:before {
@@ -111,15 +111,15 @@ h3.plain:before {
 }
 
 h4 {
-  font-size: 21px;
+  font-size: 31px;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 28px;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 26px;
 }
 
 p {
@@ -189,11 +189,11 @@ p img {
 }
 
 pre, code {
-  color: #222;
-  background-color: #fff;
+  // color: #222;
+  // background-color: #fff;
 
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 0.875em;
+  font-size: 0.7em;
 
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -204,14 +204,14 @@ pre {
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  // box-shadow: 0 0 10px rgba(0,0,0,.1);
   overflow: auto;
 }
 
 code {
   padding: 3px;
   margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  // box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
 pre code {
@@ -363,7 +363,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 850px;
+  max-width: 1080px;
   padding: 20px 10px;
   margin: 0 auto;
 }
