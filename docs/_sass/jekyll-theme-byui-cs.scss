@@ -7,6 +7,16 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'jetbrains_mono';
+  src: url('../fonts/jetbrainsmononl-regular-webfont.woff2') format('woff2'),
+       url('../fonts/jetbrainsmononl-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 // Target blank icon
 a[target="_blank"]:after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
@@ -192,7 +202,7 @@ pre, code {
   // color: #222;
   // background-color: #fff;
 
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: "jetbrains_mono", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 0.7em;
 
   border-radius: 2px;
