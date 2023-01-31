@@ -244,11 +244,11 @@ ul, ol, dl {
 ul {
   list-style-type: "»";
   margin: 0 0 20px 20px;
-  padding-left: 12px;
+  padding-left: 16px;
 }
 
 ul li {
-  padding-left: 8px;
+  padding-left: 12px;
 	color: #162a3f;
 }
 
@@ -261,7 +261,7 @@ ol {
 
 ol li {
   border-left: 2px solid #919daa;
-  padding-left: 2px;
+  padding-left: 12px;
   margin-bottom: 3px;
 }
 
@@ -279,12 +279,12 @@ dl dt {
 }
 
 dl dd {
-  padding-left: 20px;
+  padding-left: 40px;
   font-style: italic;
 }
 
 dl p {
-  padding-left: 20px;
+  padding-left: 40px;
   font-style: italic;
 }
 
