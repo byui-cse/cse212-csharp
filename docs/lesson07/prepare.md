@@ -129,7 +129,7 @@ caption="Remove from the Middle from the Linked List"
 
 ## Accessing from a Linked List
 
-If we want to find a value in the linked list or if we want to find a specific node (e.g. the 3rd node or the 10th node), we are required to loop through the linked list. We can start at either the head (if we want to go forward through the list) or we can start at the tail (if we want to go backward through the list). To loop through the list, we will follow the "next" (or the "prev" if going backwards from tail) links until we get to the end. The following code shows two ways to implement a basic traversal through a linked list.  The first loop uses the DotNet builtin method of the LinkedList class.  The second shows details of moving from node to node.
+If we want to find a value in the linked list or if we want to find a specific node (e.g. the 3rd node or the 10th node), we are required to loop through the linked list. We can start at either the head (if we want to go forward through the list) or we can start at the tail (if we want to go backward through the list). To loop through the list, we will follow the "next" (or the "prev" if going backwards from tail) links until we get to the end. The following code shows the way to implement a basic traversal through a linked list by moving from node to node until you reach the `null` end.
 
 ```csharp
     private void GoForward() {
