@@ -112,22 +112,22 @@ To display a picture use the format:
 
 To display a table, use hyphens and pipes (vertical bars):
 
-header 1 | header 2 | header 3
--------- | -------- | --------
-value 11 | value 21 | value 31
-value 12 | value 22 | value 32
-value 13 | value 23 | value 33
+| header 1 |   header 2 |   header 3   |
+|:---------|-----------:|:------------:|
+| left     |      right |   centered   |
+| value 12 |   value 22 |   value 32   |
+| value 13 |   value 23 |   value 33   |
 ``````
 
 ### Creating Example Problems
 
-One of the requirements for each data structure is an example problem and an exercise for the student. The idea with these example problems is for you to show how to **use** the data structure to solve a problem, not how to build the data structure. The problem may be trivial, but it should be designed to take advantage of the strengths of the data structure. Here is my process for building a problem:
+One of the requirements for each data structure is an example problem and an exercise for the student. The idea with these example problems is for you to show how to **use** the data structure to solve a problem, not how to build the data structure. The problem should be designed to take advantage of the strengths of the data structure. Here is my process for building a problem:
 1. Identify the strengths of the data structure
     * Example: Queue is good at keeping things in order
-2. Come up with a hobby or two
-    * Example: I like Jeeps and modifying my Jeep
+2. Come up with how this applies in your given application
+    * Example: My vacation planning app needs to keep requests from various customers in order
 3. Do something that solves a problem or scenario with your hobbies using the data structure's strength
-    * Example: Use a queue to keep track of the Jeep mods so that I know what to perform maintenance on next
+    * Example: Use a queue to keep track of requests
 
 The example problem should be a problem where you describe the the problem or the requirements and then show the student how to get to the answer. Having C# code chunks in the markdown file is good enough for the example - especially if you include blocks of text in between the code to help the student understand why that data structure helps.
 
@@ -151,12 +151,40 @@ You will have three milestone submissions during the remainder of the semester i
 ### Grading Rubric
 The final project will be graded as follows:
 
-| Criteria | Ratings | Points |
-|----------|---------|--------------|
-| Content | **600 pts** - Demonstrated creativity while providing an engaging tutorial. All requirements have been satisfied. This tutorial would be very helpful for most students to learn data structures. The student should consider adding new sections to discuss additional data structures to prepare for future interviews.<br />**530 pts** - Most requirements have been implemented OR there were some significant inaccuracies with the content. This tutorial would be helpful for some students to learn data structures but may cause some confusion without some updates. The student should address the issues in the tutorial to prepare for future interviews.<br />**460 pts** - Only some requirements have been implemented OR there are numerous content errors. This tutorial would not be helpful for most students to learn data structures. The student should consider spending time after the course to review your course notes and rework the tutorial so you are prepared for future interviews.<br />**390 pts** - Only some requirements have been implemented and there are numerous technical errors. This tutorial is not ready for other students to learn data structures. The student should consider either retaking the course or spending time after the course to reattempt the tutorial. These actions are important to prepare the student for future interviews.<br />**0 pts** - Project was not submitted or shows no effort to attempt. | **600** |
-| Engagement | **70 pts** - Great layout with engaging pictures and examples - kept me wanting to keep reading<br />**35 pts** - Included engaging examples or helpful pictures<br />**0 pts** - Mostly text and/or lacking engaging examples | **70** |
-| Technique | **30 pts** - No errors<br />**15 pts** - 1-2 Errors<br />**0 pts** - 3+ Errors | **30** |
-| ***Total*** | | ***700*** |
+###### Each data structure page will be evaluated for audience:
+
+|  Anyone | Programmers | CSE 212 Students | Professors | Rocket Scientists | Nobody |
+|--------:|------------:|-----------------:|-----------:|------------------:|-------:|
+| 100 pts |      93 pts |           83 pts |     71 pts |            60 pts |  0 pts |
+
+###### Each example and problem demonstrate understanding of when to use this data structure
+
+|         |    Yes | Yes, but code doesn't work |       No | No Effort |
+|---------|-------:|---------------------------:|---------:|----------:|
+| Example | 50 pts |                   41.5 pts | 35.5 pts |     0 pts |
+| Problem | 50 pts |                   41.5 pts | 35.5 pts |     0 pts |
+
+###### Number of errors in the entire tutorial
+
+|        |   0 | 1-3 | 4-6 | 7+ |
+|--------|----:|----:|----:|---:|
+| Points | 100 |  88 |  75 | 60 |
+
+##### Points Breakdown
+
+| Area               | Criteria        |        Points |
+|--------------------|-----------------|--------------:|
+| Data Structure 1   | Audience        |   **100 pts** |
+|                    | Example Problem |    **50 pts** |
+|                    | Student Problem |    **50 pts** |
+| Data Structure 2   | Audience        |   **100 pts** |
+|                    | Example Problem |    **50 pts** |
+|                    | Student Problem |    **50 pts** |
+| Data Structure 3   | Audience        |   **100 pts** |
+|                    | Example Problem |    **50 pts** |
+|                    | Student Problem |    **50 pts** |
+| Errors in Tutorial |                 |   **100 pts** |
+|                    |  ***Total***    | ***700 pts*** |
 
 ### Working Independently
 This final project **must be completed individually** to ensure you are meeting all course outcomes. You should not complete this project within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you design or write your project. It is an honor code violation to obtain text or example problems for your project from others including using the internet (i.e. sites that allow students to share their solutions).
