@@ -9,8 +9,7 @@ title: "W01 Welcome"
 * [Course Reading](#course-reading)
 * [Development Environment](#development-environment)
     * [.NET Core - C#](#net-core---c)
-    * [JetBrains Rider](#jetbrains-rider)
-    * [Visual Studio Code](#visual-studio-code)
+    * [VS Code or JetBrains Rider](#vs-code-or-jetbrains-rider)
     * [GitHub Desktop](#github-desktop)
     * [GitHub Classroom](#github-classroom)
 * [Downloading Course Files](#downloading-course-files)
@@ -56,22 +55,25 @@ Each of the readings will include an overview of the topic including several exa
 In addition to the reading provided, there is plenty of documentation on the internet and in libraries, including the BYU-Idaho online databases. You may want to visit the [Safari Books Online](http://go.oreilly.com/byu-idaho) database supported by the BYU-Idaho library and search for various books on the subject of data structures.
 
 ## Development Environment
-The development environment for this course will be using C#. Although initially developed by Microsoft, it has become standard across the computer industry for cross-platform development. Your development environment must be functional to successfully submit assignments during the first lesson. We will use [.NET Core](#net-core---c), [Rider](#jetbrains-rider), [GitHub Desktop](#github-desktop), and [GitHub Classroom](#github-classroom). Please install these tools on your laptops as we will require them the first week of class.
+The development environment for this course will be using C#. Although initially developed by Microsoft, it has become standard across the computer industry for cross-platform development. Your development environment must be functional to successfully submit assignments during the first lesson. We will use [.NET Core](#net-core---c), [Rider or VS Code](#vs-code-or-jetbrains-rider), [GitHub Desktop](#github-desktop), and [GitHub Classroom](#github-classroom). Please install these tools on your laptops as we will require them the first week of class.
 
 ### .NET Core - C#
 We will be using the platform independent version of C# called [.NET Core](https://dotnet.microsoft.com/en-us/download){:target="_blank"}. Please download the version for your operating system and install it so that you're ready for class to begin.
 
-### JetBrains Rider
-While you can use other integrated development environments for .NET development, we will use [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} for this class. It is fully cross-platform and will speed up development and give you experience that will prepare you for other technologies in the future. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). In order to use Rider, you will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"}.
+### VS Code or JetBrains Rider
+JetBrains Rider is a cross-platform Integrated Development Environment (IDE) that will speed up development and give you experience that will prepare you for coding in the workplace. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). If you live in an area of the world with limited Internet bandwidth, you may use Visual Studio Code to work on the assignments; however, it is highly encouraged to use JetBrains Rider if you can. Rider supplies better coding helps, a working **run** button, and help with debugging errors.
 
-### Visual Studio Code
-We will not be using Visual Studio Code in this class for any examples. It can work to edit files, but it does not allow you an integrated environment for building and running your code.
+#### Running with VS Code
+In order to run code using VS Code, you will need to use the terminal and the command `dotnet run` in the folder containing your project in order to produce results. 
+
+#### Setting up JetBrains Rider
+You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address. You will need to download [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} or the [JetBrains Toolbox](https://www.jetbrains.com/lp/toolbox/){:target="_blank"} (which then allows you to install Rider). 
 
 ### GitHub Desktop
 For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/){:target="_blank"} over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
 
 ### GitHub Classroom
-We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/){:target="_blank"}.
+We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/){:target="_blank"}. There is nothing to install, simply click on the links in iLearn to create your repositories for your assignments using GitHub Classroom.
 
 ## Downloading Course Files
 In the Teach activities and Prove assignments, you will frequently be asked to download documents and files. The instructions will be a page like this one, but the code will be a link to GitHub Classroom for you to "Accept the Assignment". This will create your own personal GitHub repository with a copy of the starting files. It is expected that you make the appropriate changes to the files and then commit and push those changes back to that same repository.
