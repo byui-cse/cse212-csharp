@@ -8,7 +8,7 @@ title: "W07 Prepare: Reading"
 ## Table of Contents
 * [Linked Lists]()
     * [Linked List Structure](#linked-list-structure)
-    * [Inserting into a Linked List](#inserting-into-a-linked-list)
+    * [Adding to a Linked List](#adding-to-a-linked-list)
     * [Removing from a Linked List](#removing-from-a-linked-list)
     * [Accessing from a Linked List](#accessing-from-a-linked-list)
     * [Linked Lists in C#](#linked-lists-in-c)
@@ -44,11 +44,11 @@ description="Shows a doubly linked list made up of 5 nodes.  Each node has a val
 caption="Doubly-Linked List"
 %}
 
-## Inserting into a Linked List
+## Adding to a Linked List
 
-Unlike inserting into a dynamic array where we had to worry about moving items over towards the end to maintain contiguous memory, the act of inserting into a linked list only has an effect on its neighboring elements. Additionally, since we are going to use pointers to connect the nodes together, there is no need to think about things such as capacity or growing the list like we did with a dynamic array. There are three scenarios to consider: insert at the head, insert at the tail, and insert at the middle.
+Unlike inserting into a dynamic array where we had to worry about moving items over towards the end to maintain contiguous memory, the act of inserting into a linked list only has an effect on its neighboring elements. Additionally, since we are going to use pointers to connect the nodes together, there is no need to think about things such as capacity or growing the list like we did with a dynamic array. There are three scenarios to consider: adding at the first, the last, and somewhere in the middle.
 
-Inserting at the head usually requires a four step process:
+Adding to the first usually requires a four step process:
 
 1. Create a new node (we will call it `newNode`)
 2. Set the "next" of the new node to the current head (`newNode.Next = head`)
@@ -56,12 +56,12 @@ Inserting at the head usually requires a four step process:
 4. Set the head equal to the new node (`head = newNode`)
 
 <!--- Figure 4 -->
-{% include image.html url="linked_list_insert_head.jpg"
+{% include image.html url="linked_list_add_first.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The four step process to add 42 to the beginning (HEAD) is shown: 1) Create a new node with value 42; 2) Connect NEXT of the new node to the node with value 8 (the HEAD); 3) Connect PREV from the node containing 8 to the new node; 4) Set HEAD equal to the new node."
 caption="Inserting at the Head of Linked List"
 %}
 
-There is a special case that exists for inserting at the head (and also inserting at the tail). If the linked list is empty (`head == null`)) then all we have to do is set both the head and the tail to the new node we created.
+There is a special case that exists for inserting at the head (and also inserting at the tail). If the linked list is empty (`head == null`) then all we have to do is set both the head and the tail to the new node we created.
 
 Inserting at the tail is similar to inserting at the head. The same four steps are followed but with respect to the tail the following should happen:
 
@@ -71,7 +71,7 @@ Inserting at the tail is similar to inserting at the head. The same four steps a
 4. Set the tail equal to the new node (`tail = newNode`)
 
 <!--- Figure 5 -->
-{% include image.html url="linked_list_insert_tail.jpg"
+{% include image.html url="linked_list_add_last.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The four step process to add 23 to the end (TAIL) is shown: 1) Create a new node with value 23; 2) Connect PREV of the new node to the node with value 4 (the TAIL); 3) Connect NEXT from the node containing 4 to the new node; 4) Set TAIL equal to the new node."
 caption="Inserting at the Tail of a Linked List"
 %}
@@ -85,7 +85,7 @@ The process for inserting into the middle is a little more complicated. In the p
 5. Set the next of the current node to the new node (`current.Next = newNode`)
 
 <!--- Figure 6  -->
-{% include image.html url="linked_list_insert_middle.jpg"
+{% include image.html url="linked_list_add_after.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The four step process to add 50 after the node with 31 (called CURRENT NODE) is shown: 1) Create a new node with value 50; 2) Connect PREV of the new node to the CURRENT NODE; 3) Connect NEXT from the new node to the node after CURRENT NODE (15); 4) Set the PREV of the node after CURRENT NODE to the new node; 5) Set the NEXT of the CURRENT NODE to the new node."
 caption="Inserting in the Middle of a Linked List"
 %}
@@ -100,9 +100,9 @@ Removing the first (the head) or the last (this tail) node from a linked list is
 As a special case, if there was only one node in the linked list, the head and tail would need to be set to `null` thus creating an empty linked list.
 
 <!--- Figure 7  -->
-{% include image.html url="linked_list_insert_tail.jpg"
+{% include image.html url="linked_list_remove_first.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The two step process to remove 8 (HEAD): 1) Set the PREV of the second node (12) to nothing; 2) Set the HEAD to the second node."
-caption="Remove the Head from the Linked List"
+caption="Remove the first element from the Linked List"
 %}
 
 The process for removing the last node is as follows:
@@ -111,9 +111,9 @@ The process for removing the last node is as follows:
 2. Set the tail to be the second to last node (`tail = tail.Prev`)
 
 <!--- Figure 8-->
-{% include image.html url="linked_list_remove_tail.jpg"
+{% include image.html url="linked_list_remove_last.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The two step process to remove 4 (TAIL): 1) Set the NEXT of the second to last node (15) to nothing; 2) Set the TAIL to the second to last node."
-caption="Remove the Tail from the Linked List"
+caption="Remove the last element from the Linked List"
 %}
 
 The process to remove from the middle is not as complicated as inserting from the middle. In the picture below, we are trying to remove the node `current`. The process involves two steps:
@@ -124,7 +124,7 @@ The process to remove from the middle is not as complicated as inserting from th
 <!--- Figure 9-->
 {% include image.html url="linked_list_remove_middle.jpg"
 description="Shows a doubly linked list made up of 5 nodes with values of 8, 12, 31, 15, and 4.  The two step process to remove the node with 31 (called the CURRENT NODE): 1) Set the PREV of the node after the CURRENT NODE (15) to the node before the CURRENT NODE (12); 2) Set the NEXT of the node before the CURRENT NODE to the node after the CURRENT NODE."
-caption="Remove from the Middle from the Linked List"
+caption="Remove from the middle of the Linked List"
 %}
 
 ## Accessing from a Linked List
@@ -151,16 +151,16 @@ If we want to find a value in the linked list or if we want to find a specific n
 
 In your assignment this week you will be writing your own linked list class. However, C# does include a linked list class `LinkedList<T>`. The table below shows the common functions in the `LinkedList`.
 
-| Common Linked List Operation | Description | C# Code | Performance |
-|------------------------------|-------------|---------|-------------|
-| insert_head(value)           | Adds "value" before the head | `linkedList.AddFirst(value)` | O(1) - Just need to adjust the pointers near the head. |
-| insert_tail(value)           | Adds "value" after the tail | `linkedList.AddLast(value)` | O(1) - Just need to adjust the pointers near the tail. |
-| insert(node, value)          | Adds "value" after node "node". | `linkedList.AddAfter(node, value)` | O(n) - It's not complicated to adjust the pointers to insert, but it takes a loop to find the node to insert after. |
-| remove_head()                | Removes the first item (the head) | `linkedList.RemoveFirst()` | O(1) - Adjusts the pointers near the head. |
-| remove_tail(index)           | Removes the last item (the tail) | `linkedList.RemoveLast()` | O(1) - Just need to adjust the pointers near the head. |
-| remove(node)                 | Removes node "node". | `linkedList.Remove(node)` | O(n) - It's not complicated to adjust the pointers to remove, but it takes a loop to find the node to remove. |
-| size()                       | Return the size of the linked list | `linkedList.Count` | O(1) - The size is maintained within the linked list class. |
-| empty()                      | Returns true if the length of the linked list is zero. | `if (linkedList.Count == 0)` | O(1) - The comparison of the length with 0 is all that is needed. |
+| Common Linked List Operation | Description                                          | C# Code | Performance |
+|------------------------------|------------------------------------------------------|---------|-------------|
+| InsertHead(value)            | Adds "value" before the head                         | `linkedList.AddFirst(value)` | O(1) - Just need to adjust the pointers near the head. |
+| InsertTail(value)            | Adds "value" after the tail                          | `linkedList.AddLast(value)` | O(1) - Just need to adjust the pointers near the tail. |
+| Insert(node, value)          | Adds "value" after node "node".                      | `linkedList.AddAfter(node, value)` | O(n) - It's not complicated to adjust the pointers to insert, but it takes a loop to find the node to insert after. |
+| RemoveHead()                 | Removes the first item (the head)                    | `linkedList.RemoveFirst()` | O(1) - Adjusts the pointers near the head. |
+| RemoveTail(index)            | Removes the last item (the tail)                     | `linkedList.RemoveLast()` | O(1) - Just need to adjust the pointers near the head. |
+| Remove(node)                 | Removes node "node".                                 | `linkedList.Remove(node)` | O(n) - It's not complicated to adjust the pointers to remove, but it takes a loop to find the node to remove. |
+| Size()                       | Return the size of the linked list                   | `linkedList.Count` | O(1) - The size is maintained within the linked list class. |
+| Empty()                      | Returns true if the size of the linked list is zero. | `if (linkedList.Count == 0)` | O(1) - The comparison of the length with 0 is all that is needed. |
 
 ## Comparing Dynamic Array and Linked List
 

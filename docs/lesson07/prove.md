@@ -17,14 +17,14 @@ As you solve the problems, remember to use the principles learned in the first f
 All of the files for this assignment will be found in the GitHub classroom ***prove-07*** repository. You will commit changes to your own repository for your submission for this assignment.
 
 
-### Problem 1 - Insert Tail
-Implement the `InsertTail` function in the LinkedList class. The function should add a new node (`Node`) at the end of the linked list. You will need to write code to test your solution. **Hint**: Consider the code already written for `InsertHead`.
+### Problem 1 - Add Last
+Implement the `AddLast` function in the LinkedList class. The function should add a new node (`Node`) at the end of the linked list. You will need to write code to test your solution. **Hint**: Consider the code already written for `AddFirst`.
 
-### Problem 2 - Remove Tail
-Implement the `RemoveTail` function in the LinkedList class. The function should remove the last node. You will need to write code to test your solution. **Hint**: Consider the code already written for `RemoveHead`.
+### Problem 2 - Remove Last
+Implement the `RemoveLast` function in the LinkedList class. The function should remove the last node. You will need to write code to test your solution. **Hint**: Consider the code already written for `RemoveFirst`.
 
 ### Problem 3 - Remove
-Implement the `Remove` function in the LinkedList class. The function will need to search for the node (starting at the head) that contains the value and then remove that one node. The function should not continue searching the list once a match has been found and the node has been deleted. You will need to write code to test your solution. **Hint**: You may be able to reuse the `RemoveHead` and `RemoveTail` functions.
+Implement the `Remove` function in the LinkedList class. The function will need to search for the node (starting at the head) that contains the value and then remove that one node. The function should not continue searching the list once a match has been found and the node has been deleted. You will need to write code to test your solution. **Hint**: You may be able to reuse the `RemoveFirst` and `RemoveLast` functions.
 
 ### Problem 4 - Replace
 Implement the `Replace` function in the LinkedList class. The function should search for all nodes that are equal to 'old_value' and then replace the value in those nodes with 'new_value'. Unlike the remove function, this function should continue searching through the list to replace all values that match 'old_value'. You will need to write code to test your solution.
