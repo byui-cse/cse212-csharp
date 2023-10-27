@@ -101,7 +101,7 @@ public int Fib(int n) {
 It is a useful exercise to analyze what happens when we call the `Fib` function. The diagram below shows the functions that are called when we run `Fib(6)`. Notice that the call to `Fib(n-1)` is called before `Fib(n-2)` and, therefore, the `Fib(n-1)` must finish first. Also notice that there are many duplicate calls to the `Fib` function for the same value of `n`.
 
 <!--- Figure 1-->
-{% include image.html url="Fib6_recursion.jpg"
+{% include image.html url="fib6_recursion.jpg"
 description="Shows all the functions called by Fib(6).  Fib(6) calls Fib(5) and Fib(4).  Fib(5) calls Fib(4) and Fib(3).  Fib(4) calls Fib(3) and Fib(2).  Fib(3) calls Fib(2) and Fib(1).  The total calls to the fib function (including the original Fib(6)) is 15."
 caption="Recursive Function Calls for Fib(6)"
 %}
