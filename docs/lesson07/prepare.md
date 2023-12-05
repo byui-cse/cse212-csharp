@@ -153,14 +153,14 @@ In your assignment this week you will be writing your own linked list class. How
 
 | Common Linked List Operation | Description                                          | C# Code | Performance |
 |------------------------------|------------------------------------------------------|---------|-------------|
-| InsertHead(value)            | Adds "value" before the head                         | `linkedList.AddFirst(value)` | O(1) - Just need to adjust the pointers near the head. |
-| InsertTail(value)            | Adds "value" after the tail                          | `linkedList.AddLast(value)` | O(1) - Just need to adjust the pointers near the tail. |
+| InsertHead(value)            | Adds "value" before the head.                        | `linkedList.AddFirst(value)` | O(1) - Just need to adjust the pointers near the head. |
+| InsertTail(value)            | Adds "value" after the tail.                         | `linkedList.AddLast(value)` | O(1) - Just need to adjust the pointers near the tail. |
 | Insert(node, value)          | Adds "value" after node "node".                      | `linkedList.AddAfter(node, value)` | O(n) - It's not complicated to adjust the pointers to insert, but it takes a loop to find the node to insert after. |
-| RemoveHead()                 | Removes the first item (the head)                    | `linkedList.RemoveFirst()` | O(1) - Adjusts the pointers near the head. |
-| RemoveTail(index)            | Removes the last item (the tail)                     | `linkedList.RemoveLast()` | O(1) - Just need to adjust the pointers near the head. |
+| RemoveHead()                 | Removes the first item (the head).                   | `linkedList.RemoveFirst()` | O(1) - Just need to adjust the pointers near the head. |
+| RemoveTail()                 | Removes the last item (the tail).                    | `linkedList.RemoveLast()` | O(1) - Just need to adjust the pointers near the tail. |
 | Remove(node)                 | Removes node "node".                                 | `linkedList.Remove(node)` | O(n) - It's not complicated to adjust the pointers to remove, but it takes a loop to find the node to remove. |
-| Size()                       | Return the size of the linked list                   | `linkedList.Count` | O(1) - The size is maintained within the linked list class. |
-| Empty()                      | Returns true if the size of the linked list is zero. | `if (linkedList.Count == 0)` | O(1) - The comparison of the length with 0 is all that is needed. |
+| Size()                       | Return the size of the linked list.                  | `linkedList.Count` | O(1) - The size is maintained within the linked list class. |
+| Empty()                      | Returns true if the size of the linked list is zero. | `linkedList.Count == 0` | O(1) - The comparison of the length with 0 is all that is needed. |
 
 ## Comparing Dynamic Array and Linked List
 
