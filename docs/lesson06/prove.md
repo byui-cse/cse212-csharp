@@ -25,7 +25,7 @@ Finish implementing the `SummarizeDegrees` function in the `MapsTester` class wh
 ### Problem 3 - Anagrams
 Finish implementing the `IsAnagram` function to determine if two words are anagrams. Two words are an anagram if they use the same letters and the same number of letters. For example, "CAT" and "ACT" are anagrams but "DOG" and "GOOD" are not because "GOOD" has two O's. You must use a dictionary to solve this problem. It is important to note the following assumptions:
 * When determining if two words are anagrams, you should ignore any spaces.
-* You should ignore letter case. For example, 'Ab' and 'bA' should be considered anagrams.
+* You should ignore letter case. For example, 'Ab' and 'Ba' should be considered anagrams.
 
 Reminder: You can access a letter by index in a string by using the `myString[3]` notation.
 
