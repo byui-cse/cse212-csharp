@@ -16,6 +16,7 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All of the files for this assignment will be found in the GitHub classroom ***prove-07*** repository. You will commit changes to your own repository for your submission for this assignment.
 
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
 
 ### Problem 1 - Add Last
 Implement the `AddLast` function in the LinkedList class. The function should add a new node (`Node`) at the end of the linked list. You will need to write code to test your solution. **Hint**: Consider the code already written for `AddFirst`.

@@ -12,6 +12,8 @@ All of the code files for this assignment will be found in the GitHub classroom 
 
 Examine the `01-prove_response.docx` document to provide your answers to questions asked in the steps below. You will commit this document back to your repository for submission.
 
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+
 ### Part 1 - Arrays
 1. Open up the following code: **ArraysTester**
 2. Implement the `MultiplesOf` function. The function should create and return a list of multiples of a number. The starting number and the number of multiples are provided as inputs to the function. For example, `MultiplesOf(3,5)`, where the 3 is the starting number and 5 is the number of multiples, would result in `<double>{3, 6, 9, 12, 15}`.

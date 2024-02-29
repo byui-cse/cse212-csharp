@@ -16,6 +16,8 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All of the files for this assignment will be found in the GitHub classroom ***prove-09*** repository. You will commit changes to your own repository for your submission for this assignment.
 
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+
 ### Problem 1 - Insert Unique Values Only
 Update the `Insert` function of the BinarySearchTree class to only allow unique values to be added to the tree (thus creating a sorted set). The `Insert` function is already written to correctly insert values into the tree. However, the current implementation will cause duplicate values to be added to the tree.
 

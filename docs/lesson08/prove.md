@@ -16,6 +16,8 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All of the files for this assignment will be found in the GitHub classroom ***prove-08*** repository. You will commit changes to your own repository for your submission for this assignment.
 
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+
 ### Problem 1 - Recursive Squares Sum
 Implement the `SumSquaresRecursive` function to find the sum `1^2 + 2^2 + 3^2 + ... + n^2` using recursion. Remember to both express the solution in terms of recursive call on a smaller problem and to identify a base case (terminating case). If the value of `n <= 0`, just return 0. A loop should not be used.
 
