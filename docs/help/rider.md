@@ -7,11 +7,11 @@ title: "CSE 212 Rider Helps"
 ## Table of Contents
 * [What is Rider?](#what-is-rider)
 * [Obtaining a Student License](#obtaining-a-student-license)
-* [Rider Setup](#development-environment)
-  * [Using JetBrains Toolbox (preferred)](#net-core---c)
-  * [Standalone Install](#vs-code-or-jetbrains-rider)
-* [Using Rider](#downloading-course-files)
-  * [Opening Files With a Single Click](#preparing-for-the-final-project)
+* [Rider Setup](#rider-setup)
+  * [Using JetBrains Toolbox (preferred)](#using-jetbrains-toolbox-preferred)
+  * [Standalone Install](#rider-as-a-stand-alone-application)
+* [Using Rider](#using-rider)
+  * [Opening Files With a Single Click](#opening-files-with-a-single-click)
   * [Why Doesn't the **Run** Button Work?](#preparing-for-the-final-project)
   * [Using Version Control]()
   * [It's Broke... How Do I Reset It?]()
@@ -24,7 +24,7 @@ JetBrains Rider is a cross-platform Integrated Development Environment (IDE) tha
 
 You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address.
 
-1. Apply for a student license: [https://www.jetbrains.com/community/education/#students](https://www.jetbrains.com/community/education/#students)
+Apply for a student license: [https://www.jetbrains.com/community/education/#students](https://www.jetbrains.com/community/education/#students)
 
 {% include image.html url="jetbrains-student-apply-link.png" description="Shows the apply button" caption="Click <u>Apply now</u>" %}
 
@@ -36,25 +36,34 @@ Next, you open Rider and select the option to activate your license via the JetB
 
 {% include image.html url="jetbrains-student-activate.png" description="Activate license via JetBrains account" caption="Activate your license via your JetBrains Account" %}
 
+## Rider Setup
 
-2. 
+Before you install Rider, make sure you have your [student license](#obtaining-a-student-license). There are 2 ways to install Rider, using the JetBrains Toolbox (which allows you to install all JetBrains products), and simply installing Rider as a stand-alone application.
 
-## Development Environment
-The development environment for this course will be using C#. Although initially developed by Microsoft, it has become standard across the computer industry for cross-platform development. Your development environment must be functional to successfully submit assignments during the first lesson. We will use [.NET Core](#net-core---c), [Rider or VS Code](#vs-code-or-jetbrains-rider), [GitHub Desktop](#github-desktop), and [GitHub Classroom](#github-classroom). Please install these tools on your laptops as we will require them the first week of class.
+### Using JetBrains Toolbox (preferred)
 
-### .NET Core - C#
-We will be using the platform independent version of C# called [.NET Core](https://dotnet.microsoft.com/en-us/download){:target="_blank"}. Please download the version for your operating system and install it so that you're ready for class to begin.
+Follow the instructions provided on [JetBrains Toolbox app website](https://www.jetbrains.com/toolbox-app/){:target="_blank"} to install the JetBrains Toolbox. Once the Toolbox is running, click its icon in your notification section of your operating system and look for Rider on the list of available tools, and click the `Install` button. The toolbox will let you know when there are updates to your installed tools.
 
-### VS Code or JetBrains Rider
-JetBrains Rider is a cross-platform Integrated Development Environment (IDE) that will speed up development and give you experience that will prepare you for coding in the workplace. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). If you live in an area of the world with limited Internet bandwidth, you may use Visual Studio Code to work on the assignments; however, it is highly encouraged to use JetBrains Rider if you can. Rider supplies better coding helps, a working **run** button, and help with debugging errors.
+### Rider as a Stand-Alone Application
 
-#### Running with VS Code
-In order to run code using VS Code, you will need to use the terminal and the command `dotnet run` in the folder containing your project in order to produce results.
+Follow the instructions provided on the [Rider download page](https://www.jetbrains.com/rider/download/){:target="_blank"}. Once downloaded, follow the prompts to install Rider. The first time Rider starts up, it will prompt you for color theme, additional plugins, and keyboard mappings. If you've only ever used VS Code, you should pick the VS Code (not Visual Studio) keyboard mappings as it will behave more like VS Code. Most students should not install any additional plugins as Rider comes ready to use.
 
-#### Setting up JetBrains Rider
-You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address. You will need to download [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} or the [JetBrains Toolbox](https://www.jetbrains.com/lp/toolbox/){:target="_blank"} (which then allows you to install Rider).
+> If Rider does not start properly, check the [system requirements](https://www.jetbrains.com/dotnet/download/system-requirements/#section-rider) to make sure your system can run it.
 
-### GitHub Desktop
+## Using Rider
+
+By default, Rider is ready to use for .NET development. Under this section are a few things that can help make your life easier or can help when something doesn't go right.
+
+### Opening Files With a Single Click
+
+### Why Doesn't the _Run_ Button Work?
+
+### Using Version Control
+
+### It's Broke... How Do I Reset It?
+
+### Navigating Assignments with TODOs
+
 For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/){:target="_blank"} over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
 
 ### GitHub Classroom
