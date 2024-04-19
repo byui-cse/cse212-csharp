@@ -67,7 +67,9 @@ JetBrains Rider is a cross-platform Integrated Development Environment (IDE) tha
 In order to run code using VS Code, you will need to use the terminal and the command `dotnet run` in the folder containing your project in order to produce results. 
 
 #### Setting up JetBrains Rider
-You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address. You will need to download [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} or the [JetBrains Toolbox](https://www.jetbrains.com/lp/toolbox/){:target="_blank"} (which then allows you to install Rider). 
+You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address. You will need to download [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} or the [JetBrains Toolbox](https://www.jetbrains.com/lp/toolbox/){:target="_blank"} (which then allows you to install Rider).
+
+For additional help, see this [Jetbrains Rider help](../help/rider)
 
 ### GitHub Desktop
 For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/){:target="_blank"} over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.

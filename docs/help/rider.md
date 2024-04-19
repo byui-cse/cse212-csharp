@@ -13,8 +13,9 @@ title: "CSE 212 Rider Helps"
 * [Using Rider](#using-rider)
   * [Opening Files With a Single Click](#opening-files-with-a-single-click)
   * [Why Doesn't the **Run** Button Work?](#preparing-for-the-final-project)
-  * [Using Version Control]()
-  * [It's Broke... How Do I Reset It?]()
+  * [Using Version Control](#using-version-control)
+  * [It's Broke... How Do I Reset It?](#its-broke-how-do-i-reset-it)
+  * [Navigating Assignments with TODOs](#navigating-assignments-with-todos)
 
 ## What is Rider?
 
@@ -56,30 +57,52 @@ By default, Rider is ready to use for .NET development. Under this section are a
 
 ### Opening Files With a Single Click
 
+To make Rider feel more like VS Code and easier to use, click the 3 dots where your file list shows up, and make sure `Open Files with Single Click` is checked.
+
+{% include image.html url="jetbrains-one-click-options.png" description="Go into the Explorer Options" caption="Click <u>⋮</u>" %}
+
+{% include image.html url="jetbrains-one-click-enable.png" description="Check the Single Click option" caption="Click <u>Open Files with Single Click</u>" %}
+
 ### Why Doesn't the _Run_ Button Work?
+
+Most likely, the _Run_ button doesn't work because you only opened the folder in Rider and didn't open the project file. I'll show you how to avoid and fix this.
+
+#### Avoiding the Gray `Run` Button
+
+The easiest way to avoid getting the gray `Run` button in the first place is to open the project when you first open Rider. Using GitHub Desktop, when you select `Open in Rider`, Rider will prompt you with something like the following prompt:
+
+{% include image.html url="jetbrains-run-button-avoid-error.png" description="Open repository message" caption="Click <u>OK</u> - Do NOT 'Just open the directory'" %}
+
+#### Fixing the Gray `Run` Button
+
+Use your Folder Explorer on Windows or Finder on Mac to find the folder that you've opened and then make sure to open the __.csproj file:
+
+{% include image.html url="jetbrains-run-button-fix.png" description="Open the project using the .csproj file" caption="Open the ___.csproj file using Rider" %}
+
+If this still opens the folder without the `Run` button, see [Reset Rider help](#its-broke-how-do-i-reset-it)
 
 ### Using Version Control
 
+Make sure and use the `Commit and Push` option. If you just used commit, you can use tools like GitHub Desktop to push all changes that you've committed. Also, you can use the Git -> Push menu option.
+
 ### It's Broke... How Do I Reset It?
+
+All of Rider's settings for a given project are stored in the same directory as the project. Notice how when I show hidden files, there's 3 extra files in my folder:
+
+{% include image.html url="jetbrains-rider-folder.png" description="Finder window of a project file" caption="Showing hidden files using macOS Finder" %}
+
+ How to see hidden files: [Windows](https://www.google.com/search?q=show+hidden+files+windows+explorer) / [macOS](https://www.google.com/search?q=show+hidden+files+mac+finder)
+
+In order to reset Rider's view of a project, do the following:
+
+1. Make sure the project is closed in Rider
+2. Remove the project from the recent list of projects
+3. Using Finder or Explorer (or a terminal) delete the __.idea__ folder
+4. Open the project again, and Rider should prompt you to open the project file and not the directory, make sure you follow the advice to [avoid this in the future](#avoiding-the-gray-run-button)
+
+{% include image.html url="jetbrains-rider-reset.png" description="Finder window of a project file without the hidden folder .idea" caption="Remove the .idea folder" %}
 
 ### Navigating Assignments with TODOs
 
 For almost all of your teach one another assignments and prove assignments, you will be cloning a repository, making changes, and then committing and pushing changes to that repository. You will then submit a link to your repository in canvas as the submission. For cloning, committing, and pushing changes we *strongly* encourage you to use [GitHub Desktop](https://desktop.github.com/){:target="_blank"} over any other tools. I've seen other tools lose track of changes, miss files, or experience authentication issues.
 
-### GitHub Classroom
-We will use GitHub Classroom to manage access to assignments and repositories so that teachers and TAs have access to your submissions. You will need to have a [GitHub account](https://github.com/){:target="_blank"}. There is nothing to install, simply click on the links in iLearn to create your repositories for your assignments using GitHub Classroom.
-
-## Downloading Course Files
-In the Teach activities and Prove assignments, you will frequently be asked to download documents and files. The instructions will be a page like this one, but the code will be a link to GitHub Classroom for you to "Accept the Assignment". This will create your own personal GitHub repository with a copy of the starting files. It is expected that you make the appropriate changes to the files and then commit and push those changes back to that same repository.
-
-Every file that you download contains the following warning: "It is a violation of BYU-Idaho Honor Code to post or share this code with others or to post it online. Storage into a personal and private repository (e.g. private GitHub repository, unshared Google Drive folder) is acceptable." It is very important that you follow these rules for all material in the course.
-
-The Prove assignments will include a Response Document that you must use to provide your responses to questions. When you submit your assignment, you will need to submit the completed Response Document along with any required code files.
-
-## Preparing for the Final Project
-Starting in Week 10, the course will be devoted to working on your final project. The [Week 10 Prepare](../lesson10/prepare) contains the full description of the project. You will be asked to create a detailed tutorial about some of the data structures you have learned during the course. To prepare for the project, you are encouraged to begin taking weekly notes about each data structure with special attention to the following:
-* What is the purpose of this data structure and when is it used?
-* What is the performance of this data structure (you learn about performance in Week 2)?
-* How does the data structure work and how do you use it with C#?
-* What are some common errors you may encounter while using the data structure?
-* The reading and the assignments contain several problem that require the use of data structures. Can you write additional problems on your own to solve?
