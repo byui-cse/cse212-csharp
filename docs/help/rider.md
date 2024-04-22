@@ -12,7 +12,7 @@ title: "CSE 212 Rider Helps"
   * [Standalone Install](#rider-as-a-stand-alone-application)
 * [Using Rider](#using-rider)
   * [Opening Files With a Single Click](#opening-files-with-a-single-click)
-  * [Why Doesn't the **Run** Button Work?](#preparing-for-the-final-project)
+  * [Why Doesn't the **Run** Button Work?](#why-doesnt-the-_run_-button-work)
   * [Using Version Control](#using-version-control)
   * [It's Broke... How Do I Reset It?](#its-broke-how-do-i-reset-it)
   * [Navigating Assignments with TODOs](#navigating-assignments-with-todos)
