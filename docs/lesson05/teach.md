@@ -11,6 +11,8 @@ These problems should be completed and discussed as a group. Answers are provide
 
 All of the files for this assignment will be found in the GitHub classroom ***teach-05*** repository.
 
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
+
 ### Problem 1 - Unique Letters
 
 1. Download the repository and load the `teach-05.csproj` in your code editor, and open the file **UniqueLetters.cs**

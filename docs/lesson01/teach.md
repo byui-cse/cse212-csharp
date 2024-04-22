@@ -10,6 +10,8 @@ These problems should be completed and discussed as a group.  Answers are provid
 
 All of the code files for this assignment will be found in the GitHub classroom ***teach-01*** repository.
 
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
+
 ### Problem 1 - Using Dynamic Arrays: Lists
 
 1.  To ensure you have enough time for this activity, spend no more than 20 minutes implementing this method before looking at the solution to discuss.
