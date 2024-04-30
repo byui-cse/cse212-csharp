@@ -59,6 +59,6 @@ In this section, you will be asked several questions related to performance usin
 4. Discuss the following together: 
     1. Do the actual results agree with the big O predictions made earlier? If not, what do you think the big O should be?
     2. Which method (Algorithm1, Algorithm2, Algorithm3) has the best performance and which one the worst performance?
-    3. Looking at the results, why do we say that big O only applies when n in "large"?
+    3. Looking at the results, why do we say that big O only applies when n is "large"?
        
   5. When you are done, take a look at the [solution](teach-algorithms-solution){:target="_blank"} and discuss it together.  
