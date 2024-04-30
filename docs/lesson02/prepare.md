@@ -99,7 +99,7 @@ void ShortMultiplicationTable(int n) {
 }
 ```
 
-When we count iterations of a loops in a function, we may end up with complex polynomials that look like this. Assume that we had performance predicted at O(2n<sup>3</sup> - 7n<sup>2</sup> + 13n - 15). In addition to dropping coefficients, we also drop lesser exponents like (in this example) the n<sup>2</sup> and the n. Therefore, O(2n<sup>3</sup> - 7n<sup>2</sup> + 13n - 15) = O(n<sup>3</sup>). This code likely has a loop, within a loop, within a loop.
+When we count iterations of loops in a function, we may end up with complex polynomials that look like this. Assume that we had performance predicted at O(2n<sup>3</sup> - 7n<sup>2</sup> + 13n - 15). In addition to dropping coefficients, we also drop lesser exponents like (in this example) the n<sup>2</sup> and the n. Therefore, O(2n<sup>3</sup> - 7n<sup>2</sup> + 13n - 15) = O(n<sup>3</sup>). This code likely has a loop, within a loop, within a loop.
 
 ### Logarithmic Performance
 It would seem like O(n) is the best performance you can get if we want to analyze a set of information. However, there are some algorithms that have better performance. Consider a function that had performance of O(log n). This is called **logarithmic** time. When graphed, the performance does not get significantly worse as the size of the data increases.
@@ -194,7 +194,7 @@ public void Run() {
     var stopwatch = Stopwatch.StartNew();
     var work = LotsOfLoops(1000);
     stopwatch.Stop();
-    // This will display 1000000
+    // This will display 1000000000
     Console.WriteLine("Innermost count is: {0}", work);
     // The time displayed will vary based on your computer
     Console.WriteLine("Execution Time in milliseconds: {0}", stopwatch.Elapsed.TotalMilliseconds);
