@@ -11,6 +11,8 @@ Download the [02-prove_response.docx](02-prove_response.docx) document to provid
 
 All of the files for this assignment will be found in the GitHub classroom ***prove-02*** repository. You will not need to modify the repository for this assignment.
 
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+
 ### Part 1 - Analyze Code
 In this section, you will be asked several questions that need to be answered in your response document:
 
