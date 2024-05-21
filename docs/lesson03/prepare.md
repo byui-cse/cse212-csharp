@@ -37,7 +37,7 @@ caption="Stack of Pancakes"
 
 ### The "Undo" Option and the Stack
 
-One of the most common stacks that people use on a computer is related to the Undo option in word processors and editors. When we type something on the keyboard, the item is both displayed to the screen and also added to a stack. If we type the phrase `"The rain in Spain stays mainly in the plain"`, we would expect the following commands to be put pushed onto the stack:
+One of the most common stacks that people use on a computer is related to the Undo option in word processors and editors. When we type something on the keyboard, the item is both displayed to the screen and also added to a stack. If we type the phrase `"The rain in Spain stays mainly in the plain"`, we would expect the following commands to be pushed onto the stack:
 `Type "The", Type "rain", Type "in"`, and so forth. The last item to be pushed would be `Type "plain"`. If we press the Undo button, the software will pop the stack and receive: `Type "plain"`. The software will then do the opposite of this which would result in the word `"plain"` being removed from the screen.
 
 {% include image.html url="undo_stack.jpg"
@@ -57,7 +57,7 @@ Even if we didn't know what a stack was before today, we have actually been usin
 * Which function we want to call
 * Which function to go back to when we are done
 
-The first of these is clear in our code. If we are currently in function A, then we expect to call function B. However, how do we tell the computer that we want to return to function A when function B is finished. This can be even more complicated by the fact that function B will need to call functions C, D, and E before it can finish. The computer accomplishes this by using a function stack. When a function is called, it is pushed to the stack. The current function running is always on the back of the stack. When the function finishes, it is popped off the stack. The result is that the function to return to is the one that is on the back of the stack.
+The first of these is clear in our code. If we are currently in function A, then we expect to call function B. However, how do we tell the computer that we want to return to function A when function B is finished. This can be even more complicated by the fact that function B may need to call functions C, D, and E before it can finish. The computer accomplishes this by using a function stack. When a function is called, it is pushed to the stack. The current function running is always on the back of the stack. When the function finishes, it is popped off the stack. The result is that the function to return to is the one that is on the back of the stack.
 
 
 <!--- Image x here   orig size was: 750 x 507-->
@@ -68,14 +68,14 @@ caption="Function Stack in Programming"
 
 In addition to keeping track of the function name that is running, the stack also allows us to see where in the function we were when a function was originally called as well as the memory that we were using in our function. Stacks work well for remembering where we've been and the circumstances we were in during that previous time.
 
-When using C# or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function stack.  Here's an example of a call stack dump from an error during runtime:
+When using C# or other programming languages, we will often see error messages that look like the following. Notice that the information is showing which functions have called which functions up until the point of error. This display of information comes directly from the function call stack (often abbreviated to just ___call stack___). Here's an example of a call stack trace from an error during runtime:
 
 {% include image.html url="exception_function_stack.png"
 description="Shows the call stack from a C# program running in Rider when the program died because of an array error."
 caption="C# Exception showing Function Stack"
 %}
 
-Many code editors also include a debugger. Debuggers can be used to pause execution of software so that we can see what is occurring within our code step-by-step. Part of the debugger capability is the display of the function stack (or frequently called the call stack) when the software is paused (due to a breakpoint or an exception).
+Many code editors also include a debugger. Debuggers can be used to pause execution of software so that we can see what is occurring within our code step-by-step. Part of the debugger capability is the display of the call stack when the software is paused (due to a breakpoint or an exception).
 
 {% include image.html url="debugger_call_stack.png"
 description="Shows the call stack from a C# program running in Rider when a breakpoint was reached and paused the software."

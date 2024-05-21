@@ -31,15 +31,15 @@ To prove that you understand the material from this course, you will be required
     4. Your tutorial must use the C# programming language.
 3. You must write the tutorial using Markdown language. You should create at least the following files:
 
-| Filename         |  Purpose                                                          |
-|------------------|-------------------------------------------------------------------|
-| 0-welcome.md     | Provide an introduction to the student as well as links to three modules. It is important that you provide your name, class, section, and email address on this page. |
-| 1-topic.md       | Provide the tutorial for the first data structure topic. You should include a link back to the welcome page. |
-| 2-topic.md       | Provide the tutorial for the second data structure topic. You should include a link back to the welcome page. |
-| 3-topic.md       | Provide the tutorial for the third data structure topic. You should include a link back to the welcome page. |
-| Picture Files       | If you want a picture (e.g., jpg, bmp, gif, png) to be included in your tutorial, then you need to make sure the files are included in your tutorial submittal. If you copy an image from the internet, make sure that you can legally copy it and be sure to provide source information. |
-| C# Files       | You will likely want to include C# files for the student to see the solution to the second problem. |
-| Other Files       | If you have any other file that needs to be displayed or accessed by your tutorial, make sure they are included in your submittal. |
+| Filename      | Purpose                                                                                                                                                                                                                                                                                   |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0-welcome.md  | Provide an introduction to the student as well as links to three modules. It is important that you provide your name, class, section, and email address on this page.                                                                                                                     |
+| 1-topic.md    | Provide the tutorial for the first data structure topic. You should include a link back to the welcome page.                                                                                                                                                                              |
+| 2-topic.md    | Provide the tutorial for the second data structure topic. You should include a link back to the welcome page.                                                                                                                                                                             |
+| 3-topic.md    | Provide the tutorial for the third data structure topic. You should include a link back to the welcome page.                                                                                                                                                                              |
+| Picture Files | If you want a picture (e.g., jpg, bmp, gif, png) to be included in your tutorial, then you need to make sure the files are included in your tutorial submittal. If you copy an image from the internet, make sure that you can legally copy it and be sure to provide source information. |
+| C# Files      | You will likely want to include C# files for the student to see the solution to the second problem.                                                                                                                                                                                       |
+| Other Files   | If you have any other file that needs to be displayed or accessed by your tutorial, make sure they are included in your submittal.                                                                                                                                                        |
 
 ### Guidance
 When you write each of the data structure modules, you will want to consider the following questions (this is not an exhaustive list):
@@ -57,7 +57,7 @@ To help you visualize what this project requires, a complete [C# Fundamentals Tu
 ### Using Markdown Language
 The Markdown language is commonly used to develop documentation. The purpose of requiring Markdown for your tutorial is to give you experience using this language. Using a simple editor and the knowledge of a little bit of syntax, you can create documents with headers, bulleted lists, links, bold text, tables and pictures. A common place to see Markdown documents is in GitHub repositories. The link above for the example tutorial was shown to you in GitHub. GitHub automatically interprets the Markdown file and displays as intended.
 
-There are many different tools available to help you write and preview Markdown files. Visual Studio Code has built-in support for Markdown. If you create a file with an `md` extension, then you can click on the preview button and you can see the Markdown and the finished product side by side.
+There are many different tools available to help you write and preview Markdown files. Visual Studio Code has built-in support for Markdown. If you create a file with an `md` extension, then you can click on the preview button, and you can see the Markdown and the finished product side by side.
 
 {% include image.html url="visual_studio_code.jpg" description="Shows the 0-welcome.md file from the example loaded into Visual Studio Code with the preview enabled." caption="Markdown in Visual Studio Code" %}
 
@@ -129,7 +129,7 @@ One of the requirements for each data structure is an example problem and an exe
 3. Do something that solves a problem or scenario with your hobbies using the data structure's strength
     * Example: Use a queue to keep track of requests
 
-The example problem should be a problem where you describe the the problem or the requirements and then show the student how to get to the answer. Having C# code chunks in the markdown file is good enough for the example - especially if you include blocks of text in between the code to help the student understand why that data structure helps.
+The example problem should be a problem where you describe the problem or the requirements and then show the student how to get to the answer. Having C# code chunks in the markdown file is good enough for the example - especially if you include blocks of text in between the code to help the student understand why that data structure helps.
 
 The problem for the student should include some description of the problem scenario and the requirements for completing it. You may give the student a starting project, but it is not required to give them starting code. You must include a link to your solution which should be working code.
 

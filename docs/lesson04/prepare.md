@@ -53,16 +53,16 @@ Processes P1 through P6 are all trying to use the variable at the same time. Pro
 
 ### Queues in C#
 
-Queues are an abstraction that you can represent in many ways. You might create your own queue using an fixed array or a list (dynamic array). There is also a built-in data type in the `Collections` library which provides a `Queue` for optimal performance.
+Queues are an abstraction that you can represent in many ways. You might create your own queue using a fixed array or a list (dynamic array). There is also a built-in data type in the `Collections` library which provides a `Queue` for optimal performance.
 
-| Common Queue Operation | Description | C# Code  | Performance |
-|------------------------|-------------|--------------|-------------|
-| enqueue(value)   | Adds "value" to the back of the queue    | `myQueue.Enqueue(value)` | O(1) |
-| dequeue()        | Removes items from the queue | `var value = myQueue.Dequeue()` | O(1) |
-| size()           | Number of elements in the queue  | myQueue.Count    | O(1) |
-| empty()          | Returns true if the length of the queue is zero.  | `if (myQueue.Count == 0)`  | O(1) |
+| Common Queue Operation | Description                                      | C# Code                         | Performance |
+|------------------------|--------------------------------------------------|---------------------------------|-------------|
+| enqueue(value)         | Adds "value" to the back of the queue            | `myQueue.Enqueue(value)`        | O(1)        |
+| dequeue()              | Removes items from the front of the queue        | `var value = myQueue.Dequeue()` | O(1)        |
+| size()                 | Number of elements in the queue                  | myQueue.Count                   | O(1)        |
+| empty()                | Returns true if the length of the queue is zero. | `if (myQueue.Count == 0)`       | O(1)        |
 
-Because a queue is just an abstraction, you can implement your own queue using a List object. In that case, performance my be worse as it requires O(n) to add or remove from the front of your List - causing either the Enqueue or Dequeue operation to take longer than O(1).
+Because a queue is just an abstraction, you can implement your own queue using a List object. In that case, performance may be worse as it requires O(n) to add or remove from the front of your List - causing either the Enqueue or Dequeue operation to take longer than O(1).
 
 Here's an example of creating a new built-in queue for characters:
 
@@ -168,7 +168,7 @@ Testing like this is also critical in the software life-cycle where code needs t
 <dt>process</dt>
 <dd>The place where software runs. A process has code that is executed and memory used for variables in that code. Multiple processes can run at the same time. Processes can share memory.</dd>
 <dt>queue</dt>
-<dd>A data structure that follows a First In, First Out (FIFO) rule. The queue is used both to maintain order in data and to remember data when there is not time to process it.</dd>
+<dd>A data structure that follows a First In, First Out (FIFO) rule. The queue is used both to maintain order in data and to remember data when there is no time to process it.</dd>
 <dt>requirements</dt>
 <dd>Written description of what software should do.</dd>
 <dt>test cases</dt>

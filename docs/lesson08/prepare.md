@@ -19,7 +19,7 @@ title: "W08 Prepare: Reading"
 ## Recursion
 ### Recursive Function Calls
 
-Usually when we write functions, we design them so they call different functions. **Recursion** is a technique where a function calls itself. For example, consider the following code:
+Usually when we write functions, we design them, so they call different functions. **Recursion** is a technique where a function calls itself. For example, consider the following code:
 
 ```csharp
 public void SayHello() {
@@ -164,7 +164,7 @@ Each recursive call to the `Permutations` function will need to know two things:
 
 <!--- Figure 2-->
 {% include image.html url="permutations.jpg"
-description="Shows some of the functions called by Permutations([A,B,C,D]). This first function calls Permutations([B,C,D],'A'), Permutations([A,C,D],'B'), Permutations([A,B,D],'C') and Permutations([A,B,C],'D').  The Permutations([B,C,D],'A') will call Permutations([C,D],'AB'), Permutations([B,D],'AC'), and Permutations([B,C],'AD').  The permutations ([C,D],'AB') will call Permutations([D],'ABC') and Permutations([C],'ABD').  Each of these last 2 functions will call Permutations([],'ABCD') and Permutations([],'ABDC'), respectively.  In these last functions, the strings 'ABCD' and 'ABDC' will be printed out in each functions respectively. "
+description="Shows some of the functions called by Permutations([A,B,C,D]). This first function calls Permutations([B,C,D],'A'), Permutations([A,C,D],'B'), Permutations([A,B,D],'C') and Permutations([A,B,C],'D').  The Permutations([B,C,D],'A') will call Permutations([C,D],'AB'), Permutations([B,D],'AC'), and Permutations([B,C],'AD').  The permutations ([C,D],'AB') will call Permutations([D],'ABC') and Permutations([C],'ABD').  Each of these last 2 functions will call Permutations([],'ABCD') and Permutations([],'ABDC'), respectively.  In these last functions, the strings 'ABCD' and 'ABDC' will be printed out in each function respectively. "
 caption="Recursive Function Calls for Permutations([A,B,C,D])"
 %}
 

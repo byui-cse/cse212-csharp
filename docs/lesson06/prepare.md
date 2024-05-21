@@ -9,7 +9,7 @@ title: "W06 Prepare: Reading"
     * [Making the Map from the Set](#making-the-map-from-the-set)
     * [Maps in C#](#maps-in-c)
     * [Objects are Maps](#objects-are-maps)
-    * [Complex Dictionary Data](#complex-dictionary-data)
+    * [Complex Map Data](#complex-map-data)
     * [Building Summary Tables](#building-summary-tables)
 * [Key Terms](#key-terms)
 
@@ -39,13 +39,13 @@ or
 var dictionary = new Dictionary<string, double>() { { "key1", 2.1 }, { "key2", 2.3 } };
 ```
 
-| Common Map Operation | Description | C# Code | Performance   |
-|----------------------|-------------|---------|---------------|
-| put(key, value) | Adds (or replaces) a row in the map with the specified key and value. | `myMap.Add(key, value)` or `myMap[key] = value`  | O(1) - Performance of hashing the key (assuming good conflict resolution) and assigning the value |
-| get(key)        | Gets the value for the specified key.       | `myMap[key]`   | O(1) - Performance of hashing the key (assuming good conflict resolution) and getting the associated value |
-| remove(key)     | Removes the row from the map containing the specified key. | `myMap.Remove(key)` | O(1) - Performance of hashing the key (assuming good conflict resolution) and removing the associated value |
-| member(key)    | Determines if "key" is in the map. | `myMap.ContainsKey(key)` | O(1) - Performance of hashing the key (assuming good conflict resolution) |
-| size()         | Returns the number of items in the map. | `myMap.Count` | O(1) - Performance of returning the size of the map |
+| Common Map Operation | Description                                                           | C# Code                                         | Performance                                                                                                 |
+|----------------------|-----------------------------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| put(key, value)      | Adds (or replaces) a row in the map with the specified key and value. | `myMap.Add(key, value)` or `myMap[key] = value` | O(1) - Performance of hashing the key (assuming good conflict resolution) and assigning the value           |
+| get(key)             | Gets the value for the specified key.                                 | `myMap[key]`                                    | O(1) - Performance of hashing the key (assuming good conflict resolution) and getting the associated value  |
+| remove(key)          | Removes the row from the map containing the specified key.            | `myMap.Remove(key)`                             | O(1) - Performance of hashing the key (assuming good conflict resolution) and removing the associated value |
+| member(key)          | Determines if "key" is in the map.                                    | `myMap.ContainsKey(key)`                        | O(1) - Performance of hashing the key (assuming good conflict resolution)                                   |
+| size()               | Returns the number of items in the map.                               | `myMap.Count`                                   | O(1) - Performance of returning the size of the map                                                         |
 
 ### Objects are Maps
 Whenever you create a class in any programming language, you are creating a map. Each member variable or property on the class can be considered a key, with the value being stored in that variable. Consider the following code:
@@ -90,7 +90,7 @@ class Location {
 }
 ```
 
-With an instance of the `SpaceStation` class, it is essentially a map where the keys are fixed when the program is built. This does require that you know the format of the data (including all of the value data types) before creating the class.
+With an instance of the `SpaceStation` class, it is essentially a map where the keys are fixed when the program is built. This does require that you know the format of the data (including all the value data types) before creating the class.
 
 Once we read, the JSON data from the server, we use a `JsonSerializer.Deserialize()` method to convert the raw JSON data into the class object.
 

@@ -25,7 +25,7 @@ A **binary** tree is a tree that links to no more than two other **nodes**. In t
 
 <!--- Figure 1-->
 {% include image.html url="binary_tree.jpg"
-description="Shows a Binary Tree where the top (node A) is called the root, the nodes that do not connect to any other nodes are called leaves (node F, G, H and I).  Node A connects to nodes B and C.  Node B connects to node D and E.  Node C connects only to node F.  Node D connects to nodes G and H.  Node E connects to Node I. A subtree is formed from a any parent node such as parent node B and includes all of the children nodes D, E, G, H, and I."
+description="Shows a Binary Tree where the top (node A) is called the root, the nodes that do not connect to any other nodes are called leaves (node F, G, H and I).  Node A connects to nodes B and C.  Node B connects to node D and E.  Node C connects only to node F.  Node D connects to nodes G and H.  Node E connects to Node I. A subtree is formed from any parent node such as parent node B and includes all the children nodes D, E, G, H, and I."
 caption="Binary Tree"
 %}
 
@@ -105,7 +105,7 @@ The code for inserting into a BST is shown below. Some things to note are as fol
 * A node is defined as an object (in this example) of class `Node`. This is similar to what we saw with the linked list class. The Node class contains three things: `Data` (the value), `Left` (pointer to the left node), and `Right` (pointer to the right node).
 * There are two `Insert` functions:
 	* The first `BinarySearchTree.Insert` function is the one called by the user who wants to insert a value into the tree. This function is used to call the recursive function `Node.Insert` on the root node. As a special case, if the root node is empty (`null`), then we will put the new Node in the root without using any recursion.
-	* The second `Node.Insert` calls itself until it finds a empty position in which to insert the value.
+	* The second `Node.Insert` calls itself until it finds an empty position in which to insert the value.
 * We will follow a similar pattern for many of the recursive functions we write for the BinarySearchTree.
 * In the `Node.Insert` function, we should identify the base case and the recursive calls to the correct subtrees.
 
@@ -209,10 +209,10 @@ public class BinarySearchTree : IEnumerable<int> {
 
 ### BST in C#
 
-In your assignment this week you will be writing your own BST class. C# does has a built-in tree called a  `SortedSet<T>` which is an implementation of a **Red Black Tree**. The table below shows the common functions in a BST.
+In your assignment this week you will be writing your own BST class. C# does have a built-in tree called a  `SortedSet<T>` which is an implementation of a **Red Black Tree**. The table below shows the common functions in a BST.
 
-| Common BST Operation | Description | Performance  |
-|----------------------|-------------|--------------|
+| Common BST Operation | Description                                                                                     | Performance                                                                                                                              |
+|----------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | insert(value)        | Insert a value into the tree.                                                                   | O(log n) - Recursively search the subtrees to find the next available spot                                                               |
 | remove(value)        | Remove a value from the tree.                                                                   | O(log n) - Recursively search the subtrees to find the value and then remove it. This will require some cleanup of the adjacent nodes.   |
 | contains(value)      | Determine if a value is in the tree.                                                            | O(log n) - Recursively search the subtrees to find the value.                                                                            |
@@ -228,11 +228,11 @@ In your assignment this week you will be writing your own BST class. C# does has
 <dt>AVL Tree</dt>
 <dd>Adelson-Velskii and Landis Tree. A balanced binary search tree that is checked unbalanced height after every modification to the tree. If the tree is unbalanced, then pre-determined algorithms are used to balance the tree.</dd>
 <dt>balanced</dt>
-<dd>A tree is balanced if the the height of the tree from the root to each leaf is consistent for all subtrees. The measure of consistentency will vary between algorithms but usually does not exceed a height difference of 1.</dd>
+<dd>A tree is balanced if the height of the tree from the root to each leaf is consistent for all subtrees. The measure of consistency will vary between algorithms but usually does not exceed a height difference of 1.</dd>
 <dt>balanced binary search tree</dt>
 <dd>A binary search tree which is balanced or restructured to be balanced. A balanced binary search tree has O(log n) performance when searching.</dd>
 <dt>binary search tree</dt>
-<dd>A binary tree that puts data less than the root to the left and greater than the root to the right. This type of a tree enables searching algorithms to be efficient.</dd>
+<dd>A binary tree that puts data less than the root to the left and greater than the root to the right. This type of tree enables searching algorithms to be efficient.</dd>
 <dt>binary tree</dt>
 <dd>A tree that has up to two children for each node.</dd>
 <dt>child</dt>
