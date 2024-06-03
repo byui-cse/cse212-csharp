@@ -166,14 +166,15 @@ In your assignment this week you will be writing your own linked list class. How
 
 The dynamic array and linked list look the same to the user but because the memory is managed differently, the performance numbers are different. The table below compares these two data structures:
 
-| Operation     | Dynamic Array | Linked List |
-|---------------|---------------|-------------|
-| Insert Front  | O(n)          | O(1)        |
-| Insert Middle | O(n)          | O(n)        |
-| Insert End    | O(1)          | O(1)        |
-| Remove Front  | O(n)          | O(1)        |
-| Remove Middle | O(n)          | O(n)        |
-| Remove End    | O(1)          | O(1)        |
+| Operation       | Dynamic Array | Linked List |
+|-----------------|---------------|-------------|
+| Insert Front    | O(n)          | O(1)        |
+| Insert Middle   | O(n)          | O(n)        |
+| Insert End      | O(1)          | O(1)        |
+| Remove Front    | O(n)          | O(1)        |
+| Remove Middle   | O(n)          | O(n)        |
+| Remove End      | O(1)          | O(1)        |
+| Access by Index | O(1)          | O(n)        |
 
 We can conclude the following:
 
