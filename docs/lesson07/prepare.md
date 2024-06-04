@@ -92,7 +92,7 @@ caption="Inserting in the Middle of a Linked List"
 
 ## Removing from a Linked List
 
-Removing the first (the head) or the last (this tail) node from a linked list is similar and involve setting updating the second node (or the second to last node in the case of removing from the tail). The process for removing the first node is as follows:
+Removing the first (the head) or the last (this tail) node from a linked list is similar and involves updating the second node (or the second to last node in the case of removing from the tail). The process for removing the first node is as follows:
 
 1. Set the "prev" of the second node (`head.Next`) to nothing (`head.Next.Prev = null`)
 2. Set the head to be the second node (`head = head.Next`)
