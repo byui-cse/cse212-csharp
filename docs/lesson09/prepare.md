@@ -61,7 +61,7 @@ description="Shows a binary search tree with a root node of 3.  Each subsequent 
 caption="Unbalanced BST"
 %}
 
-This tree is a BST but looks more like a linked list. This BST is unbalanced has a resulting performance for searching of O(n) instead of O(log n).
+This tree is a BST but looks more like a linked list. This BST is unbalanced and has a resulting performance for searching of O(n) instead of O(log n).
 
 ### Balanced Binary Search Trees
 
