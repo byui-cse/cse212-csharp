@@ -121,17 +121,24 @@ To display a table, use hyphens and pipes (vertical bars):
 
 ### Creating Example Problems
 
-One of the requirements for each data structure is an example problem and an exercise for the student. The idea with these example problems is for you to show how to **use** the data structure to solve a problem, not how to build the data structure. The problem should be designed to take advantage of the strengths of the data structure. Here is my process for building a problem:
+One of the requirements for each data structure is an example problem and an exercise for the student. The idea with these example problems is for you to show how to **use** the data structure to solve a problem, not how to build the data structure. The problem should be designed to take advantage of the strengths of the data structure. Your instructor may give you a scenario that your examples and problems must fit with. Example: _You are working for a company that is developing a music app. All of your examples and student problems should be features of the music app which use the various data structures._ Check with your instructor if there are restrictions for your example and problem.
+
+Here is my process for building a problem:
+
 1. Identify the strengths of the data structure
     * Example: Queue is good at keeping things in order
 2. Come up with how this applies in your given application
     * Example: My vacation planning app needs to keep requests from various customers in order
-3. Do something that solves a problem or scenario with your hobbies using the data structure's strength
+3. Put those 2 things together
     * Example: Use a queue to keep track of requests
 
 The example problem should be a problem where you describe the problem or the requirements and then show the student how to get to the answer. Having C# code chunks in the markdown file is good enough for the example - especially if you include blocks of text in between the code to help the student understand why that data structure helps.
 
 The problem for the student should include some description of the problem scenario and the requirements for completing it. You may give the student a starting project, but it is not required to give them starting code. You must include a link to your solution which should be working code.
+
+The template repository has 3 projects already created for you for each data structure (`ds1-example`, `ds1-problem`, `ds1-solution`, etc.). The ___example___ project is for you to drop your code in and is more for you than for me. It lets you make sure your code is the right syntax to include in the markdown files. The ___problem___ project is for you to have a place to put starting code for your student problem - you don't have to use it, but it's here if you want it. The ___solution___ project should be used to store your solution code so that you can give the student a link to that folder. You don't have to use any of these projects if you don't want to, these are mostly there for convenience for you. 
+
+#### How to Start Your Own Project in C#
 
 So far in our course, we have not required you to create a new C# project. Each of your student problems' solutions should be in a separate C# project. You create a project in C# by using a terminal to navigate to the solution folder and then run `dotnet new console` to create a new application.
 
