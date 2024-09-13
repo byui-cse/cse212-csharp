@@ -17,6 +17,7 @@ Examine the `01-prove_response.docx` document to provide your answers to questio
 ### Part 1 - Arrays
 1. Open up the following code: **ArraysTester**
 2. Implement the `MultiplesOf` function. The function should create and return a list of multiples of a number. The starting number and the number of multiples are provided as inputs to the function. For example, `MultiplesOf(3,5)`, where the 3 is the starting number and 5 is the number of multiples, would result in `<double>{3, 6, 9, 12, 15}`.
+3. You should **NOT** modify the tests
 
 ### Part 2 - Solving a Complicated Problem Using a List
 1. Come up with a plan on how to implement the `RotateListRight` function. This function receives a list of `data` and an `amount` to rotate to the right. For example, if the `data` is `<List>{1, 2, 3, 4, 5, 6, 7, 8, 9}` and an `amount` is 5 then the list returned should be `<List>{5, 6, 7, 8, 9, 1, 2, 3, 4}`. If the `data` is `<List>{1, 2, 3, 4, 5, 6, 7, 8, 9}` and an `amount` is 3 then the list returned should be `<List>{7, 8, 9, 1, 2, 3, 4, 5, 6}`. The value of `amount` will be in the range of 1 and `data.Count`. Remember the suggestion to "solve the problem manually." Write down a process for doing this step by step before you write the code.
@@ -30,7 +31,8 @@ Examine the `01-prove_response.docx` document to provide your answers to questio
         * `RemoveAt(index)`
     * See the [documentation for a C# List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0#methods){:target="_blank"} to see all the methods available.
 2. Implement the `RotateListRight` function. Remember to add useful comments to your code.
-3. In your response document, give a description (including a picture) of how the code is solving the problem. For the picture, you may use the computer or a white board and just snap a picture with your phone.
+3. You should **NOT** modify the tests
+4. In your response document, give a description (including a picture) of how the code is solving the problem. For the picture, you may use the computer or a white board and just snap a picture with your phone.
 
 ## Submission
 You need to submit the following for this assignment:
