@@ -65,19 +65,19 @@ To make Rider feel more like VS Code and easier to use, click the 3 dots where y
 
 ### Why Doesn't the _Run_ Button Work?
 
-Most likely, the _Run_ button doesn't work because you only opened the folder in Rider and didn't open the project file. I'll show you how to avoid and fix this.
+Most likely, the _Run_ button doesn't work because you only opened the folder in Rider and didn't open the solution (`___.sln`) or project (`___.csproj`) file. I'll show you how to avoid and fix this.
 
 #### Avoiding the Gray `Run` Button
 
 The easiest way to avoid getting the gray `Run` button in the first place is to open the project when you first open Rider. Using GitHub Desktop, when you select `Open in Rider`, Rider will prompt you with something like the following prompt:
 
-{% include image.html url="jetbrains-run-button-avoid-error.png" description="Open repository message" caption="Click <u>OK</u> - Do NOT 'Just open the directory'" %}
+{% include image.html url="jetbrains-run-button-avoid-error-sln.png" description="Open repository message" caption="Click <u>Open</u> or <u>OK</u> - Do NOT 'Just open the directory'" %}
 
 #### Fixing the Gray `Run` Button
 
-Use your Folder Explorer on Windows or Finder on Mac to find the folder that you've opened and then make sure to open the __.csproj file:
+Use your Folder Explorer on Windows or Finder on Mac to find the folder that you've opened and then make sure to open the (`___.sln`) or (`___.csproj`) file:
 
-{% include image.html url="jetbrains-run-button-fix.png" description="Open the project using the .csproj file" caption="Open the ___.csproj file using Rider" %}
+{% include image.html url="jetbrains-run-button-fix.png" description="Open the project using the .sln or .csproj file" caption="Open the ___.csproj or ___.sln file using Rider" %}
 
 If this still opens the folder without the `Run` button, see [Reset Rider help](#its-broke-how-do-i-reset-it)
 

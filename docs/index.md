@@ -61,3 +61,6 @@ title: Course Index
 * Week 12: [Draft 2](lesson12/prove)
 * Week 13: [Peer Review](lesson13/prove)
 * Week 14: [Final Submission](lesson14/prove)
+
+## Resources
+* [Rider Help](help/rider)
