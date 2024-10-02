@@ -7,7 +7,7 @@ title: "W04 Prove: Individual Assignment"
 ## Instructions
 This assignment **must be completed individually** to ensure you are meeting all course outcomes. You should not complete this assignment within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you answer these problems. It is an honor code violation to obtain answers for these problems from others including using the internet (i.e. sites that allow students to share their solutions).
 
-There is no response document for this assignment. All test cases and results should be placed within the test documentation in the `Run()` method of each file.
+There is no response document for this assignment. All test cases and results should be placed within the test documentation in the test methods of each test file.
 
 All the files for this assignment will be found in the GitHub classroom ***prove-04*** repository. You will commit changes to your own repository for your submission for this assignment.
 
@@ -22,7 +22,7 @@ All the files for this assignment will be found in the GitHub classroom ***prove
     4. When a person is dequeued and has an infinite number of turns (defined as having number of turns of 0 or less), they shall be enqueued again.
     5. If the queue is empty, then an error message shall be displayed.
 3. Test cases are already written for you in the code. Run the tests and find the errors. You should summarize the results of the tests and the errors found within the test case documentation at the end of the code file.
-4. Fix the code so that all requirements are implemented correctly. You know that you are done because the test cases will all pass.
+4. Fix the code so that all requirements are implemented correctly. You know that you are done because the test cases will all pass. The tests do not need to be modified.
 
 ### Part 2 - Priority Queue
 1. Examine the following test code file: `PriorityTests.cs` (Note: Do not read through the referenced code first. Instead, proceed with the instructions below).
