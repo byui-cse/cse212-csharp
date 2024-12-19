@@ -40,10 +40,12 @@ To create a fixed array in C#, you allocate the array with a size and type, and 
     numbers[2] = 3;
 ```
 
-Another syntax that is a few less characters is to use a collection initializer:
+Another syntax that uses a few less characters is a collection initializer:
 
 ```csharp
     var numbers = new[] { 1, 2, 3 };
+    // or
+    int[] numbers = [1, 2, 3];
 ```
 
 ### Dynamic Arrays
