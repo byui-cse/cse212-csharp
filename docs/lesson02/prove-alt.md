@@ -9,9 +9,9 @@ This assignment **must be completed individually** to ensure you are meeting all
 
 Download the [02-prove_response.docx](02-prove_response.docx) document to provide your answers to questions asked in the steps below.
 
-All the files for this assignment will be found in the GitHub classroom ***prove-02*** repository. You will not need to modify the repository for this assignment.
+All the files for this assignment will be found in the GitHub classroom ***prove-02-alt*** repository. You will not need to modify the repository for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Accept your assignment repository](prove-classroom-alt){:target="_blank"}
 
 ### Part 1 - Analyze Code
 In this section, you will be asked several questions that need to be answered in your response document:
