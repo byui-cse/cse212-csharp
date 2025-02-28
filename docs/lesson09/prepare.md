@@ -31,7 +31,7 @@ caption="Binary Tree"
 
 ### Binary Search Trees
 
-A **binary search tree** (BST) is a binary tree that follows rules for data that is put into the tree. Data is placed into the BST by comparing the data with the value in the parent node. If the data being added is less than the parent node, then it is put in the left subtree. If the data being added is greater than the parent node, then it is put in the right subtree. If duplicates are allowed than the duplicate can be put either to the left or to the right of the root. By using this process, the data is stored in the tree sorted.
+A **binary search tree** (BST) is a binary tree that follows rules for data that is put into the tree. Data is placed into the BST by comparing the data with the value in the parent node. If the data being added is less than the parent node, then it is put in the left subtree. If the data being added is greater than the parent node, then it is put in the right subtree. If duplicates are allowed, then the duplicate can be put either to the left or to the right of the parent (as long as you do it consistently). By using this process, the data is stored in the tree sorted.
 
 {% include image.html url="binary_search_tree.jpg"
 description="Shows a Binary Search Tree where the root node is 15.  The 15 is connected to 10 (on the left) and 24 (on the right).  The 10 is connected to 3 (on the left) and 14 (on the right).  The 24 is connected to 33 (on the right)."
@@ -95,7 +95,7 @@ BST operations can be very complicated (balanced BST's offering even more compli
 
 ### Inserting into a BST
 
-Inserting into a BST is a recursive operations:
+Inserting into a BST is a recursive operation:
 
 * Smaller problem: Insert a value into either the left subtree or the right subtree based on the value.
 * Base case: If there is space to add the node (the subtree is empty), then the correct place has been found and the item can be inserted.
