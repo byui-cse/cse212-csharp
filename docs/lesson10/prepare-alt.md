@@ -136,17 +136,50 @@ The example problem should be a problem where you describe the problem or the re
 
 The problem for the student should include some description of the problem scenario and the requirements for completing it. You may give the student a starting project, but it is not required to give them starting code. You must include a link to your solution which should be working code.
 
-The template repository has 3 projects already created for you for each data structure (`ds1-example`, `ds1-problem`, `ds1-solution`, etc.). The ___example___ project is for you to drop your code in and is more for you than for me. It lets you make sure your code is the right syntax to include in the markdown files. The ___problem___ project is for you to have a place to put starting code for your student problem - you don't have to use it, but it's here if you want it. The ___solution___ project should be used to store your solution code so that you can give the student a link to that folder. You don't have to use any of these projects if you don't want to, these are mostly there for convenience for you. 
+#### Creating New Projects With Rider
 
-#### How to Start Your Own Project in C#
+You will need to create your own example and solution folders. The easiest way using Rider is to right-click on the solution and go to `Add` → `New Project...`. That will pull up a dialog box (see image below) with various templates. Select `Console` to have a program that will just run. Select `Class Library` to build a program like the assignments in class which rely on a separate Unit Test project to actually run. Select `Unit Test` to create a project to test either of the other two kinds of projects. After selecting the appropriate template, make sure and name the project.
 
-So far in our course, we have not required you to create a new C# project. Each of your student problems' solutions should be in a separate C# project. You create a project in C# by using a terminal to navigate to the solution folder and then run `dotnet new console` to create a new application.
+{% include image.html url="create_code_projects.png" description="Shows two add project dialog boxes, one for the class library project and another for the nunit test project" caption="Add New C# Project to the Solution" %}
 
-{% include image.html url="create_code_solution.jpg" description="Shows the terminal creating a new C sharp console application." caption="Create a New C# Project" %}
+Remember that class library projects cannot run on their own, and so if you want to create tests, you'll need to create a separate test project and add a reference from the test project to the main project. After creating both the unit test and class library projects, right-click on the unit test project's `Dependencies` → `Reference...`, and then select the class library project.
 
-You can then open the created solution file to begin editing your problem solution.
+{% include image.html url="add_project_reference.png" description="Shows adding a reference from the test project to the class library project" caption="Add a Reference to the Class Library Project" %}
 
-{% include image.html url="explore_code_solution.jpg" description="Shows the project folder after creating a new C sharp project." caption="Folder Containing the C# Project" %}
+#### Creating New Projects Without Rider
+
+To create a project without Rider, you will need to use the terminal to create the project, then add that project to the solution using a separate command. See the following example for creating a project for the starting code of a student problem. Note that the name of the directory will be the name of the project, `my-directory-name` will create the project `my-directory-name.csproj`.
+
+```
+// from the solution directory
+> mkdir stack-problem
+> cd stack-problem
+> dotnet new classlib
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring /Users/arkay/dev/w25-final-project-alt-kaychoro/stack-problem/stack-problem.csproj:
+  Determining projects to restore...
+  Restored /Users/arkay/dev/w25-final-project-alt-kaychoro/stack-problem/stack-problem.csproj (in 699 ms).
+Restore succeeded.
+
+
+> dotnet sln ../final-project.sln add stack-problem.csproj
+Project `stack-problem/stack-problem.csproj` added to the solution.
+```
+
+There are 3 different project templates that you might use, `console`, `classlib`, and `nunit`. Console applications can run on their own, but Class Libraries need another application to reference them and call them. NUnit test projects reference class libraries and let you run the unit tests like on the assignments.
+
+After creating an `nunit` template called `stack-problem-tests`, here's how to add the reference to the `stack-problem` class library:
+
+```
+// Currently in the stack-problem-tests directory
+
+> dotnet add stack-problem-tests.csproj reference ../stack-problem/stack-problem.csproj 
+Reference `..\stack-problem\stack-problem.csproj` added to the project.
+```
+
+The code in the `stack-problem-tests` project can now access classes in the `stack-problem` project.
 
 ### Milestone Submissions
 You will have three milestone submissions during the remainder of the semester in which you will receive a grade and feedback from your teacher:
