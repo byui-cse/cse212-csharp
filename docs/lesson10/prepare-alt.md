@@ -146,6 +146,8 @@ Remember that class library projects cannot run on their own, and so if you want
 
 {% include image.html url="add_project_reference.png" description="Shows adding a reference from the test project to the class library project" caption="Add a Reference to the Class Library Project" %}
 
+The code in the `stack-problem-tests` project can now access classes in the `stack-problem` project.
+
 #### Creating New Projects Without Rider
 
 To create a project without Rider, you will need to use the terminal to create the project, then add that project to the solution using a separate command. See the following example for creating a project for the starting code of a student problem. Note that the name of the directory will be the name of the project, `my-directory-name` will create the project `my-directory-name.csproj`.
