@@ -18,235 +18,156 @@ title: "W09 Prepare: Reading"
 
 ## Heaps
 
-A heap is another binary tree data structure organized in a specific way. Heaps are organized to efficiently provide the highest or lowest item in the collection. A heap that provides the highest item is called a **max-heap** while a heap that provides the lowest item is called a **min-heap**.
+A heap is another data structure built using a binary tree; however, it is organized differently than a **binary search tree**. The heap provides the highest priority item from the collection of items. Usually this item is either the minimum or maximum value. A heap that provides the minimum value item is called a **min-heap** while a heap that provides the maximum value item is called a **max-heap**.
 
-### Organization
+### Heap Organization
 
-There are two rules for building a heap:
+There are two rules for a binary tree to be a heap:
 
-1. Each node's children must be lower priority than the node.
-2. The binary tree must be a **complete** binary tree.
+1. The binary tree must be a **complete** binary tree.
+2. Each node's children must be a lower priority than the node.
 
-#### Lower Priority Children
+#### Rule 1—Complete Binary Tree
+
+A complete binary tree means that each level of the tree must be filled before adding a new level. The level must be filled from left to right.
+
+#### Rule 2—Lower Priority Children
 
 Each node contains a value. For a **min-heap**, if a child node exists, the child node must contain a value that is greater than or equal to the parent node. In a **min-heap**, the minimum value has the highest priority and will therefore always be found in the root node of the tree. Conversely, a **max-heap** will have the highest value as its highest priority and all children will be lower than the root node's value.
 
-Binary trees that make up heaps are organized such that the primary item is at the root of the tree. Any additional items will be of lower priority than the root node. For example, a **min-heap** will have its lowest item as the value of the root node, while a **max-heap** will have its highest valued item as the root node. Every node in the tree follows the same structure, the child nodes of any given node are of lower priority to the heap.
+This rule applies to every node individually. The level of the tree does not indicate the priority of a particular item—only that the highest priority item is at the root and that every child has a lower priority than its parent.
+
+#### Example
 
 All examples will be shown using a **min-heap**, but they will apply to a **max-heap** by simply applying the reverse of the less than or greater than comparison.
 
 <!--- Figure 1-->
 {% include image.html url="min_heap.png"
-description="Shows a Min Heap where the root node is 3 and all values below each node are larger than the value of that node."
+description="Shows a Min Heap where the value of the root node is 3 and all children nodes have higher values than their parent nodes."
 caption="Min Heap"
 %}
 
-Notice that every node in the heap follows the same rule that its children's values are larger than its value. There are no other rules than this single rule. The 24-node can be on either the left side of the tree or the right side.
+This **min-heap** follows both rules where each child has a higher value than its parent, and the binary tree is complete by filling in each level from left to right.
 
-### Heap Operations
+## Heap Operations
 
-The heap data structure allows inserting, removing, observing the next value, and getting the size. To implement these operations, two sub-operations need to be introduced.
+The heap data structure operations are:
+
+* Insert
+* Remove
+* Peek
+* Size
+
+To understand how these operations work, two recursive sub-operations need to be introduced: **bubble-up** and **bubble-down**
 
 #### Bubble Up
 
+Bubble up means that if a child node has a higher priority than its parent, you swap the parent and child positions. Then, reevaluate by looking at the next parent until [Rule #2](#rule-2lower-priority-children) is obeyed. At most, this will swap every node from the bottom of the tree all the way to the root, which will be **log(n)** operations.
+
+Conceptually, if the highest priority item was at the bottom of the tree, the bubble up operation will cause that high priority node to swap positions with each parent until it is at the root of the tree.
+
+<!--- Figure 2-->
+{% include image.html url="bubble_up.png"
+description="Shows a bubble up operation of the 8-node swapping places with the 33-node, then the 15-node so that the tree follows rule #1."
+caption="Bubble Up of the 8-Node"
+%}
+
+```c#
+private void BubbleUp(Node node)
+{
+    // TODO finish this
+}
+```
+
 #### Bubble Down
 
+Bubble down is the opposite of bubble up. If a parent has a lower priority than either child, swap the parent and child positions. Then reevaluate by looking at the new children until [Rule #2](#rule-2lower-priority-children) is obeyed. At most, this will swap every node from the top of the tree all the way to the leaf node, which will be **log(n)** operations.
 
-A **binary** tree is a tree that links to no more than two other **nodes**. In the picture below, the top node is called the **root** node. The nodes that connect to no other nodes are called **leaf** nodes. A node that has connected nodes is called a **parent** node. The node connected to the parent are called **child** nodes. The nodes to the left and right of any parent node form a **subtree**. There is always only one root node. While not shown in the picture, it is common for child nodes to also point back up to the parent node (similar to a linked list).
+Conceptually, this is where a low priority item sinks down the tree until it reaches the bottom.
 
-Figure 1
-include image.html url="binary_tree.jpg"
-description="Shows a Binary Tree where the top (node A) is called the root, the nodes that do not connect to any other nodes are called leaves (node F, G, H and I).  Node A connects to nodes B and C.  Node B connects to node D and E.  Node C connects only to node F.  Node D connects to nodes G and H.  Node E connects to Node I. A subtree is formed from any parent node such as parent node B and includes all the children nodes D, E, G, H, and I."
-caption="Binary Tree"
+<!--- Figure 3-->
+{% include image.html url="bubble_down.png"
+description="Shows a bubble down operation of the 33-node swapping places with the 3-node, then the 8-node, then the 15-node so that the tree follows rule #1."
+caption="Bubble Down of the 33-Node"
+%}
 
-
-### Binary Search Trees
-
-A **binary search tree** (BST) is a binary tree that follows rules for data that is put into the tree. Data is placed into the BST by comparing the data with the value in the parent node. If the data being added is less than the parent node, then it is put in the left subtree. If the data being added is greater than the parent node, then it is put in the right subtree. If duplicates are allowed, then the duplicate can be put either to the left or to the right of the parent (as long as you do it consistently). By using this process, the data is stored in the tree sorted.
-
-include image.html url="binary_search_tree.jpg"
-description="Shows a Binary Search Tree where the root node is 15.  The 15 is connected to 10 (on the left) and 24 (on the right).  The 10 is connected to 3 (on the left) and 14 (on the right).  The 24 is connected to 33 (on the right)."
-caption="Binary Search Tree"
-
-Using the tree above, we can determine where to put additional items. We always start at the root node and compare the new value with it. We keep comparing until we have found an empty place for the new node. For example, to insert the value 20, do the following:
-
-* Start at the root node 15 and compare with the new value 20
-* Since 20 is greater than 15, goto the right and visit node 24
-* Since 20 is less than 24, goto the left and see there is no additional node
-* Insert 20 in the empty spot to the left of 24
-
-Figure 3
-include image.html url="binary_search_tree_add_node.jpg"
-description="Shows the same binary search tree with node 20 added to the left of node 24.  Nodes 15, 24, and 20 are highlighted to show the path to find where the new node was inserted."
-caption="Add Node to BST"
-
-
-The process that we used to find where to put the new node was an efficient process. If we had a dynamic array or a linked list containing sorted values, we would have an O(n) operation as we search for the proper location to insert a value into the proper sorted position. By using the BST, we are able to exclude a subtree with each comparison. This ability to split the job in half recursively results in O(log n). Maintaining sorted data in a BST performs better than other data structures.
-
-However, the only reason we had O(log n) in the example above was because the tree was "balanced". To see the difference between a **balanced** and an unbalanced tree, we will construct a tree with the same values but in a different order. The reason why the previous tree has 15 as the root node is because 15 was added first. This time, we will add the values in the following order: 3, 10, 14, 15, 20, 24, 33 (purposefully in ascending order).
-
-Figure 4
-include image.html url="unbalanced_bst.jpg"
-description="Shows a binary search tree with a root node of 3.  Each subsequent node is attached to the right including 10, 14, 15, 20, 24, and 33."
-caption="Unbalanced BST"
-
-This tree is a BST but looks more like a linked list. This BST is unbalanced and has a resulting performance for searching of O(n) instead of O(log n).
-
-### Balanced Binary Search Trees
-
-A **balanced binary search tree** (balanced BST) is a BST such that the difference of height between any two subtrees is not dramatically different. The height of a tree can be found by counting the maximum number of nodes between root and the leaves. Since it is not reasonable to expect that the order of data will result in a balanced BST, numerous algorithms have been written to detect if a tree is unbalanced and to correct the unbalance. Common algorithms include red black trees and AVL (Adelson-Velskii and Landis) trees. The example below shows an **AVL tree** which is balanced because the difference of height between subtrees is less than 2.
-
-Figure 5
-include image.html url="avl_tree_initial.jpg"
-description="Shows an AVL tree where the root node is 15.  The 15 is connected to 10 (on the left) and 24 (on the right).  The 10 is connected to 3 (on the left) and 14 (on the right).   The 12 is connected to 14 (on the left).  The 24 is connected to 33 (on the right). Looking at the subtree starting with 10, the height to the 3 on the left is 2.  The height of the subtree to the 12 on the right is 3."
-caption="Balanced AVL Tree`"
-
-If we add 13 to the right of the 12, we end up with an unbalanced AVL tree because the height of the right subtree from 10 is now 2 more than the left subtree.
-
-Figure 6
-include image.html url="avl_tree_unbalanced.jpg"
-description="Shows the same AVL tree but with node 13 added to the right of 12.  The height between node 10 and node 13 is now 4."
-caption="Unbalanced AVL Tree after Adding Node"
-
-The AVL algorithm will detect that the tree has become unbalanced. To balance the tree, a node rotation will be performed. For our tree, we can rotate the node with 13 so that nodes 12 and 14 are children nodes of the 13. When this rotation is done, the tree returns to a balanced state. An AVL tree will always be a Balanced BST and therefore benefit from O(log n) performance.
-
-Figure 7
-include image.html url="avl_tree_rebalanced.jpg"
-description="Shows the same AVL tree balanced again by moving the 13 to be the node of the subtree with 12 and 14 as children."
-caption="Rebalanced AVL Tree"
-
-## BST Operations
-
-BST operations can be very complicated (balanced BST's offering even more complication). We will look at two operations in our study of trees: inserting and traversing.
-
-### Inserting into a BST
-
-Inserting into a BST is a recursive operation:
-
-* Smaller problem: Insert a value into either the left subtree or the right subtree based on the value.
-* Base case: If there is space to add the node (the subtree is empty), then the correct place has been found and the item can be inserted.
-
-The code for inserting into a BST is shown below. Some things to note are as follows:
-
-* A node is defined as an object (in this example) of class `Node`. This is similar to what we saw with the linked list class. The Node class contains three things: `Data` (the value), `Left` (pointer to the left node), and `Right` (pointer to the right node).
-* There are two `Insert` functions:
-	* The first `BinarySearchTree.Insert` function is the one called by the user who wants to insert a value into the tree. This function is used to call the recursive function `Node.Insert` on the root node. As a special case, if the root node is empty (`null`), then we will put the new Node in the root without using any recursion.
-	* The second `Node.Insert` calls itself until it finds an empty position in which to insert the value.
-* We will follow a similar pattern for many of the recursive functions we write for the BinarySearchTree.
-* In the `Node.Insert` function, we should identify the base case and the recursive calls to the correct subtrees.
-
-```csharp
-public class BinarySearchTree : IEnumerable<int> {
-    private Node? _root;
-
-    // Insert 'value' into the BST.  If the BST is empty, then
-    // set the root equal to the new node. Otherwise, use
-    // Node.Insert to recursively find the location to insert.
-    public void Insert(int value) {
-        if (_root is null)
-            _root = new Node(value);
-        else
-            _root.Insert(value); // Start inserting at the root
-    }
-}
-
-public class Node {
-    // This function will look for a place to insert a node
-    // with 'value' inside of it. The current subtree is
-    // represented by this instance of Node. This function
-    // is intended to be called the first time by the
-    // BinarySearchTree.Insert function.
-    public void Insert(int value) {
-        if (value < Data) {
-            // The value belongs on the left side
-            if (Left is null) {
-                // We found an empty spot
-                Left = new Node(value);
-            }
-            else {
-                // Need to keep looking; Call Insert
-                // recursive on the left subtree
-                Left.Insert(value);
-            }
-        }
-        else {
-            // The value belongs on the right side
-            if (Right is null) {
-                // We found an empty spot
-                Right = new Node(value);
-            }
-            else {
-                // Need to keep looking; Call Insert
-                // recursive on the right subtree
-                Right.Insert(value);
-            }
-        }
-    }
+```c#
+private void BubbleDown(Node node)
+{
+    // TODO finish this
 }
 ```
 
-### Traversing a BST
+### Insert
 
-We **traverse** a BST when we want to display all the data in the tree. An in-order traversal will visit each node from smallest to largest. A similar process can be followed to visit each node from the largest to the smallest. This is also a recursive process:
+The `Insert` operation must follow both rules. We start by following [Rule #1](#rule-1complete-binary-tree), inserting the new value at the bottom of the tree in the next available position. We then call `BubbleUp` on the newly inserted node to make the tree follow [Rule #2](#rule-2lower-priority-children) as well. The tree is now balanced.
 
-* Smaller problem: Traverse the left subtree of a node, use the current node, and then traverse the right subtree of the node.
-* Base case: If the subtree is empty, then don't recursively traverse or use anything.
+<!--- Figure 4-->
+{% include image.html url="bubble_up.png"
+description="Shows a bubble up operation of the 8-node swapping places with the 33-node, then the 15-node so that the tree follows rule #1."
+caption="Inserting the 8-Node"
+%}
 
-The code for traversing a BST is shown below. In addition to understanding that there are two calls - one to start the recursion, and another to keep it going, here are some insights about creating iterators (`IEnumerable`) in C#:
+The `Insert` operation relies on `BubbleUp`, so the efficiency is **O(log n)**.
 
-* There is an interface `IEnumerable<int>` which C# uses to enable `foreach` loops over custom classes. In order to implement the `IEnumerable<int>` interface, the class must implement 2 `GetEnumerator` functions.
-	* The first `IEnumerator IEnumerable.GetEnumerator()` is the required function for all `IEnumerable` objects, but it doesn't specify the type of item being enumerated.
-	* The second `public IEnumerator<int> GetEnumerator()` is what is called when using a `foreach` loop to inform the compiler that each loop will produce an `int` value.
-	```csharp
-		var bst = new BinarySearchTree();
-		foreach (var intValue in bst) {
-			Console.WriteLine(intValue);
-		}
-	```
-* The `IEnumerator` return type is generated using the `yield return` syntax. Whenever you use `yield return`, the function will always return an `IEnumerator` with the values of each time `yield return` is called. There is no way to call `yield return` recursively, so our implementation is to gather all values into a `List` using recursion, and then use `yield return` for all values in the `List`.
-
-```csharp
-public class BinarySearchTree : IEnumerable<int> {
-    private Node? _root;
-
-    // Yields all values in the tree
-    IEnumerator IEnumerable.GetEnumerator() {
-        // call the typed version of the method
-        return GetEnumerator();
-    }
-
-    // Iterate forward through the BST
-    public IEnumerator<int> GetEnumerator() {
-        var numbers = new List<int>();
-        TraverseForward(_root, numbers);
-        foreach (var number in numbers) {
-            yield return number;
-        }
-    }
-
-    private void TraverseForward(Node? node, List<int> values) {
-        if (node is not null) {
-            TraverseForward(node.Left, values);
-            values.Add(node.Data);
-            TraverseForward(node.Right, values);
-        }
-    }
+```c#
+private void Insert(int value)
+{
+    // TODO finish this
+}
 ```
 
-### BST in C#
+### Remove
 
-In your assignment this week you will be writing your own BST class. C# does have a built-in tree called a  `SortedSet<T>` which is an implementation of a **Red Black Tree**. The table below shows the common functions in a BST.
+The `Remove` operation also must follow both rules. We start by removing the highest priority node, which is always the root node. To follow [Rule #1](#rule-1complete-binary-tree), we replace the root node with the last node in the complete tree. This ensures we still follow [Rule #1](#rule-1complete-binary-tree). We then call `BubbleDown` on the new root node to make the tree follow [Rule #2](#rule-2lower-priority-children) as well. The tree is now balanced.
 
-| Common BST Operation | Description                                                                                     | Performance                                                                                                                              |
-|----------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| insert(value)        | Insert a value into the tree.                                                                   | O(log n) - Recursively search the subtrees to find the next available spot                                                               |
-| remove(value)        | Remove a value from the tree.                                                                   | O(log n) - Recursively search the subtrees to find the value and then remove it. This will require some cleanup of the adjacent nodes.   |
-| contains(value)      | Determine if a value is in the tree.                                                            | O(log n) - Recursively search the subtrees to find the value.                                                                            |
-| traverse_forward     | Visit all objects from smallest to largest.                                                     | O(n) - Recursively traverse the left subtree and then the right subtree.                                                                 |
-| traverse_reverse     | Visit all objects from largest to smallest.                                                     | O(n) - Recursively traverse the right subtree and then the left subtree.                                                                 |
-| height(node)         | Determine the height of a node. If the height of the tree is needed, the root node is provided. | O(n) - Recursively find the height of the left and right subtrees and then return the maximum height (plus one to account for the root). |
-| size()               | Return the size of the BST.                                                                     | O(1) - The size is maintained within the BST class.                                                                                      |
-| empty()              | Returns true if the root node is empty. This can also be done by checking the size for 0.       | O(1) - The comparison of the root node or the size.                                                                                      |
+<!--- Figure 5-->
+{% include image.html url="remove.png"
+description="Shows a remove operation of the 2-node, replacing the root with the last node of the tree (33-node)."
+caption="Removing the 2-Node"
+%}
+
+<!--- Figure 6-->
+{% include image.html url="bubble_down.png"
+description="Shows a bubble down operation of the 33-node swapping places with the 3-node, then the 8-node, then the 15-node so that the tree follows rule #1."
+caption="Bubble Down of the 33-Node"
+%}
+
+The `Remove` operation relies on `BubbleDown`, so the efficiency is **O(log n)**.
+
+```c#
+private int Remove()
+{
+    // TODO finish this
+}
+```
+
+### Peek
+
+The `Peek` operation will simply return the value of the root node as that is the highest priority item. Reading the root value will always be **O(1)** regardless of the size of the tree.
+
+```c#
+private int Peek()
+{
+    // return the root value
+    return _root.Data;
+}
+```
+
+### Size
+
+The `Size` operation returns the number of nodes in the tree. As this value can be incremented when a value is inserted, the efficiency is **O(1)**
+
+## Performance Summary
+
+The table below shows the common functions of a Heap.
+
+| Common BST Operation | Description                                                                               | Performance                                                              |
+|----------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| insert(value)        | Insert a value into the heap.                                                             | O(log n) - Recursively swap values until the tree is balanced            |
+| remove()             | Remove the highest priority value from the heap and return it.                            | O(log n) - Rebalance the tree so that it's ready for the next operation. |
+| size()               | Return the size of the Heap.                                                              | O(1) - The size is maintained within the Heap class.                     |
+| empty()              | Returns true if the root node is empty. This can also be done by checking the size for 0. | O(1) - The comparison of the root node or the size.                      |
 
 ## Key Terms
 
