@@ -53,6 +53,11 @@ title: Course Index
 * [Teach One Another](lesson09/teach)
 * [Prove](lesson09/prove)
 
+{% include plain-h3.html content="Week 10: Heaps" %}
+* [Prepare](lesson10/prepare-heap)
+* [Teach One Another](lesson10/teach)
+* [Prove](lesson10/prove-heap)
+
 ## Phase 3 - Prove
 {% include plain-h3.html content="Weeks 10-14: Final Project" %}
 * [Project Description](lesson10/prepare)
