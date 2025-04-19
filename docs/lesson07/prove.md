@@ -16,7 +16,7 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All the files for this assignment will be found in the GitHub classroom ***prove-07*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
 
 ### Problem 1 - Add Last
 Implement the `AddLast` function in the LinkedList class. The function should add a new node (`Node`) at the end of the linked list. **Hint**: Consider the code already written for `AddFirst`.
@@ -53,5 +53,5 @@ foreach(var item in myLinkedList.Reverse())
 
 ## Submission
 You need to submit the following for this assignment:
-* Make sure all of your changes are committed and pushed to the `main` branch of your **prove-07-alt-[username]** repository
+* Make sure all of your changes are committed and pushed to the `main` branch of your **prove-07-[username]** repository
 * Submit a link to your repository in I-Learn

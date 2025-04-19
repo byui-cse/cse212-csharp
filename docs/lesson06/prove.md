@@ -14,9 +14,9 @@ As you solve the problems, remember to use the principles learned in the first f
 * Finding Defects Using Tests: write tests to determine if your solution is working.
 * Articulating Answers for Technical Questions: imagine that you were asked one of these questions during an interview. Remember to ensure that you fully understand the problem and work through different scenarios manually. Consider how the data structure you are using will help you solve the problem. A notebook or a whiteboard can be very useful in this process.
 
-All the files for this assignment will be found in the GitHub classroom ***prove-06-alt*** repository. You will commit changes to your own repository for your submission for this assignment.
+All the files for this assignment will be found in the GitHub classroom ***prove-06*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
 
 ### Problem 1 - Translator Class
 Implement the `AddWord` and `Translate` functions in the Translator class using a dictionary. The `AddWord` function should allow the user to add word translations (e.g. english to german). The `Translate` function should return the translation of a word. If the translation is not available for a word, then "???" should be returned instead. You will need to call `AddWord` multiple times to build a translation dictionary for testing. You should assume that there is only one translation for every word (and vice versa).
@@ -53,5 +53,5 @@ You should summarize the earthquake data into one string per earthquake and retu
 
 ## Submission
 You need to submit the following for this assignment:
-* Make sure all of your changes are committed and pushed to the `main` branch of your **prove-06-alt-[username]** repository
+* Make sure all of your changes are committed and pushed to the `main` branch of your **prove-06-[username]** repository
 * Submit a link to your repository in I-Learn
