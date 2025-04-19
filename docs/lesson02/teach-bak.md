@@ -9,9 +9,9 @@ title: "W02 Teach: Group Practice"
 
 These problems should be completed and discussed as a group. Answers are provided below.
 
-All the files for this assignment will be found in the GitHub classroom ***teach-02-alt*** repository.
+All of the files for this assignment will be found in the GitHub classroom ***teach-02*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
 
 ### Problem 1 - Analyze Code
 
@@ -41,7 +41,7 @@ In this section, you will be asked several questions related to performance usin
 
 ### Problem 2 - Predict, Measure, and Compare Code
 
-1. Open the file **Algorithms.cs** (NOTE: Do not run the code until you're asked below)
+1. Open the file **Algorithms.cs** (NOTE: Do not run the code until you're asked to below)
    
 2. This file contains three different methods called `Algorithm1`, `Algorithm2`, and `Algorithm3`. Predict the performance of each method using big O notation.
    
