@@ -14,9 +14,9 @@ As you solve the problems, remember to use the principles learned in the first f
 * Finding Defects Using Tests: write tests to determine if your solution is working.
 * Articulating Answers for Technical Questions: imagine that you were asked one of these questions during an interview. Remember to ensure that you fully understand the problem and work through different scenarios manually. Consider how the data structure you are using will help you solve the problem. A notebook or a whiteboard can be very useful in this process.
 
-All the files for this assignment will be found in the GitHub classroom ***prove-08*** repository. You will commit changes to your own repository for your submission for this assignment.
+All the files for this assignment will be found in the GitHub classroom ***prove-08-alt*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Accept your assignment repository](prove-classroom-alt){:target="_blank"}
 
 ### Problem 1 - Recursive Squares Sum
 Implement the `SumSquaresRecursive` function in the `SumSquares` class to find the sum `1^2 + 2^2 + 3^2 + ... + n^2` using recursion. Remember to both express the solution in terms of recursive call on a smaller problem and to identify a base case (terminating case). If the value of `n <= 0`, just return 0. A loop should not be used.

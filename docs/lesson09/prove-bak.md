@@ -16,7 +16,7 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All the files for this assignment will be found in the GitHub classroom ***prove-09*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Accept your assignment repository](prove-classroom-alt){:target="_blank"}
 
 ### Problem 1 - Insert Unique Values Only
 Update the `Insert` operation to only allow unique values to be added to the tree (thus creating a sorted set). The `Insert` functions are already written to correctly insert values into the tree. However, the current implementation will cause duplicate values to be added to the tree.
