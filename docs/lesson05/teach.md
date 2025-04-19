@@ -9,9 +9,9 @@ title: "W05 Teach: Group Practice"
 
 These problems should be completed and discussed as a group. Answers are provided below.
 
-All the files for this assignment will be found in the GitHub classroom ***teach-05-alt*** repository.
+All the files for this assignment will be found in the GitHub classroom ***teach-05*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
 
 ### Problem 1 - Unique Letters
 

@@ -9,9 +9,9 @@ title: "W01 Teach: Group Practice"
 
 These problems should be completed and discussed as a group.  Answers are provided below.
 
-All the code files for this assignment will be found in the GitHub classroom ***teach-01-alt*** repository.
+All the code files for this assignment will be found in the GitHub classroom ***teach-01*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
 
 ### Problem 1 - Using Dynamic Arrays: Lists
 

@@ -9,9 +9,9 @@ title: "W04 Teach: Group Practice"
 
 These problems should be completed and discussed as a group. Answers are provided below.
 
-All the files for this assignment will be found in the GitHub classroom ***teach-04-alt*** repository.
+All the files for this assignment will be found in the GitHub classroom ***teach-04*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom-alt){:target="_blank"}
+#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
 
 ### Problem 1 - Simple Queue
 1. Download the repository and load the `teach-04.sln` in your code editor. (Note: Do not read through the code first. Instead, proceed with the instructions below). 
