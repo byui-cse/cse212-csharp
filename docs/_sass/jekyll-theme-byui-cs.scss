@@ -349,18 +349,43 @@ kbd {
   -ms-box-shadow: none;
 }
 
-figure {
+ figure.figures {
 	margin: 0 auto 1em;
 	counter-increment: figures;
 }
 
-figure figcaption:before {
+figure.figures  figcaption:before {
 	content: 'Figure ' counter(figures) ' - ';
 }
 
-figure figcaption {
+figure.figures  figcaption {
     text-align: center;
     	margin: 0 auto 1em;
+}
+
+.plain img {
+  display: block;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px;
+  max-width: 92%;
+  padding: 0px 4%;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+}
+
+figure.plain {
+  margin: 0 auto 1em;
+}
+
+figure.plain figcaption {
+  text-align: center;
+  margin: 0 auto 1em;
 }
 
 /*******************************************************************************
