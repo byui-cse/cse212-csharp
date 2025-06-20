@@ -51,7 +51,7 @@ For a **min-heap**, if a child node exists, the child node must contain a value 
 
 #### Example
 
-All examples will be shown using a **min-heap**, but they will apply to a **max-heap** by simply applying the reverse of the less than or greater than comparison.
+All examples will be shown using a **min-heap**, but they will apply to a **max-heap** by simply applying the inverse of the less than or greater than comparison.
 
 <!--- Figure 2 -->
 {% include image.html url="min_heap.png"
@@ -60,6 +60,33 @@ caption="Min Heap"
 %}
 
 This **min-heap** follows both rules where each child has a higher value than its parent, and the binary tree is complete by filling in each level from left to right.
+
+## Representing a Tree Efficiently
+
+While we can use a `Node` class to represent a tree, computers operate faster when accessing data stored together. For this reason, trees are often stored as arrays (or lists) so that all the data is stored together.
+
+<!--- Figure 3 -->
+{% include image.html url="heap_in_array.png"
+description="Shows a heap in both tree and array form."
+caption="Heap Stored in an Array"
+%}
+
+To determine the parent and child of a given node, we use these formulas:
+
+* $index_{parent} = \left\lfloor\dfrac{(index - 1)}{2}\right\rfloor$
+* $index_{left} = index \times 2 + 1$
+* $index_{right} = index \times 2 + 2$
+
+#### Example
+
+---
+
+To calculate the parent for node `(14)`, we can see $\left\lfloor\dfrac{(4 _{(index)} - 1)}{2}\right\rfloor = 1$ which matches the index for its parent `(10)`. Going from `(10)` to the right child `(14)` is $1 _{(index)} \times 2 + 2 = 4$.
+
+---
+<br />
+
+Using an array to store the heap data works well because the heap is always a complete tree. New values will only be added at the end of the tree, so the backing array will only ever change at the end which is ***O(1)*** performance.
 
 ## Heap Operations
 
@@ -76,7 +103,7 @@ To understand how these operations work, two recursive sub-operations need to be
 
 ### Bubble Up
 
-The bubble up operation is to evaluate if a child node is following the rule that it must come after its parent. This recursive operation will check if the child comes before the parent and if so, it will swap the parent and the child positions. Now that same child node is either the root or has a new parent. Repeat until there are no parents who come after this node. At most, this will swap every node from the bottom of the tree all the way to the root, which will be a function of the height of the tree which will result in **log(n)** operations.
+The bubble up operation is to evaluate if a child node is following the rule that it must come after its parent. This recursive operation will check if the child comes before the parent and if so, it will swap the parent and the child positions. Now that same child node is either the root or has a new parent. Repeat until there are no parents who come after this node. At most, this will swap every node from the bottom of the tree all the way to the root, which is a function of the tree's height which will result in **log(n)** operations.
 
 Conceptually, if the first item was at the bottom of the tree, the bubble up operation will cause that first node to swap positions with each parent until it is at the root of the tree.
 
@@ -87,9 +114,15 @@ caption="Bubble Up of the 8-Node"
 %}
 
 ```c#
-private void BubbleUp(Node node)
+private void BubbleUp(int index)
 {
-    // TODO finish this
+	int parentIndex = (index - 1) / 2;
+	if (_data[index] < _data[parentIndex])
+	{
+		// swap positions and repeat
+		(_data[index], _data[parentIndex]) = (_data[parentIndex], _data[index]);
+		BubbleUp(parentIndex);
+	}
 }
 ```
 
@@ -106,9 +139,28 @@ caption="Bubble Down of the 33-Node"
 %}
 
 ```c#
-private void BubbleDown(Node node)
+private void BubbleDown(int index)
 {
-    // TODO finish this
+	int leftIndex = index * 2 + 1;
+	int rightIndex = index * 2 + 2;
+
+	// Case 1: no children
+	if (leftIndex >= _data.Count)
+		return;
+
+	// Case 2: only left child exists
+	int smallestChildIndex = leftIndex;
+
+	// Case 3: right child also exists and is smaller than left child
+	if (rightIndex < _data.Count && _data[rightIndex] < _data[leftIndex])
+		smallestChildIndex = rightIndex;
+	
+	if (_data[smallestChildIndex] < _data[index])
+	{
+		// swap positions and repeat
+		(_data[index], _data[smallestChildIndex]) = (_data[smallestChildIndex], _data[index]);
+		BubbleDown(smallestChildIndex);
+	}
 }
 ```
 
@@ -127,7 +179,8 @@ The `Add` operation takes one operation to add the new node, and then calls `Bub
 ```c#
 private void Add(int value)
 {
-    // TODO finish this
+	_data.Add(value);
+	BubbleUp(_data.Count - 1);
 }
 ```
 
@@ -152,7 +205,15 @@ The `Remove` operation takes only a few operations to remove the node and replac
 ```c#
 private int Remove()
 {
-    // TODO finish this
+	if (_data.Count == 0)
+		throw new ArgumentOutOfRangeException();
+	
+	var minValue = _data[0];
+	// Replace the top value with the bottom-most value
+	_data[0] = _data[_data.Count - 1];
+	_data.RemoveAt(_data.Count - 1);
+	BubbleDown(0);
+	return minValue;
 }
 ```
 
@@ -164,7 +225,7 @@ The `Peek` operation will return the first item of the heap found at the root no
 private int Peek()
 {
     // return the root value
-    return _root.Data;
+    return _data[0];
 }
 ```
 
