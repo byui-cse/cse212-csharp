@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "W09 Prove: Individual Assignment"
+title: "W10 Prove: Individual Assignment"
 ---
 
 # W10 Prove: Individual Assignment
@@ -18,34 +18,11 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Accept your assignment repository](prove-classroom-heap){:target="_blank"}
 
-### Problem 1 - UPDATE THIS CONTENT
-Update the `Insert` operation to only allow unique values to be added to the tree (thus creating a sorted set). The `Insert` functions are already written to correctly insert values into the tree. However, the current implementation will cause duplicate values to be added to the tree.
+### Problem 1 - Using a heap to build a priority queue
+Look at the `PriorityQueue` class. Using the pattern found in the `MinHeap` class, make the `Enqueue` and `Dequeue` functions work using a heap rather than loops. You may need to modify the `PriorityItem` class. You will also need to add additional tests in `PriorityTests.cs` to verify that your heap-based implementation works properly. Once you have made all your changes so that it uses a heap, remove the `TestPriorityQueueForHeapImplementation` method.
 
-### Problem 2 - UPDATE THIS CONTENT
-Implement the `Contains` function in the Node class. This function is called by the `Contains` function in the BinarySearchTree to search for a value in the tree. If the value is found, `true` should be returned; otherwise return `false`. **Hint**: study the `Insert` function. You will need to use recursion to solve this problem.
-
-### Problem 3 - UPDATE THIS CONTENT
-Implement the `TraverseBackward` function in the BinarySearchTree class. This function is called by the `Reversed` function to loop through the tree backwards (largest value down to the smallest value). The `Reversed` function allows you to write code using the `foreach` syntax like the following:
-
-```csharp	
-foreach(var value in myTree.Reversed()) {
-	Console.WriteLine(value);
-}
-```
-		
-**Hint**: study the `TraverseForward` function to see how traversing forward is done.
-
-### Problem 4 - UPDATE THIS CONTENT
-Implement the `GetHeight` function to get the height of the BinarySearchTree. The height of any tree (or subtree) is defined as one plus the height of either the left subtree or the right subtree (whichever one is bigger). If the tree has only the root node, then this would be 1 plus the maximum height of either subtree which would be 0. Therefore, the height of a tree with only the root node is 1. You will need to use recursion to solve this problem.
-
-### Problem 5 - UPDATE THIS CONTENT
-Implement the `InsertMiddle` function (note this function is defined outside the BinarySearchTree class) so that the `CreateTreeFromSortedList` function can successfully create a balanced tree from a sorted list of values. If we looped through the list of sorted values and added them (using the `Insert` function in the BinarySearchTree class) one at a time in order, then the resulting tree would look like a linked list. This is not desirable because it results in O(n) instead of O(log n).
-
-To achieve a balanced tree, the `InsertMiddle` function should find the middle of the list (or sub-list ... notice that the function takes a `first` and `last` value to keep track of what part of the list you are working with) and add it to the tree. After adding the middle value, then the middle value from the first half and the middle value from the second half should be added. This process (which is recursive) will result in a balanced tree.
-
-The purpose for having the `first` and `last` parameters is so that we do not need to create new sublists when we make recursive calls. Avoid using list slicing to create sublists to solve this problem.
-
-Please note we are not using balanced algorithms like AVL or red/black trees in this problem.
+### Problem 2 - Phone Switch with 911 Priority
+The phone switch has been working so far using a list to implement the priority queue. Your company has just won a contract for providing phone switching beyond your small town of 900 people to being the phone switch used across the states of Washington, Idaho, and Oregon. You are tasked with updating the working phone switch code to handle that new load using the heap-based priority queue. Check out `MinHeap.cs` for an existing implementation and modify your phone switch to use a heap. The existing tests are there to make sure you don't break the current functionality. Once you have made all your changes so that it uses a heap, remove the `TestPhoneSwitchForHeapImplementation` method.
 
 ## Submission
 You need to submit the following for this assignment:
