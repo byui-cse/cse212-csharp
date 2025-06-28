@@ -14,7 +14,7 @@ As you solve the problems, remember to use the principles learned in the first f
 * Finding Defects Using Tests: write tests to determine if your solution is working.
 * Articulating Answers for Technical Questions: imagine that you were asked one of these questions during an interview. Remember to ensure that you fully understand the problem and work through different scenarios manually. Consider how the data structure you are using will help you solve the problem. A notebook or a whiteboard can be very useful in this process.
 
-All the files for this assignment will be found in the GitHub classroom ***prove-09*** repository. You will commit changes to your own repository for your submission for this assignment.
+All the files for this assignment will be found in the GitHub classroom ***prove-10*** repository. You will commit changes to your own repository for your submission for this assignment.
 
 #### Step 1: [Accept your assignment repository](prove-classroom-heap){:target="_blank"}
 
