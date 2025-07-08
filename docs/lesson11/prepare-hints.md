@@ -20,9 +20,9 @@ The c# solution file defines projects. Each project is a library or an executabl
 
 Spring 2025 project was missing the following references:
 * `Playlist2` needs to reference `Common`
-* `Playlist2Test` needs to reference `Playlist2`
+* `Playlist2Tests` needs to reference `Playlist2`
 * `Playlist3` needs to reference `Common`
-* `Playlist3Test` needs to reference `Playlist3`
+* `Playlist3Tests` needs to reference `Playlist3`
 
 Alternately, you can **Sync Fork** your repository to update your local repository.
 
