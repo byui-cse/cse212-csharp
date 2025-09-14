@@ -20,19 +20,19 @@ add the student roster back in (student-000, student-001, ..., student-300)
 """
 
 links = [
-    ("lesson01", "prove", "https://classroom.github.com/a/knUcBiMV", True, True),
-    ("lesson02", "prove", "https://classroom.github.com/a/PM1Z35wZ", True, True),
-    ("lesson04", "prove", "https://classroom.github.com/a/E0F1t5rw", True, True),
-    ("lesson05", "prove", "https://classroom.github.com/a/9uGxuyU9", True, True),
-    ("lesson06", "prove", "https://classroom.github.com/a/8PO0P2Hd", True, True),
-    ("lesson07", "prove", "https://classroom.github.com/a/Om_1fTI0", True, True),
-    ("lesson08", "prove", "https://classroom.github.com/a/Nc9BZ51D", True, True),
-    ("lesson09", "prove", "https://classroom.github.com/a/-LqCaFGX", True, True),
-    ("lesson01", "teach", "https://classroom.github.com/a/Ofd6qvle", True, True),
-    ("lesson02", "teach", "https://classroom.github.com/a/QzdG83_Z", True, True),
-    ("lesson04", "teach", "https://classroom.github.com/a/ocUUSKOR", True, True),
-    ("lesson05", "teach", "https://classroom.github.com/a/nmTLs7G-", True, True),
-    ("lesson10", "prove", "https://classroom.github.com/a/_xthzpbA", True, False),
+    ("lesson01", "prove", "https://classroom.github.com/a/zew8343a", True, True),
+    ("lesson02", "prove", "https://classroom.github.com/a/bcMFBKVd", True, True),
+    ("lesson04", "prove", "https://classroom.github.com/a/5ddCZjKA", True, True),
+    ("lesson05", "prove", "https://classroom.github.com/a/x_LM7D3V", True, True),
+    ("lesson06", "prove", "https://classroom.github.com/a/CNvHho1I", True, True),
+    ("lesson07", "prove", "https://classroom.github.com/a/7-wdhRSR", True, True),
+    ("lesson08", "prove", "https://classroom.github.com/a/-bHgia0S", True, True),
+    ("lesson09", "prove", "https://classroom.github.com/a/-9nfB1Xm", True, True),
+    ("lesson01", "teach", "https://classroom.github.com/a/pnO22Paq", True, True),
+    ("lesson02", "teach", "https://classroom.github.com/a/PERK7G0g", True, True),
+    ("lesson04", "teach", "https://classroom.github.com/a/XALMmsxW", True, True),
+    ("lesson05", "teach", "https://classroom.github.com/a/L7HIj3-5", True, True),
+    ("lesson10", "prove", "https://classroom.github.com/a/igg5eSYR", True, False),
 ]
 
 for lesson, type, link, do_regular, do_alt in links:
