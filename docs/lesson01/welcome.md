@@ -85,7 +85,7 @@ Every file that you download contains the following warning: "It is a violation 
 The Prove assignments will include a Response Document that you must use to provide your responses to questions. When you submit your assignment, you will need to submit the completed Response Document along with any required code files.
 
 ## Preparing for the Final Project
-Starting in Week 10, the course will be devoted to working on your final project. The [Week 10 Prepare](../lesson10/prepare) contains the full description of the project. You will be asked to create a detailed tutorial about some of the data structures you have learned during the course. To prepare for the project, you are encouraged to begin taking weekly notes about each data structure with special attention to the following:
+Starting in Week 11, the course will be devoted to working on your final project. The [Week 11 Prepare](../lesson11/prepare-alt) contains the full description of the project. You will be asked to build a feature of an application 3 times using 3 different data structures you have learned during the course. To prepare for the project, you are encouraged to begin taking weekly notes about each data structure with special attention to the following:
 * What is the purpose of this data structure and when is it used?
 * What is the performance of this data structure (you learn about performance in Week 2)?
 * How does the data structure work and how do you use it with C#?

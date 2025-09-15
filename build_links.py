@@ -28,11 +28,11 @@ links = [
     ("lesson07", "prove", "https://classroom.github.com/a/7-wdhRSR", True, True),
     ("lesson08", "prove", "https://classroom.github.com/a/-bHgia0S", True, True),
     ("lesson09", "prove", "https://classroom.github.com/a/-9nfB1Xm", True, True),
+    ("lesson10", "prove", "https://classroom.github.com/a/igg5eSYR", True, False),
     ("lesson01", "teach", "https://classroom.github.com/a/pnO22Paq", True, True),
     ("lesson02", "teach", "https://classroom.github.com/a/PERK7G0g", True, True),
     ("lesson04", "teach", "https://classroom.github.com/a/XALMmsxW", True, True),
     ("lesson05", "teach", "https://classroom.github.com/a/L7HIj3-5", True, True),
-    ("lesson10", "prove", "https://classroom.github.com/a/igg5eSYR", True, False),
 ]
 
 for lesson, type, link, do_regular, do_alt in links:
