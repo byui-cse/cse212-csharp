@@ -1,22 +1,38 @@
 ﻿"""
-1. delete all the assignments from last semester
-2. remove the student roster
+1.  Delete all the assignments from last semester:
+    https://classroom.github.com/classrooms/104235113-byui-cse-212-master
 
-Use github cli gh to execute stuff like this:
-gh auth status
-gh repo list -L 100 byui-cse212 | awk '{print $1}'
-Then I drop that in excel to run the delete repo commands like:
-gh repo delete byui-cse212/byui-cse212-classroom-w25-final-project-alt-final-project-alt --yes
+2.  Delete the template repositories (not the original prove-01, but the ones like
+    byui-cse-212-master-f25-prove-01-prove-01-alt
 
-recreate all the assignments from prove01-prove10, teach01-teach05, final-project in gh classroom
+    Use github cli gh to execute stuff like this:
+    gh auth status
+    gh auth refresh -h github.com -s delete_repo
+    gh repo list -L 100 byui-cse-212 | awk '{print $1}'
 
-using excel I did something like this per row:
-1	byui-cse212/prove-01-alt	s25-prove-01		lesson01	prove	https://classroom.github.com/a/knUcBiMV
-to generate the links array down below
+    Then I drop that in Excel to run the delete repo commands like:
+    (assuming it's in column A, I put this in B1:
+    ="gh repo delete " & A1 & " --yes"
+    which should expand to:
+    gh repo delete byui-cse-212/byui-cse-212-master-w25-final-project-alt-final-project-alt --yes
 
-run this python script to update the links files (alts are for previous years)
+3.  Recreate all the assignments from prove01-prove10, teach01-teach05, final-project in gh classroom
+    - Note that prove-03 and teach-03 do not have a repository - skip those
+    - Assignment names should be f25-prove-01 (for Fall 2025, prove 1 assignment)
+    - Template repo should be byui-cse-212/prove-01-alt (until the alt gets removed)
+    - take the link (https://classroom.github.com/a/knUcBiMV) and put it in the python code below
 
-add the student roster back in (student-000, student-001, ..., student-300)
+3.  Recreate all the assignments for the final-project in gh classroom
+    - Note that prove-03 and teach-03 do not have a repository - skip those
+    - Assignment names should be f25-prove-01 (for Fall 2025, prove 1 assignment)
+    - Template repo should be byui-cse-212/prove-01-alt (until the alt gets removed)
+    - take the link (https://classroom.github.com/a/knUcBiMV) and put it in the python code below
+
+4.  Run this python script to update the links so that canvas points to this new semester's
+    assignments (alts are for previous years)
+
+5.  You are done, do NOT create a Roster in Github Classroom, the students can accept the assignments
+    without the roster.
 """
 
 links = [
