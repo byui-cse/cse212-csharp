@@ -22,7 +22,7 @@
     - Template repo should be byui-cse-212/prove-01
     - take the link (https://classroom.github.com/a/knUcBiMV) and put it in the python code below
 
-3.  Recreate all the assignments for the final-project in gh classroom
+3.  Recreate all the assignments and the final-project in gh classroom
     - Note that prove-03 and teach-03 do not have a repository - skip those
     - Assignment names should be f25-prove-01 (for Fall 2025, prove 1 assignment)
     - Template repo should be byui-cse-212/prove-01

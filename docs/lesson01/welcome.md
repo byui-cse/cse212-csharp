@@ -25,7 +25,7 @@ Welcome to CSE 212 - Programming with Data Structures. This course is intended f
 * Conversant: Articulate the answers to technical questions involving data structures.
 * Self-Reliant: Solve problems using data structures independently.
 
-Data structures are containers that hold information. There are different data structures which are suited for different purposes. In this course, you will study the following data structures: dynamic array, stack, queue, set, map, linked list, and tree. You will also learn about big O performance and recursion.
+Data structures are containers that hold information. There are different data structures which are suited for different purposes. In this course, you will study the following data structures: dynamic array, stack, queue, set, map, linked list, tree, and heap. You will also learn about Big O performance and recursion.
 
 The course is divided into three phases:
 
@@ -33,15 +33,15 @@ The course is divided into three phases:
     * You will learn programming skills and techniques and apply them to data structures.
     * You will complete practice problems with other students and discuss the solutions together.
     * Your individual assignments will be similar to the practice problems.
-* Phase 2 - Teach (Lessons 6-9)
+* Phase 2 - Teach (Lessons 6-10)
     * You will learn complex data structures and rely on your skills discovered in the Prepare phase.
     * You will have a set of problems to individually solve each week.
     * You will meet with other students for a set amount of time each week to collaborate on these problems (without sharing code).
-* Phase 3 - Prove (Lessons 10-14)
+* Phase 3 - Prove (Lessons 11-14)
     * You will demonstrate what you learned in the Prepare and Teach phases by completing a final individual project.
     * Class time will be given to work on your final project.
 
-This course is designed to provide opportunities for you to learn with your peers while at the same time demonstrating your personal mastery of the material. You should only collaborate with other students as directed in the assignments. When working with TA's, tutors, and other individuals outside of class, you should not seek or receive direct help in answering a problem that you were expected to answer on your own. You should seek help to learn course material and then demonstrate your understanding on your own.
+This course is designed to provide opportunities for you to learn with your peers while at the same time demonstrating your personal mastery of the material. You should only collaborate with other students as directed in the assignments. When working with AI, TA's, tutors, and other individuals outside of class, you should not seek or receive direct help in answering a problem that you were expected to answer on your own. You should seek help to learn course material and then demonstrate your understanding on your own.
 
 Many programming problems in this course have solutions that with some effort could be found online. You should resist the temptation to use online solutions in favor of solving the problems on your own. For this purpose, many of the assignments will require written responses in addition to C# code. When you interview with potential employers, you will not have the luxury of a web search engine to help you answer the question. You will need to be prepared to articulate your answers clearly to others. The successful CSE 212 student will gain this skill.
 
@@ -64,7 +64,7 @@ We will be using the platform independent version of C# called [.NET Core](https
 JetBrains Rider is a cross-platform Integrated Development Environment (IDE) that will speed up development and give you experience that will prepare you for coding in the workplace. Using this tool will give you *many* advantages over Visual Studio Code (which you probably have used in the past). If you live in an area of the world with limited Internet bandwidth, you may use Visual Studio Code to work on the assignments; however, it is highly encouraged to use JetBrains Rider if you can. Rider supplies better coding helps, a working **run** button, and help with debugging errors.
 
 #### Running with VS Code
-In order to run code using VS Code, you will need to use the terminal and the command `dotnet run` in the folder containing your project in order to produce results. 
+In order to run code using VS Code, you will need to use the terminal and the command `dotnet test` in the folder containing your project in order to produce results. 
 
 #### Setting up JetBrains Rider
 You will need to activate a [student license](https://www.jetbrains.com/community/education/#students){:target="_blank"} which involves creating an account and supplying your BYU-Idaho email address. You will need to download [JetBrains Rider](https://www.jetbrains.com/rider/){:target="_blank"} or the [JetBrains Toolbox](https://www.jetbrains.com/lp/toolbox/){:target="_blank"} (which then allows you to install Rider).
