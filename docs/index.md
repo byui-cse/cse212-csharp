@@ -59,13 +59,10 @@ title: Course Index
 * [Prove](lesson10/prove-heap)
 
 ## Phase 3 - Prove
-{% include plain-h3.html content="Weeks 10-14: Final Project" %}
-* [Project Description](lesson10/prepare)
-* Week 10: [Outline](lesson10/prove)
-* Week 11: [Draft 1](lesson11/prove)
-* Week 12: [Draft 2](lesson12/prove)
-* Week 13: [Peer Review](lesson13/prove)
-* Week 14: [Final Submission](lesson14/prove)
+{% include plain-h3.html content="Weeks 11-14: Final Project" %}
+* [Project Description](lesson11/prepare-alt)
+* [Project Hints](lesson11/prepare-hints)
+* [Peer Review](lesson13/prove-alt)
 
 ## Resources
 * [Rider Help](help/rider)
