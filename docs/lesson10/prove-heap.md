@@ -16,7 +16,9 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All the files for this assignment will be found in the GitHub classroom ***prove-10*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom-heap){:target="_blank"}
+#### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ### Problem 1 - Using a heap to build a priority queue
 Look at the `PriorityQueue` class. Using the pattern found in the `MinHeap` class, make the `Enqueue` and `Dequeue` functions work using a heap rather than loops. You may need to modify the `PriorityItem` class. You will also need to add additional tests in `PriorityTests.cs` to verify that your heap-based implementation works properly. Once you have made all your changes so that it uses a heap, remove the `TestPriorityQueueForHeapImplementation` method.

@@ -31,7 +31,9 @@ You are working for a company developing a simple music application. You have be
 
 ## Repository
 
-#### [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ---
 

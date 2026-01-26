@@ -9,7 +9,9 @@ This assignment **must be completed individually** to ensure you are meeting all
 
 All the code files for this assignment will be found in the GitHub classroom ***prove-05*** repository - including the 05-prove-response.md. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ### Part 1 - Response Document
 Examine the `05-prove-response.md` document to provide your answers to questions asked in the steps below. You will commit this document back to your repository for submission.

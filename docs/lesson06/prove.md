@@ -16,7 +16,9 @@ As you solve the problems, remember to use the principles learned in the first f
 
 All the files for this assignment will be found in the GitHub classroom ***prove-06*** repository. You will commit changes to your own repository for your submission for this assignment.
 
-#### Step 1: [Accept your assignment repository](prove-classroom){:target="_blank"}
+#### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ### Problem 1 - Translator Class
 Implement the `AddWord` and `Translate` functions in the Translator class using a dictionary. The `AddWord` function should allow the user to add word translations (e.g. english to german). The `Translate` function should return the translation of a word. If the translation is not available for a word, then "???" should be returned instead. You will need to call `AddWord` multiple times to build a translation dictionary for testing. You should assume that there is only one translation for every word (and vice versa).
