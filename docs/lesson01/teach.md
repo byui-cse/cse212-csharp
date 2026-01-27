@@ -11,7 +11,9 @@ These problems should be completed and discussed as a group.  Answers are provid
 
 All the code files for this assignment will be found in the GitHub classroom ***teach-01*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
+#### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ### Problem 1 - Using Dynamic Arrays: Lists
 

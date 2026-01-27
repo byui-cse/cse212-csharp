@@ -11,7 +11,9 @@ These problems should be completed and discussed as a group. Answers are provide
 
 All the files for this assignment will be found in the GitHub classroom ***teach-04*** repository.
 
-#### Step 1: [Accept your assignment repository](teach-classroom){:target="_blank"}
+#### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
 
 ### Problem 1 - Simple Queue
 1. Download the repository and load the `teach-04.sln` in your code editor. (Note: Do not read through the code first. Instead, proceed with the instructions below). 
