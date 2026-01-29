@@ -48,8 +48,8 @@ links = [
     ("lesson11", "prove", "https://classroom.github.com/a/r3GD7TQX", True, False), # final project
     ("lesson01", "teach", "https://classroom.github.com/a/X2B_3Oc7", True, True),
     ("lesson02", "teach", "https://classroom.github.com/a/12qtq7Wc", True, True),
-    ("lesson04", "teach", "https://classroom.github.com/a/w60mPv3_", True, True),
-    ("lesson05", "teach", "https://classroom.github.com/a/I5sMr-5t", True, True),
+    ("lesson04", "teach", "https://classroom.github.com/a/dGMMm-bq", True, True),
+    ("lesson05", "teach", "https://classroom.github.com/a/SAJic_8V", True, True),
 ]
 
 for lesson, type, link, do_regular, do_alt in links:
