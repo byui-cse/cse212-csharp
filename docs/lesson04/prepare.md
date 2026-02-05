@@ -80,7 +80,7 @@ The best time to find a **defect** is while you are *"in-phase."* This means tha
 * Testing
 
 ### Testing Code From Requirements
-Even the best code reviewers may not be able to analyze all the different scenarios that the software will execute within. **Testing** is a process of demonstrating that specific inputs will result in expected outputs. The selection of inputs can be done systematically. We do not need to test all input combination. Often times we will write code to test your code. Consider a program that was supposed to determine if a year was a leap year. The **requirements** of a program would include the following:
+Even the best code reviewers may not be able to analyze all the different scenarios that the software will execute within. **Testing** is a process of demonstrating that specific inputs will result in expected outputs. The selection of inputs can be done systematically. We do not need to test all input combinations. Often times we will write code to test your code. Consider a program that was supposed to determine if a year was a leap year. The **requirements** of a program would include the following:
 
 * Every 4 years shall be a leap year.
 * Every 100 years shall not be a leap year.
