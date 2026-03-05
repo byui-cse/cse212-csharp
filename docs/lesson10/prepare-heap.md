@@ -46,7 +46,7 @@ caption="Incomplete vs Complete Binary Tree"
 
 This rule applies to every node individually. The children of every parent node must come after the parent in sorted order. The level of the tree does not indicate any ordering other than the first item in the heap is at the root and that every child comes after its parent.
 
-For a **min-heap**, if a child node exists, the child node must contain a value that is greater than or equal to the parent node. In a **min-heap**, the minimum value has the comes first and will therefore always be found in the root node of the tree. Conversely, a **max-heap** will have the highest value come first and all children will be lower than the root node's value.
+For a **min-heap**, if a child node exists, the child node must contain a value that is greater than or equal to the parent node. In a **min-heap**, the minimum value comes first and will therefore always be found in the root node of the tree. Conversely, a **max-heap** will have the highest value come first and all children will be lower than the root node's value.
 
 
 #### Example
