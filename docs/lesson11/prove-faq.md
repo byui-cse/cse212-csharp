@@ -10,20 +10,42 @@ This FAQ addresses common questions and pitfalls students often encounter while 
 ### 1. Do all three playlist implementations need to support the exact same features?
 Yes. All three implementations must support the same playlist operations and meet the same functional requirements. The only difference between them should be the underlying data structure used.
 
-### 2. Can I reuse code between implementations?
+### 2. Which files should I work in for Week 11?
+For Week 11, your main implementation should go in `Playlist1`. Add or update your tests in `PlaylistTests`, and record your Week 11 write-up in `report.md`.
+
+The provided `Menu` is mainly for informal manual testing. It is helpful, but your grade is based on your `IPlaylist` implementation, tests, performance results, and write-up.
+
+If you do not see `report.md` in your solution view, switch to the repository/files view in your editor.
+
+### 3. Can I reuse code between implementations?
 You may reuse ideas and logic, but each implementation should be written as a separate class that clearly demonstrates how the chosen data structure works. Excessive copy-pasting that hides structural differences is discouraged.
 
-### 3. How should I determine if two songs “match”?
-Unless otherwise specified, two songs should be considered a match if their title and artist are the same. You may implement this by overriding `Equals()` or by explicitly comparing fields.
+### 4. How should I determine if two songs “match”?
+For the main playlist requirements, two songs should be considered a match if their title and artist are the same.
+
+However, the provided `Menu` may pass in a `Song` that only includes a title. To support that manual testing scenario, your code should also handle title-only matching. In that case, use the **first matching title** in playlist order.
+
+If multiple songs match, `RemoveSong()`, `MoveSongUp()`, and `MoveSongDown()` should act on the **first matching song** in playlist order.
 
 ## Playlist Behavior
-### 4. What happens when `PlayNext()` reaches the end of the playlist?
-Once all songs have been played, `PlayNext()` should return `null`. To start playback again from the beginning, you must call `Reset()`.
+### 5. What happens when `PlayNext()` reaches the end of the playlist?
+If the playlist is not empty and all songs have already been played, `PlayNext()` should return `null`.
 
-### 5. What does it mean if a song is “currently playing” when moving songs up or down?
-If a song is moved and it was the song most recently returned by `PlayNext()`, playback should continue logically at the same playlist position, even though the song itself may have changed.
+It should continue returning `null` until either:
 
-### 6. What format should `ShowPlayList()` use?
+1. `Reset()` is called, or
+2. A new song is added
+
+If the playlist is empty, see question 8.
+
+### 6. What does it mean if a song is “currently playing” when moving songs up, moving songs down, or removing songs?
+Think of playback as a cursor between songs. After `PlayNext()` returns a song, the cursor sits immediately after that song.
+
+If the most recently played song is moved, the cursor should move with it. If songs are removed or moved elsewhere, keep playback consistent with that cursor rather than restarting from the beginning.
+
+This means the next song may change if the playlist around the cursor changes.
+
+### 7. What format should `ShowPlaylist()` use?
 The exact format is flexible, but it must be clear and consistent. A recommended format is:
 
 `Title - Artist (Length)`
@@ -31,18 +53,25 @@ The exact format is flexible, but it must be clear and consistent. A recommended
 If the playlist is empty, display an `Empty Playlist` message.
 
 ## Edge Cases and Exceptions
-### 7. When should I throw an `InvalidOperationException`?
+### 8. When should I throw an `InvalidOperationException`?
 You should throw an exception when an operation cannot logically be performed, including:
 
 1. Calling `PlayNext()` or `Reset()` on an empty playlist
 2. Moving a song up when it is already at the top
 3. Moving a song down when it is already at the end
 
-### 8. What should `RemoveSong()` do if the song is not found?
-If the playlist is not empty and the song is not found, `RemoveSong()` should return `false` and make no changes to the playlist.
+### 9. What should `RemoveSong()`, `MoveSongUp()`, or `MoveSongDown()` do if the song is not found?
+If the song is not found, these methods should return `false` and make no changes to the playlist.
+
+This includes the empty-playlist case for `RemoveSong()`, `MoveSongUp()`, and `MoveSongDown()`.
+
+### 10. Are duplicate songs allowed?
+Yes. Duplicate songs are allowed.
+
+If more than one song matches the same search criteria, operate on the **first matching song** in playlist order.
 
 ## Dictionary Implementation
-### 9. How can I use a dictionary for an ordered playlist?
+### 11. How can I use a dictionary for an ordered playlist?
 Dictionaries do not preserve order by default. You must explicitly manage song order. Common approaches include:
 
 1. Storing an index or position value with each song
@@ -52,10 +81,12 @@ Dictionaries do not preserve order by default. You must explicitly manage song o
 Your design choice should be clearly explained in your paper.
 
 ## Performance Testing
-### 10. Do I need to test every method at every playlist size?
-Yes. For valid comparisons, you should measure all core playlist operations at the same playlist sizes for each implementation.
+### 12. Do I need to test every method at every playlist size?
+For the final comparison, use the same playlist sizes across implementations so your results are comparable.
 
-### 11. My timing results are inconsistent. Is that okay?
+For the Week 11 prove checkpoint, follow the prove page requirements and measure at least the listed operations for multiple playlist sizes.
+
+### 13. My timing results are inconsistent. Is that okay?
 Yes. This is normal. You should discuss sources of inconsistency in your paper, such as:
 
 1. JIT warm-up effects
@@ -64,14 +95,19 @@ Yes. This is normal. You should discuss sources of inconsistency in your paper, 
 
 Explain what steps you took to improve measurement reliability.
 
+### 14. Are the starter tests complete?
+No. The starter tests are examples, not a complete solution.
+
+You are expected to add your own functional tests for all required methods and edge cases, and to add the performance measurements required for each week.
+
 ## Final Paper
-### 12. Which implementation do you expect to perform best?
+### 15. Which implementation do you expect to perform best?
 There is no single “correct” answer. Your grade is based on the quality of your reasoning, how well your conclusions are supported by data, and how accurately you apply Big-O analysis.
 
-### 13. Do I need to measure memory usage in code?
+### 16. Do I need to measure memory usage in code?
 No. You are not required to measure memory usage programmatically. However, your memory analysis must be technically accurate and grounded in how each data structure allocates and manages memory.
 
-### 14. What matters most in grading the final paper?
+### 17. What matters most in grading the final paper?
 Clarity, correctness, and reasoning matter more than writing style. Well-organized explanations supported by data will score higher than vague or unsupported claims.
 
 If you are unsure about a design decision, make a reasonable choice, document it clearly, and justify it in your paper. Thoughtful explanation is a key part of this project.
