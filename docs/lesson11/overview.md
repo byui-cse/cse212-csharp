@@ -137,6 +137,7 @@ In addition to your code, tests, and performance results, you will write a final
 - Keep your three implementations behaviorally consistent.
 - Cite any sources if you reuse code snippets.
 - Use clear visuals (tables or charts) in your final report.
+- If you need help formatting `report.md`, see [Using Markdown Language](prepare-markdown).
 - Use the [FAQ](prove-faq) whenever you are unsure about exact behavior.
 
 ---

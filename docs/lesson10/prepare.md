@@ -4,194 +4,281 @@ title: "W10 Prepare: Reading"
 ---
 
 # W10 Prepare: Reading
+
 ## Table of Contents
-* [Final Project Description](#final-project-description)
-    * [Project Requirements](#project-requirements)
-    * [Guidance](#guidance)
-    * [Using Markdown Language](#using-markdown-language)
-    * [Creating Example Problems](#creating-example-problems)
-    * [Milestone Submissions](#milestone-submissions)
-    * [Grading Rubric](#grading-rubric)
-    * [Working Independently](#working-independently)
 
-## Final Project Description
-The information below is the complete description for the final project you will complete during the remainder of the semester. You may want to bookmark or print this page out for easier reference.
+* [Heaps](#Heaps)
+* [Heap Organization](#heap-organization)
+    * [Complete Binary Tree](#binary-search-trees)
+    * [Parents Come First](#balanced-binary-search-trees)
+* [Heap Operations ](#bst-operations)
+* [Uses](#uses)
+* [Key Terms](#key-terms)
 
-### Project Requirements
-To prove that you understand the material from this course, you will be required to create a **Data Structure Tutorial**. The tutorial must meet the following requirements:
+## Heaps
 
-1. The tutorial must cover three different data structures as follows:
-    1. Select one of the following: stack, queue
-    2. Select one of the following: set, linked list
-    3. You must include the following: tree
-2. Each of the three data structure training modules must include the following:
-    1. Detailed and organized coverage of the topic with documentation including (but not limited to) example C# code, diagrams, and tables. You should assume that the student using your tutorial will already know how to program in C#. **This should be written in your own words. Remember, you are the teacher now.**
-    2. A complete example of a problem solved using the data structure. The problem should be **created by you** and not be a copy of an existing problem.
-    3. A second problem (again created by you) which is given to the student of your tutorial to solve on their own. You need to provide a link to the solution.
-    4. Your tutorial must use the C# programming language.
-3. You must write the tutorial using Markdown language. You should create at least the following files:
+A heap is another data structure built using a **binary tree**; however, it is organized differently than a **binary search tree**. The heap relies on data that can be sorted to provide the first item from the collection of items. Usually, this item is either the minimum or maximum value. A heap that provides the minimum value item is called a **min-heap** while a heap that provides the maximum value item is called a **max-heap**.
 
-| Filename      | Purpose                                                                                                                                                                                                                                                                                   |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0-welcome.md  | Provide an introduction to the student as well as links to three modules. It is important that you provide your name, class, section, and email address on this page.                                                                                                                     |
-| 1-topic.md    | Provide the tutorial for the first data structure topic. You should include a link back to the welcome page.                                                                                                                                                                              |
-| 2-topic.md    | Provide the tutorial for the second data structure topic. You should include a link back to the welcome page.                                                                                                                                                                             |
-| 3-topic.md    | Provide the tutorial for the third data structure topic. You should include a link back to the welcome page.                                                                                                                                                                              |
-| Picture Files | If you want a picture (e.g., jpg, bmp, gif, png) to be included in your tutorial, then you need to make sure the files are included in your tutorial submittal. If you copy an image from the internet, make sure that you can legally copy it and be sure to provide source information. |
-| C# Files      | You will likely want to include C# files for the student to see the solution to the second problem.                                                                                                                                                                                       |
-| Other Files   | If you have any other file that needs to be displayed or accessed by your tutorial, make sure they are included in your submittal.                                                                                                                                                        |
+{% include plain-image.html url="heap-header.jpg"
+description="Shows a Min Heap where the value of the root node is 3 and all children nodes have higher values than their parent nodes."
+caption="Min Heap"
+%}
 
-### Guidance
-When you write each of the data structure modules, you will want to consider the following questions (this is not an exhaustive list):
-* What is the purpose of the data structure?
-* What is the performance of the data structure (you will need to talk about big O notation)?
-* What kind of problems can be solved using the data structure?
-* How would the data structure be used in C# (in some cases you will need to discuss recursion)?
-* What kind of errors are common when using the data structure?
-* ...
+## Heap Organization
 
-This list of questions is not an exhaustive list but will be helpful to get you started.
+There are two rules for a binary tree to be a heap:
 
-To help you visualize what this project requires, a complete [C# Fundamentals Tutorial](https://github.com/byui-cse/cse212-csharp/blob/master/CSharpFundamentals/0-welcome.md) example written in Markdown has been provided. This example covers three fundamental topics in C# programming: decisions, loops, and functions. Please note that your tutorial will not be on these basic C# topics. Your tutorial will be on data structures as described in project requirements shown in the previous section. The structure of this example tutorial follows the project requirements for structure, technical depth, and sample problems.
+1. The binary tree must be a **complete** binary tree.
+2. Parent nodes must come before child nodes when comparing the two.
 
-### Using Markdown Language
-The Markdown language is commonly used to develop documentation. The purpose of requiring Markdown for your tutorial is to give you experience using this language. Using a simple editor and the knowledge of a little bit of syntax, you can create documents with headers, bulleted lists, links, bold text, tables and pictures. A common place to see Markdown documents is in GitHub repositories. The link above for the example tutorial was shown to you in GitHub. GitHub automatically interprets the Markdown file and displays as intended.
+### Complete Binary Tree
 
-There are many different tools available to help you write and preview Markdown files. Visual Studio Code has built-in support for Markdown. If you create a file with an `md` extension, then you can click on the preview button, and you can see the Markdown and the finished product side by side.
+A complete binary tree means that each level of the tree must be filled before adding a new level. The level must be filled from left to right.
 
-{% include image.html url="visual_studio_code.jpg" description="Shows the 0-welcome.md file from the example loaded into Visual Studio Code with the preview enabled." caption="Markdown in Visual Studio Code" %}
+<!--- Figure 1 -->
+{% include image.html url="complete_binary_tree.png"
+description="Shows two trees, the one on the left is incomplete, while the one on the right is complete."
+caption="Incomplete vs Complete Binary Tree"
+%}
 
-Writing in Markdown requires the memorization of some basic syntax (here is an example of a [cheat sheet](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) you might find useful). Listed below is syntax that was used in the example tutorial.
 
-``````markdown
-	
-# Title
+### Parents Come First
 
-When you put a hash sign in front, you get a header.
+This rule applies to every node individually. The children of every parent node must come after the parent in sorted order. The level of the tree does not indicate any ordering other than the first item in the heap is at the root and that every child comes after its parent.
 
-If you want sub-headings, use more than one hash:
+For a **min-heap**, if a child node exists, the child node must contain a value that is greater than or equal to the parent node. In a **min-heap**, the minimum value comes first and will therefore always be found in the root node of the tree. Conversely, a **max-heap** will have the highest value come first and all children will be lower than the root node's value.
 
-# Header
-## Section
-### Sub-Section
 
-To make a bulleted list, use a single star in front:
-* Item 1
-* Item 2
-* Item 3
+#### Example
 
-To make an ordered list, use numbers:
-1. Item 1
-2. Item 2
-3. Item 3
+All examples will be shown using a **min-heap**, but they will apply to a **max-heap** by simply applying the inverse of the less than or greater than comparison.
 
-To highlight some code in your sentence use the 
-back-tick (left leaning apostrophe) around the code 
-like this `x = 42`
+<!--- Figure 2 -->
+{% include image.html url="min_heap.png"
+description="Shows a Min Heap where the value of the root node is 3 and all children nodes have higher values than their parent nodes."
+caption="Min Heap"
+%}
 
-If you have a block of code you want to show, use three back-ticks
-before and after the code.  If you put the name of the programming 
-language after the fourth back-ticks, then it will highlight the 
-syntax for you:
+This **min-heap** follows both rules where each child has a higher value than its parent, and the binary tree is complete by filling in each level from left to right.
 
- ```csharp
-int x = 3
-int y = 7
-int z = x * y
-Console.WriteLine(z)
+## Representing a Tree Efficiently
+
+While we can use a `Node` class to represent a tree, computers operate faster when accessing data stored together. For this reason, trees are often stored as arrays (or lists) so that all the data is stored together.
+
+<!--- Figure 3 -->
+{% include image.html url="heap_in_array.png"
+description="Shows a heap in both tree and array form."
+caption="Heap Stored in an Array"
+%}
+
+To determine the parent and child of a given node, we use these formulas:
+
+* $index_{parent} = \left\lfloor\dfrac{(index - 1)}{2}\right\rfloor$
+* $index_{left} = index \times 2 + 1$
+* $index_{right} = index \times 2 + 2$
+
+#### Example
+
+---
+
+To calculate the parent for node `(14)`, we can see $\left\lfloor\dfrac{(4 _{(index)} - 1)}{2}\right\rfloor = 1$ which matches the index for its parent `(10)`. Going from `(10)` to the right child `(14)` is $1 _{(index)} \times 2 + 2 = 4$.
+
+---
+<br />
+
+Using an array to store the heap data works well because the heap is always a complete tree. New values will only be added at the end of the tree, so the backing array will only ever change at the end which is ***O(1)*** performance.
+
+## Heap Operations
+
+The heap data structure operations are:
+
+* Bubble Up
+* Bubble Down
+* Add
+* Remove
+* Peek
+* Size
+
+To understand how these operations work, two recursive sub-operations need to be introduced: **bubble-up** and **bubble-down**
+
+### Bubble Up
+
+The bubble up operation is to evaluate if a child node is following the rule that it must come after its parent. This recursive operation will check if the child comes before the parent and if so, it will swap the parent and the child positions. Now that same child node is either the root or has a new parent. Repeat until there are no parents who come after this node. At most, this will swap every node from the bottom of the tree all the way to the root, which is a function of the tree's height which will result in **log(n)** operations.
+
+Conceptually, if the first item was at the bottom of the tree, the bubble up operation will cause that first node to swap positions with each parent until it is at the root of the tree.
+
+<!--- Figure 3 -->
+{% include image.html url="bubble_up.png"
+description="Shows a bubble up operation of the 8-node swapping places with the 33-node, then the 15-node so that the tree follows rule 1."
+caption="Bubble Up of the 8-Node"
+%}
+
+```c#
+private void BubbleUp(int index)
+{
+	int parentIndex = (index - 1) / 2;
+	if (_data[index] < _data[parentIndex])
+	{
+		// swap positions and repeat
+		(_data[index], _data[parentIndex]) = (_data[parentIndex], _data[index]);
+		BubbleUp(parentIndex);
+	}
+}
 ```
 
-To put text in italics, use a single star:  *i am italics*
-To put text in bold, use two stars: **i am bold**
+### Bubble Down
 
-To create a link use the format: 
-[Text to Display](filename or link)
+Bubble down is the opposite of bubble up. If a parent comes after either child, swap the parent and child positions. If both children come before the parent, it doesn't matter which child is swapped. Many implementations will swap with the child who comes first. The operation then recurses to check the new children if a swap occurred. At most, this will swap every node from the top of the tree all the way to one of the leaf nodes, which will be a function of the height of the tree which will result in **log(n)** operations.
 
-To display a picture use the format: 
-![Alternate Text to Display](filename or link)
+Conceptually, this is where an item that sorts towards the end will sink down the tree until it reaches the bottom.
 
-To display a table, use hyphens and pipes (vertical bars):
+<!--- Figure 4 -->
+{% include image.html url="bubble_down.png"
+description="Shows a bubble down operation of the 33-node swapping places with the 3-node, then the 8-node, then the 15-node so that the tree follows rule 1."
+caption="Bubble Down of the 33-Node"
+%}
 
-| header 1 |   header 2 |   header 3   |
-|:---------|-----------:|:------------:|
-| left     |      right |   centered   |
-| value 12 |   value 22 |   value 32   |
-| value 13 |   value 23 |   value 33   |
-``````
+```c#
+private void BubbleDown(int index)
+{
+	int leftIndex = index * 2 + 1;
+	int rightIndex = index * 2 + 2;
 
-### Creating Example Problems
+	// Case 1: no children
+	if (leftIndex >= _data.Count)
+		return;
 
-One of the requirements for each data structure is an example problem and an exercise for the student. The idea with these example problems is for you to show how to **use** the data structure to solve a problem, not how to build the data structure. The problem should be designed to take advantage of the strengths of the data structure. Your instructor may give you a scenario that your examples and problems must fit with. Example: _You are working for a company that is developing a music app. All of your examples and student problems should be features of the music app which use the various data structures._ Check with your instructor if there are restrictions for your example and problem.
+	// Case 2: only left child exists
+	int smallestChildIndex = leftIndex;
 
-Here is my process for building a problem:
+	// Case 3: right child also exists and is smaller than left child
+	if (rightIndex < _data.Count && _data[rightIndex] < _data[leftIndex])
+		smallestChildIndex = rightIndex;
+	
+	if (_data[smallestChildIndex] < _data[index])
+	{
+		// swap positions and repeat
+		(_data[index], _data[smallestChildIndex]) = (_data[smallestChildIndex], _data[index]);
+		BubbleDown(smallestChildIndex);
+	}
+}
+```
 
-1. Identify the strengths of the data structure
-    * Example: Queue is good at keeping things in order
-2. Come up with how this applies in your given application
-    * Example: My vacation planning app needs to keep requests from various customers in order
-3. Put those 2 things together
-    * Example: Use a queue to keep track of requests
+### Add
 
-The example problem should be a problem where you describe the problem or the requirements and then show the student how to get to the answer. Having C# code chunks in the markdown file is good enough for the example - especially if you include blocks of text in between the code to help the student understand why that data structure helps.
+The `Add` operation must follow both rules. We start by following rule 1 to make he tree complete, adding the new value at the bottom of the tree in the next available position. We then call `BubbleUp` on the newly added node to make the tree follow rule 2 so that the new value ends up at the correct spot in the heap.
 
-The problem for the student should include some description of the problem scenario and the requirements for completing it. You may give the student a starting project, but it is not required to give them starting code. You must include a link to your solution which should be working code.
+<!--- Figure 5 -->
+{% include image.html url="bubble_up.png"
+description="Shows a bubble up operation of the 8-node swapping places with the 33-node, then the 15-node so that the tree follows rule 1."
+caption="Adding the 8-Node"
+%}
 
-The template repository has 3 projects already created for you for each data structure (`ds1-example`, `ds1-problem`, `ds1-solution`, etc.). The ___example___ project is for you to drop your code in and is more for you than for me. It lets you make sure your code is the right syntax to include in the markdown files. The ___problem___ project is for you to have a place to put starting code for your student problem - you don't have to use it, but it's here if you want it. The ___solution___ project should be used to store your solution code so that you can give the student a link to that folder. You don't have to use any of these projects if you don't want to, these are mostly there for convenience for you. 
+The `Add` operation takes one operation to add the new node, and then calls `BubbleUp`, so the overall efficiency is **O(log n)**.
 
-#### How to Start Your Own Project in C#
+```c#
+private void Add(int value)
+{
+	_data.Add(value);
+	BubbleUp(_data.Count - 1);
+}
+```
 
-So far in our course, we have not required you to create a new C# project. Each of your student problems' solutions should be in a separate C# project. You create a project in C# by using a terminal to navigate to the solution folder and then run `dotnet new console` to create a new application.
+### Remove
 
-{% include image.html url="create_code_solution.jpg" description="Shows the terminal creating a new C sharp console application." caption="Create a New C# Project" %}
+The `Remove` operation also must follow both rules. We start by removing the first node, which is always the root node. To follow rule 1 to make sure our binary tree stays complete, we replace the root node with the last node in the complete tree. This ensures we still follow rule 1 of having a complete tree. We then call `BubbleDown` on the new root node to make the tree follow rule 2 that every parent comes before its children.
 
-You can then open the created solution file to begin editing your problem solution.
+<!--- Figure 6 -->
+{% include image.html url="remove.png"
+description="Shows a remove operation of the 2-node, replacing the root with the last node of the tree (33-node)."
+caption="Removing the 2-Node"
+%}
 
-{% include image.html url="explore_code_solution.jpg" description="Shows the project folder after creating a new C sharp project." caption="Folder Containing the C# Project" %}
+<!--- Figure 7 -->
+{% include image.html url="bubble_down.png"
+description="Shows a bubble down operation of the 33-node swapping places with the 3-node, then the 8-node, then the 15-node so that the tree follows rule 1."
+caption="Bubble Down of the 33-Node"
+%}
 
-### Milestone Submissions
-You will have three milestone submissions during the remainder of the semester in which you will receive a grade and feedback from your teacher:
+The `Remove` operation takes only a few operations to remove the node and replace it with the node from the bottom of the heap, but because it relies on `BubbleDown`, the overall efficiency is **O(log n)**.
 
-* Outline - You will submit an outline of your tutorial. An example outline will be provided in the assignment description.
-* Draft Submission 1 - You will submit one of your completed data structure topic markdown files for review.
-* Draft Submission 2 - You will submit another one of your completed data structure topic markdown files for review.
+```c#
+private int Remove()
+{
+	if (_data.Count == 0)
+		throw new ArgumentOutOfRangeException();
+	
+	var minValue = _data[0];
+	// Replace the top value with the bottom-most value
+	_data[0] = _data[_data.Count - 1];
+	_data.RemoveAt(_data.Count - 1);
+	BubbleDown(0);
+	return minValue;
+}
+```
 
-### Grading Rubric
-The final project will be graded as follows:
+### Peek
 
-###### Each data structure page will be evaluated for audience:
+The `Peek` operation will return the first item of the heap found at the root node. Reading the root value will always be **O(1)** regardless of the size of the tree.
 
-|  Anyone | Programmers | CSE 212 Students | Professors | Rocket Scientists | Nobody |
-|--------:|------------:|-----------------:|-----------:|------------------:|-------:|
-| 100 pts |      93 pts |           83 pts |     71 pts |            60 pts |  0 pts |
+```c#
+private int Peek()
+{
+    // return the root value
+    return _data[0];
+}
+```
 
-###### Each example and problem demonstrate understanding of when to use this data structure
+### Size
 
-|         |    Yes | Yes, but code doesn't work |       No | No Effort |
-|---------|-------:|---------------------------:|---------:|----------:|
-| Example | 50 pts |                   41.5 pts | 35.5 pts |     0 pts |
-| Problem | 50 pts |                   41.5 pts | 35.5 pts |     0 pts |
+The `Size` operation returns the number of nodes in the tree. As this value can be incremented when a value is added, the efficiency is **O(1)**
 
-###### Number of errors in the entire tutorial
+### Performance Summary
 
-|        |   0 | 1-3 | 4-6 | 7+ |
-|--------|----:|----:|----:|---:|
-| Points | 100 |  88 |  75 | 60 |
+The table below shows the common functions of a Heap.
 
-##### Points Breakdown
+| Common Heap Operation | Description                                               | Performance                                                                             |
+|-----------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Add(value)            | Adds a value into the heap in the correct place.          | O(log n) - Recursively swap values until the value is in the right spot.                |
+| Remove()              | Remove the first value from the heap and return it.       | O(log n) - Recursively swap so the tree stays complete and all values follow the rules. |
+| Peek()                | Return the first value from the heap without removing it. | O(1) - Looking at the root node only.                                                   |
+| Size()                | Return the size of the Heap.                              | O(1) - The size is maintained within the Heap class.                                    |
 
-| Area               | Criteria        |        Points |
-|--------------------|-----------------|--------------:|
-| Data Structure 1   | Audience        |   **100 pts** |
-|                    | Example Problem |    **50 pts** |
-|                    | Student Problem |    **50 pts** |
-| Data Structure 2   | Audience        |   **100 pts** |
-|                    | Example Problem |    **50 pts** |
-|                    | Student Problem |    **50 pts** |
-| Data Structure 3   | Audience        |   **100 pts** |
-|                    | Example Problem |    **50 pts** |
-|                    | Student Problem |    **50 pts** |
-| Errors in Tutorial |                 |   **100 pts** |
-|                    |  ***Total***    | ***700 pts*** |
+## Uses
 
-### Working Independently
-This final project **must be completed individually** to ensure you are meeting all course outcomes. You should not complete this project within a group. If you obtain help from a tutor, the tutor should help you understand principles but should not help you design or write your project. It is an honor code violation to obtain text or example problems for your project from others including using the internet (i.e. sites that allow students to share their solutions).
+Heaps are efficient data structures that can order data as they receive data. Because of this characteristic, they are most commonly used for **Priority Queues**. If you used a linked list for a priority queue, you can append to it in O(1), but it would take O(n) to identify and return the highest priority item (first when sorting by priority). The heap would take O(log n) to add the item, but it could remove the next item from the queue in O(log n) as well.
+
+One downside to heaps is that they are not ordered. The first item is known, but any of the leaf nodes could be the last item. This also creates a challenge when creating a priority queue because you need to keep track of the order the items were entered in addition to the priority of each item. By default, a heap would treat two items with the same priority as equivalent - either one could come first.
+
+## Key Terms
+
+<dl>
+<dt>binary search tree</dt>
+<dd>A binary tree that puts data less than the root to the left and greater than the root to the right. This type of tree enables searching algorithms to be efficient.</dd>
+<dt>binary tree</dt>
+<dd>A tree that has up to two children for each node.</dd>
+<dt>complete binary tree</dt>
+<dd>A binary tree that fills every available place for a node before starting a new level.</dd>
+<dt>child</dt>
+<dd>A child is a node connected from a parent node.</dd>
+<dt>heap</dt>
+<dd>A tree where each parent node comes before either of their children in sorted order.</dd>
+<dt>leaf</dt>
+<dd>A leaf is a node that has no children.</dd>
+<dt>max heap</dt>
+<dd>A heap where the root node is the maximum value.</dd>
+<dt>min heap</dt>
+<dd>A heap where the root node is the minimum value.</dd>
+<dt>node</dt>
+<dd>An entry in a tree that contains both the value and pointers to any children nodes.</dd>
+<dt>parent</dt>
+<dd>A parent is a node that connects to children nodes.</dd>
+<dt>priority queue</dt>
+<dd>A queue that returns data in order it was received according to priority</dd>
+<dt>root</dt>
+<dd>The first parent in a tree.</dd>
+<dt>subtree</dt>
+<dd>Subset of a tree made by selecting a node to be the root and including all the children from that node.</dd>
+<dt>trees</dt>
+<dd>A data structure that starts with a root node and is subsequently connected to multiple nodes according to a relationship between the nodes. The tree does not have any circular loops or unconnected nodes.</dd>
+</dl>
