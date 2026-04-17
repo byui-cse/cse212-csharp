@@ -54,15 +54,18 @@ title: Course Index
 * [Prove](lesson09/prove)
 
 {% include plain-h3.html content="Week 10: Heaps" %}
-* [Prepare](lesson10/prepare-heap)
+* [Prepare](lesson10/prepare)
 * [Teach One Another](lesson10/teach)
-* [Prove](lesson10/prove-heap)
+* [Prove](lesson10/prove)
 
 ## Phase 3 - Prove
 {% include plain-h3.html content="Weeks 11-14: Final Project" %}
-* [Project Description](lesson11/prepare-alt)
-* [Project Hints](lesson11/prepare-hints)
-* [Peer Review](lesson13/prove-alt)
+* [Project Description](lesson11/overview)
+* [Project FAQs](lesson11/prove-faq)
+* [Week 11 Details](lesson11/prove)
+* [Week 12 Details](lesson12/prove)
+* [Week 13 Peer Review](lesson13/prove)
+* [Week 14 Submission Checklist](lesson14/prove)
 
 ## Resources
 * [Rider Help](help/rider)
