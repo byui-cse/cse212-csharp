@@ -36,33 +36,26 @@
 """
 
 links = [
-    ("lesson01", "prove", "https://classroom.github.com/a/ImjcAjh8", True, True),
-    ("lesson02", "prove", "https://classroom.github.com/a/CjacNbNZ", True, True),
-    ("lesson04", "prove", "https://classroom.github.com/a/9qRS5mSi", True, True),
-    ("lesson05", "prove", "https://classroom.github.com/a/asMoextS", True, True),
-    ("lesson06", "prove", "https://classroom.github.com/a/PDhSGue_", True, True),
-    ("lesson07", "prove", "https://classroom.github.com/a/9fpUobY3", True, True),
-    ("lesson08", "prove", "https://classroom.github.com/a/eTgEpZBc", True, True),
-    ("lesson09", "prove", "https://classroom.github.com/a/T7Jm4i7j", True, True),
-    ("lesson10", "prove", "https://classroom.github.com/a/9hz4sHYc", True, False),
-    ("lesson11", "prove", "https://classroom.github.com/a/r3GD7TQX", True, False), # final project
-    ("lesson01", "teach", "https://classroom.github.com/a/X2B_3Oc7", True, True),
-    ("lesson02", "teach", "https://classroom.github.com/a/12qtq7Wc", True, True),
-    ("lesson04", "teach", "https://classroom.github.com/a/dGMMm-bq", True, True),
-    ("lesson05", "teach", "https://classroom.github.com/a/SAJic_8V", True, True),
+    ("lesson01", "prove", "https://classroom.github.com/a/ImjcAjh8"),
+    ("lesson02", "prove", "https://classroom.github.com/a/CjacNbNZ"),
+    ("lesson04", "prove", "https://classroom.github.com/a/9qRS5mSi"),
+    ("lesson05", "prove", "https://classroom.github.com/a/asMoextS"),
+    ("lesson06", "prove", "https://classroom.github.com/a/PDhSGue_"),
+    ("lesson07", "prove", "https://classroom.github.com/a/9fpUobY3"),
+    ("lesson08", "prove", "https://classroom.github.com/a/eTgEpZBc"),
+    ("lesson09", "prove", "https://classroom.github.com/a/T7Jm4i7j"),
+    ("lesson10", "prove", "https://classroom.github.com/a/9hz4sHYc"),
+    ("lesson11", "prove", "https://classroom.github.com/a/r3GD7TQX"), # final project
+    ("lesson01", "teach", "https://classroom.github.com/a/X2B_3Oc7"),
+    ("lesson02", "teach", "https://classroom.github.com/a/12qtq7Wc"),
+    ("lesson04", "teach", "https://classroom.github.com/a/dGMMm-bq"),
+    ("lesson05", "teach", "https://classroom.github.com/a/SAJic_8V"),
 ]
 
-for lesson, type, link, do_regular, do_alt in links:
+for lesson, type, link, do_regular in links:
     print(lesson)
     if do_regular:
         with open('docs/' + lesson + '/' + type + '-classroom.html', 'w') as file:
-            file.write(f"""<!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to {link}</title>
-<meta http-equiv="refresh" content="0; URL={link}">
-<link rel="canonical" href="{link}">""")
-    if do_alt:
-        with open('docs/' + lesson + '/' + type + '-classroom-alt.html', 'w') as file:
             file.write(f"""<!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to {link}</title>

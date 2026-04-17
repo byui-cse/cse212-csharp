@@ -25,11 +25,7 @@ title: Course Demos
 * [Demo 4](lesson04/demo-04.zip)
 
 {% include plain-h3.html content="Week 5: Articulating Answers to Technical Questions / Sets" %}
-* [Demo 5a](lesson05/demo-05a.zip)
-* [Demo 5a Solution](lesson05/demo-05a-solution.zip)
-* [Demo 5b](lesson05/demo-05b.zip)
-* [Demo 5c](lesson05/demo-05c.zip)
-* [Demo 5c Solution](lesson05/demo-05c-solution.zip)
+* [Demo 5](lesson05/demo-05.zip)
 
 ## Phase 2 - Teach
 {% include plain-h3.html content="Week 6: Maps" %}
