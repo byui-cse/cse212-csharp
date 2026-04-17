@@ -9,8 +9,8 @@ title: "W10 Prepare: Reading"
 
 * [Heaps](#Heaps)
 * [Heap Organization](#heap-organization)
-* [Complete Binary Tree](#complete-binary-tree)
-* [Parents Come First](#parents-come-first)
+    * [Complete Binary Tree](#complete-binary-tree)
+    * [Parents Come First](#parents-come-first)
 * [Heap Operations ](#heap-operations)
 * [Uses](#uses)
 * [Key Terms](#key-terms)
