@@ -9,7 +9,7 @@ For this prove assignment, submit progress on **Week 11** of the Playlist Final 
 
 This week focuses on an **array/list-based playlist implementation** in `Playlist1` and on building the functional unit tests that will support the rest of the project.
 
-Use this page for the specific Week 11 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](overview). Before you begin, read the [Playlist Final Project FAQ](prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions.
+Use this page for the specific Week 11 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](overview). Before you begin, read the [Playlist Final Project FAQ](prove-faq). It defines the official rules for matching songs, playback behavior, duplicates, edge cases, and starter-template questions.
 
 ## Week 11 Scope (Array/List)
 For Week 11, implement `IPlaylist` using a built-in array or list internally.
@@ -68,7 +68,7 @@ Your implementation/tests should explicitly cover:
 7. `PlayNext()` returning `null` after the final song has been played
 8. Duplicate songs (allowed)
 
-See the [FAQ](prove-faq) for the expected exceptions and return values for these cases.
+See the [FAQ](prove-faq) for the expected behavior and return values for these cases.
 
 ## Matching Rules
 For the main playlist requirements, songs are considered equivalent when **title and artist** match.

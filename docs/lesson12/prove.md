@@ -9,7 +9,7 @@ For this prove assignment, submit progress on **Week 12** of the Playlist Final 
 
 This week focuses on a **linked-list-based playlist implementation** in `Playlist2`, extending your functional unit tests to cover both versions, and adding the first round of performance comparisons. Although not required, it is highly recommended to use the built in `LinkedList<>` class.
 
-Use this page for the specific Week 12 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions.
+Use this page for the specific Week 12 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, playback behavior, duplicates, edge cases, and starter-template questions.
 
 ## Week 12 Scope (Linked List)
 For Week 12, implement `IPlaylist` in `Playlist2` using a linked list internally.
@@ -70,7 +70,7 @@ Your functional tests should explicitly verify that both `Playlist1` and `Playli
 8. Adding a new song after `PlayNext()` has started returning `null`
 9. Duplicate songs (allowed)
 
-See the [FAQ](../lesson11/prove-faq) for the expected exceptions and return values for these cases.
+See the [FAQ](../lesson11/prove-faq) for the expected behavior and return values for these cases.
 
 ## Performance Checkpoint
 For Week 12, add performance tests that compare `Playlist1` and `Playlist2`.

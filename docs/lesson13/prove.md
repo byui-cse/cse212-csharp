@@ -9,7 +9,7 @@ Week 13 is the final work week for the Playlist Final Project.
 
 There is **no separate Week 13 draft submission**. Instead, use this week to finish the **third playlist implementation** in `Playlist3`, extend your functional tests to cover all three versions, update your performance comparisons so all three implementations are measured the same way, and prepare your final project submission for the beginning of **Week 14**.
 
-Use this page for the specific Week 13 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions.
+Use this page for the specific Week 13 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, playback behavior, duplicates, edge cases, and starter-template questions.
 
 
 ## Week 13 Scope (Third Implementation)
@@ -72,7 +72,7 @@ Your functional tests should explicitly verify that `Playlist1`, `Playlist2`, an
 8. Adding a new song after `PlayNext()` has started returning `null`
 9. Duplicate songs (allowed)
 
-See the [FAQ](../lesson11/prove-faq) for the expected exceptions and return values for these cases.
+See the [FAQ](../lesson11/prove-faq) for the expected behavior and return values for these cases.
 
 ## Performance Checkpoint
 For Week 13, extend your performance tests so `Playlist1`, `Playlist2`, and `Playlist3` are all measured using the same operations and playlist sizes.

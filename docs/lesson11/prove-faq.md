@@ -34,14 +34,14 @@ With duplicate songs, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act 
 
 ## Playlist Behavior
 #### 6. What happens when `PlayNext()` reaches the end of the playlist?
-If the playlist is not empty and all songs have already been played, `PlayNext()` should return `null`.
+If the playlist is empty, `PlayNext()` should return `null`.
+
+If the playlist is not empty and all songs have already been played, `PlayNext()` should also return `null`.
 
 It should continue returning `null` until either:
 
 1. `Reset()` is called, or
 2. A new song is added
-
-If the playlist is empty, see [When should I throw an `InvalidOperationException`?](#when-should-i-throw-an-invalidoperationexception).
 
 #### 7. What does it mean if a song is “currently playing” when moving songs up, moving songs down, or removing songs?
 Think of playback as a cursor between songs. After `PlayNext()` returns a song, the cursor sits immediately after that song.
@@ -57,13 +57,14 @@ The exact format is flexible, but it must be clear and consistent. A recommended
 
 If the playlist is empty, display an `Empty Playlist` message.
 
-## Edge Cases and Exceptions
-#### 9. When should I throw an `InvalidOperationException`?
-You should throw an exception when an operation cannot logically be performed, including:
+## Edge Cases
+#### 9. What should happen in edge cases that cannot be performed?
+These operations should not throw an exception for normal edge cases. Instead:
 
-1. Calling `PlayNext()` or `Reset()` on an empty playlist
-2. Moving a song up when it is already at the top
-3. Moving a song down when it is already at the end
+1. `PlayNext()` on an empty playlist should return `null`
+2. `Reset()` on an empty playlist should do nothing
+3. `MoveSongUp()` when the song is already at the top should return `false` and make no changes
+4. `MoveSongDown()` when the song is already at the end should return `false` and make no changes
 
 #### 10. What should `RemoveSong()`, `MoveSongUp()`, or `MoveSongDown()` do if the song is not found?
 If the song is not found, these methods should return `false` and make no changes to the playlist.
