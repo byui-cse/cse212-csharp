@@ -60,7 +60,7 @@ title: Course Index
 
 ## Phase 3 - Prove
 {% include plain-h3.html content="Weeks 11-14: Final Project" %}
-* [Project Description](lesson11/overview)
+* [Project Overview](lesson11/overview)
 * [Project FAQs](lesson11/prove-faq)
 * [Week 11 Details](lesson11/prove)
 * [Week 12 Details](lesson12/prove)
