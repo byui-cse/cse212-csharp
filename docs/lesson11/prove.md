@@ -76,7 +76,7 @@ Your implementation/tests should explicitly cover:
 5. `MoveSongDown()` when the song is already last
 6. `MoveSongUp()` or `MoveSongDown()` when the song is not found
 7. `PlayNext()` returning `null` after the final song has been played
-8. Duplicate songs (allowed)
+8. Handle duplicate songs (should be allowed)
 
 See the [FAQ](prove-faq) for the expected behavior and return values for these cases.
 

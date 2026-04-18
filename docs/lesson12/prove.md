@@ -7,7 +7,7 @@ title: "W12 Prove: Final Project - Part 2"
 ## Instructions
 For this prove assignment, submit progress on **Week 12** of the Playlist Final Project.
 
-This week focuses on a **linked-list-based playlist implementation** in `Playlist2`, extending your functional unit tests to cover both versions, and adding the first round of performance comparisons. Although not required, it is highly recommended to use the built in `LinkedList<>` class.
+This week focuses on a **linked-list-based playlist implementation** in `Playlist2`, extending your functional unit tests to cover both versions, and adding the first round of performance comparisons. It is highly recommended to use the built in `LinkedList<>` class.
 
 Use this page for the specific Week 12 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, playback behavior, duplicates, edge cases, and starter-template questions.
 
