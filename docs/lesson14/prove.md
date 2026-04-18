@@ -74,4 +74,4 @@ The final project is the culmination of Weeks 11-13:
 Your final submission should show the complete result of that work in one repository.
 
 ## Submit
-Submit your repository link in Canvas by **Week 14 Monday night**.
+Submit your repository link in Canvas by the due date (usually the last day of classes).

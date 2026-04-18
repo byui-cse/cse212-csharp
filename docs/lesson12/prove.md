@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "W12 Prove: Final Project - Status Report 2"
+title: "W12 Prove: Final Project - Part 2"
 ---
 
-# W12 Prove: Final Project - Status Report 2
+# W12 Prove: Final Project - Part 2
 ## Instructions
 For this prove assignment, submit progress on **Week 12** of the Playlist Final Project.
 
-This week focuses on a **linked-list-based playlist implementation** in `Playlist2`, extending your functional unit tests to cover both versions, and adding the first round of performance comparisons.
+This week focuses on a **linked-list-based playlist implementation** in `Playlist2`, extending your functional unit tests to cover both versions, and adding the first round of performance comparisons. Although not required, it is highly recommended to use the built in `LinkedList<>` class.
 
 Use this page for the specific Week 12 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions.
 
@@ -35,13 +35,6 @@ By the end of Week 12, you should have enough progress to show that:
 5. You have updated `report.md` with what changed in Week 12 and what your first comparison results suggest.
 
 This is still a progress checkpoint, not the final comparison report. You do **not** need the third implementation yet. That begins in Week 13.
-
-## Matching Rules
-For the main playlist requirements, songs are considered equivalent when **title and artist** match.
-
-To support the provided `Menu` for manual testing, your code should also behave reasonably when only a title is provided. In that case, operate on the **first matching title** in playlist order.
-
-If multiple songs match, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## What to Submit
 Submit one link to your GitHub repository (or the specific folder/file set) that contains:

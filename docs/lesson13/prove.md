@@ -1,15 +1,16 @@
 ---
 layout: default
-title: "W13 Prove: Final Project - Final Preparation"
+title: "W13 Prove: Final Project - Part 3"
 ---
 
-# W13 Prove: Final Project - Final Preparation
+# W13 Prove: Final Project - Part 3
 ## Instructions
 Week 13 is the final work week for the Playlist Final Project.
 
 There is **no separate Week 13 draft submission**. Instead, use this week to finish the **third playlist implementation** in `Playlist3`, extend your functional tests to cover all three versions, update your performance comparisons so all three implementations are measured the same way, and prepare your final project submission for the beginning of **Week 14**.
 
-Use this page for the specific Week 13 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions. If your class is also doing the Week 13 in-class review activity, use the [Peer Review Guide](review).
+Use this page for the specific Week 13 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](../lesson11/overview). Before you begin, read the [Playlist Final Project FAQ](../lesson11/prove-faq). It defines the official rules for matching songs, exceptions, playback behavior, duplicates, and starter-template questions.
+
 
 ## Week 13 Scope (Third Implementation)
 For Week 13, implement `IPlaylist` in `Playlist3` using a BST or dictionary.
@@ -35,13 +36,6 @@ By the end of Week 13, you should have enough progress to show that:
 5. You have updated `report.md` with what changed in the third implementation, what your three-way comparison suggests, and the direction of your final recommendation.
 
 This is the final implementation checkpoint before the final submission. By the end of this week, you should have all three versions working, reviewed, and ready for final polishing.
-
-## Matching Rules
-For the main playlist requirements, songs are considered equivalent when **title and artist** match.
-
-To support the provided `Menu` for manual testing, your code should also behave reasonably when only a title is provided. In that case, operate on the **first matching title** in playlist order.
-
-If multiple songs match, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## What to Complete This Week
 There is no separate Week 13 draft to turn in. By the end of this week, your repository should be ready for the final submission and should contain:
@@ -87,7 +81,9 @@ Reuse the same operations and sizes from Week 12 if possible so the comparison s
 
 - `AddSong`
 - `RemoveSong`
+- `PlayNext`
 - `MoveSongUp`
+- `MoveSongDown`
 
 You may test more operations if you want, but keep the comparison consistent across all three implementations.
 

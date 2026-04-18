@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "W11 Prove: Final Project - Status Report 1"
+title: "W11 Prove: Final Project - Part 1"
 ---
 
-# W11 Prove: Final Project - Status Report 1
+# W11 Prove: Final Project - Part 1
 ## Instructions
 For this prove assignment, submit progress on **Week 11** of the Playlist Final Project.
 
@@ -36,12 +36,6 @@ By the end of Week 11, you should have enough progress to show that:
 
 This is a progress checkpoint, not the final comparison report. You do **not** need performance comparisons yet. Those begin in Week 12 after you have a second implementation.
 
-## Matching Rules
-For the main playlist requirements, songs are considered equivalent when **title and artist** match.
-
-To support the provided `Menu` for manual testing, your code should also behave reasonably when only a title is provided. In that case, operate on the **first matching title** in playlist order.
-
-If multiple songs match, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## What to Submit
 Submit one link to your GitHub repository (or the specific folder/file set) that contains:
@@ -72,10 +66,14 @@ Your implementation/tests should explicitly cover:
 5. `MoveSongDown()` when the song is already last
 6. `MoveSongUp()` or `MoveSongDown()` when the song is not found
 7. `PlayNext()` returning `null` after the final song has been played
-8. Adding a new song after `PlayNext()` has started returning `null`
-9. Duplicate songs (allowed)
+8. Duplicate songs (allowed)
 
 See the [FAQ](prove-faq) for the expected exceptions and return values for these cases.
+
+## Matching Rules
+For the main playlist requirements, songs are considered equivalent when **title and artist** match.
+
+With duplicate songs, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## What Good Evidence Looks Like
 A strong Week 11 submission usually includes:

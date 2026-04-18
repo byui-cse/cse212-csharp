@@ -28,11 +28,9 @@ If you do not see `report.md` in your solution view, switch to the repository/fi
 You may reuse ideas and logic, but each implementation should be written as a separate class that clearly demonstrates how the chosen data structure works. Excessive copy-pasting that hides structural differences is discouraged.
 
 #### 5. How should I determine if two songs “match”?
-For the main playlist requirements, two songs should be considered a match if their title and artist are the same.
+For the main playlist requirements, songs are considered equivalent when **title and artist** match.
 
-However, the provided `Menu` may pass in a `Song` that only includes a title. To support that manual testing scenario, your code should also handle title-only matching. In that case, use the **first matching title** in playlist order.
-
-If multiple songs match, `RemoveSong()`, `MoveSongUp()`, and `MoveSongDown()` should act on the **first matching song** in playlist order.
+With duplicate songs, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## Playlist Behavior
 #### 6. What happens when `PlayNext()` reaches the end of the playlist?
@@ -75,7 +73,7 @@ This includes the empty-playlist case for `RemoveSong()`, `MoveSongUp()`, and `M
 #### 11. Are duplicate songs allowed?
 Yes. Duplicate songs are allowed.
 
-If more than one song matches the same search criteria, operate on the **first matching song** in playlist order.
+With duplicate songs, `RemoveSong`, `MoveSongUp`, and `MoveSongDown` should act on the **first matching song** in playlist order.
 
 ## Dictionary Implementation
 #### 12. How can I use a dictionary for an ordered playlist?
