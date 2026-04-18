@@ -37,7 +37,7 @@
 
 links = [
     # final project
-    ("lesson11", "prove", "https://classroom.github.com/a/_zSLk9r_"),
+    ("lesson11", "prove", "https://classroom.github.com/a/EloTV6z-"),
     # prove 1-2,4-10
     ("lesson01", "prove", "https://classroom.github.com/a/CDrIO3Dc"),
     ("lesson02", "prove", "https://classroom.github.com/a/-p8HD-fF"),
