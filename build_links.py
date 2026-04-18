@@ -36,27 +36,29 @@
 """
 
 links = [
-    ("lesson01", "prove", "https://classroom.github.com/a/ImjcAjh8"),
-    ("lesson02", "prove", "https://classroom.github.com/a/CjacNbNZ"),
-    ("lesson04", "prove", "https://classroom.github.com/a/9qRS5mSi"),
-    ("lesson05", "prove", "https://classroom.github.com/a/asMoextS"),
-    ("lesson06", "prove", "https://classroom.github.com/a/PDhSGue_"),
-    ("lesson07", "prove", "https://classroom.github.com/a/9fpUobY3"),
-    ("lesson08", "prove", "https://classroom.github.com/a/eTgEpZBc"),
-    ("lesson09", "prove", "https://classroom.github.com/a/T7Jm4i7j"),
-    ("lesson10", "prove", "https://classroom.github.com/a/9hz4sHYc"),
-    ("lesson11", "prove", "https://classroom.github.com/a/r3GD7TQX"), # final project
-    ("lesson01", "teach", "https://classroom.github.com/a/X2B_3Oc7"),
-    ("lesson02", "teach", "https://classroom.github.com/a/12qtq7Wc"),
-    ("lesson04", "teach", "https://classroom.github.com/a/dGMMm-bq"),
-    ("lesson05", "teach", "https://classroom.github.com/a/SAJic_8V"),
+    # final project
+    ("lesson11", "prove", "https://classroom.github.com/a/_sMIC4-b"),
+    # prove 1-2,4-10
+    ("lesson01", "prove", "https://classroom.github.com/a/CDrIO3Dc"),
+    ("lesson02", "prove", "https://classroom.github.com/a/-p8HD-fF"),
+    ("lesson04", "prove", "https://classroom.github.com/a/l7nMuM9c"),
+    ("lesson05", "prove", "https://classroom.github.com/a/JtMCcnVA"),
+    ("lesson06", "prove", "https://classroom.github.com/a/sxL_fDhD"),
+    ("lesson07", "prove", "https://classroom.github.com/a/Rl-hFSpU"),
+    ("lesson08", "prove", "https://classroom.github.com/a/9V9E1qUi"),
+    ("lesson09", "prove", "https://classroom.github.com/a/lKpbkxHk"),
+    ("lesson10", "prove", "https://classroom.github.com/a/bjK0tZY9"),
+    # teach 1-2, 4-5
+    ("lesson01", "teach", "https://classroom.github.com/a/k2cyZ0OH"),
+    ("lesson02", "teach", "https://classroom.github.com/a/7KZU6gQY"),
+    ("lesson04", "teach", "https://classroom.github.com/a/NjQIIM9R"),
+    ("lesson05", "teach", "https://classroom.github.com/a/AFP9u45h"),
 ]
 
-for lesson, type, link, do_regular in links:
+for lesson, type, link in links:
     print(lesson)
-    if do_regular:
-        with open('docs/' + lesson + '/' + type + '-classroom.html', 'w') as file:
-            file.write(f"""<!DOCTYPE html>
+    with open('docs/' + lesson + '/' + type + '-classroom.html', 'w') as file:
+        file.write(f"""<!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to {link}</title>
 <meta http-equiv="refresh" content="0; URL={link}">
