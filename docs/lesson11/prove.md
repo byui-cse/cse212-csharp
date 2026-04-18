@@ -11,6 +11,16 @@ This week focuses on an **array/list-based playlist implementation** in `Playlis
 
 Use this page for the specific Week 11 checkpoint expectations. For the full project description and timeline, see the [Final Project Overview](overview). Before you begin, read the [Playlist Final Project FAQ](prove-faq). It defines the official rules for matching songs, playback behavior, duplicates, edge cases, and starter-template questions.
 
+---
+
+## Repository
+
+#### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
+
+#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
+
+---
+
 ## Week 11 Scope (Array/List)
 For Week 11, implement `IPlaylist` using a built-in array or list internally.
 

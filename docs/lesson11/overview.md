@@ -15,7 +15,7 @@ You will:
 - **Measure and compare performance** once you have multiple implementations to compare.
 - Write a final **recommendation report** explaining which data structure you would choose if you were developing this feature at a real company.
 
-Use this page for the big-picture project description. For the Week 11 checkpoint, see [W11 Prove: Final Project - Status Report 1](prove). For official behavior rules and edge cases, see the [Playlist Final Project FAQ](prove-faq).
+Use this page for the big-picture project description. For the Week 11 checkpoint, see [W11 Prove: Final Project - Part 1](prove). For official behavior rules and edge cases, see the [Playlist Final Project FAQ](prove-faq).
 
 ---
 
@@ -70,7 +70,7 @@ The starter repository includes:
 - Record a short Week 11 write-up in `report.md` describing your implementation, edge cases, and any important assumptions.
 - Submit Draft 1 / the Week 11 prove.
 
-For detailed Week 11 expectations, see [W11 Prove: Final Project - Status Report 1](prove).
+For detailed Week 11 expectations, see [W11 Prove: Final Project - Part 1](prove).
 
 - 📌 **Draft submission due at the end of Week 11**
 
