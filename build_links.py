@@ -37,7 +37,7 @@
 
 links = [
     # final project
-    ("lesson11", "prove", "https://classroom.github.com/a/EloTV6z-"),
+    ("lesson11", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/final"),
     # prove 1-2,4-10
     ("lesson01", "prove", "https://classroom.github.com/a/CDrIO3Dc"),
     ("lesson02", "prove", "https://classroom.github.com/a/-p8HD-fF"),
@@ -46,8 +46,8 @@ links = [
     ("lesson06", "prove", "https://classroom.github.com/a/sxL_fDhD"),
     ("lesson07", "prove", "https://classroom.github.com/a/Rl-hFSpU"),
     ("lesson08", "prove", "https://classroom.github.com/a/9V9E1qUi"),
-    ("lesson09", "prove", "https://classroom.github.com/a/lKpbkxHk"),
-    ("lesson10", "prove", "https://classroom.github.com/a/bjK0tZY9"),
+    ("lesson09", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-09"),
+    ("lesson10", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-10"),
     # teach 1-2, 4-5
     ("lesson01", "teach", "https://classroom.github.com/a/k2cyZ0OH"),
     ("lesson02", "teach", "https://classroom.github.com/a/7KZU6gQY"),
