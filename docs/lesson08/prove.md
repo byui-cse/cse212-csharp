@@ -18,8 +18,6 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Recursive Squares Sum
 Implement the `SumSquaresRecursive` function in the `SumSquares` class to find the sum `1^2 + 2^2 + 3^2 + ... + n^2` using recursion. Remember to both express the solution in terms of recursive call on a smaller problem and to identify a base case (terminating case). If the value of `n <= 0`, just return 0. A loop should not be used.
 

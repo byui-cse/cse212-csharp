@@ -17,8 +17,6 @@ Use this page for the specific Week 11 checkpoint expectations. For the full pro
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ---
 
 ## Week 11 Scope (Array/List)

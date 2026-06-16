@@ -18,8 +18,6 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Insert Unique Values Only
 Update the `Insert` operation to only allow unique values to be added to the tree (thus creating a sorted set). The `Insert` functions are already written to correctly insert values into the tree. However, the current implementation will cause duplicate values to be added to the tree.
 
