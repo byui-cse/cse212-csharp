@@ -69,3 +69,4 @@ title: Course Index
 
 ## Resources
 * [Rider Help](help/rider)
+* [Class Clowne Help](help/classclowne)
