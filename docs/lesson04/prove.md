@@ -13,8 +13,6 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Part 1 - Taking Turns Queue
 1. Examine the following test code file: `TakingTurnsTests.cs` (Note: Do not read through the referenced code first. Instead, proceed with the instructions below).
 2. The `TakingTurnsQueue` class maintains a circular queue of people. When a person is added, they are assigned a number of turns (a value of 0 or fewer means that they have an infinite number of turns). When a person is removed from the queue, they are re-added to the queue if they still have turns left. Here are the detailed requirements (**which can not be changed**):

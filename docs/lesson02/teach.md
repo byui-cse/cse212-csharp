@@ -13,8 +13,6 @@ All the files for this assignment will be found in the GitHub classroom ***teach
 
 #### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Analyze Code
 
 In this section, you will be asked several questions related to performance using big O notation. You will be asked to compare your answers to the actual solutions at the end of this section. You should watch the clock to make sure you don't spend more than half of your hour on this section before going to the next section.

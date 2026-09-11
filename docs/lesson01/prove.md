@@ -12,8 +12,6 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Response Document
 Examine the `01-prove_response.docx` document to provide your answers to questions asked in the steps below. You will commit this document back to your repository for submission.
 

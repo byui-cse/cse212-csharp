@@ -13,8 +13,6 @@ All the files for this assignment will be found in the GitHub classroom ***teach
 
 #### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Simple Queue
 1. Download the repository and load the `teach-04.sln` in your code editor. (Note: Do not read through the code first. Instead, proceed with the instructions below). 
 2. The SimpleQueue class implements a traditional FIFO queue that has an enqueue and dequeue function. Here are the detailed requirements (which can not be changed): 

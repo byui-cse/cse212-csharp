@@ -13,8 +13,6 @@ All the code files for this assignment will be found in the GitHub classroom ***
 
 #### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Using Dynamic Arrays: Lists
 
 1. To ensure you have enough time for this activity, spend no more than 20 minutes implementing this method before looking at the solution to discuss.

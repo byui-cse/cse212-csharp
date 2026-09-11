@@ -13,8 +13,6 @@ All the files for this assignment will be found in the GitHub classroom ***teach
 
 #### Step 1: [Create your assignment repository](teach-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Problem 1 - Unique Letters
 
 1. Download the repository and load the `teach-05.sln` in your code editor, and open the file `SetProblems.cs` to the `AreUniqueLetters(...)` function.

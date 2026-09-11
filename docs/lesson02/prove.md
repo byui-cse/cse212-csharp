@@ -13,8 +13,6 @@ All the files for this assignment will be found in the GitHub classroom ***prove
 
 #### Step 1: [Create your assignment repository](prove-classroom){:target="_blank"}
 
-#### Step 2: [Accept repository invite to resolve Access Issues](https://github.com/settings/organizations){:target="_blank"}
-
 ### Part 1 - Analyze Code
 In this section, you will be asked several questions that need to be answered in your response document:
 
