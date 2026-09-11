@@ -39,20 +39,20 @@ links = [
     # final project
     ("lesson11", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/final"),
     # prove 1-2,4-10
-    ("lesson01", "prove", "https://classroom.github.com/a/CDrIO3Dc"),
-    ("lesson02", "prove", "https://classroom.github.com/a/-p8HD-fF"),
-    ("lesson04", "prove", "https://classroom.github.com/a/l7nMuM9c"),
-    ("lesson05", "prove", "https://classroom.github.com/a/JtMCcnVA"),
-    ("lesson06", "prove", "https://classroom.github.com/a/sxL_fDhD"),
-    ("lesson07", "prove", "https://classroom.github.com/a/Rl-hFSpU"),
-    ("lesson08", "prove", "https://classroom.github.com/a/9V9E1qUi"),
+    ("lesson01", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-01"),
+    ("lesson02", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-02"),
+    ("lesson04", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-04"),
+    ("lesson05", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-05"),
+    ("lesson06", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-06"),
+    ("lesson07", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-07"),
+    ("lesson08", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-08"),
     ("lesson09", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-09"),
     ("lesson10", "prove", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/prove-10"),
     # teach 1-2, 4-5
-    ("lesson01", "teach", "https://classroom.github.com/a/k2cyZ0OH"),
-    ("lesson02", "teach", "https://classroom.github.com/a/7KZU6gQY"),
-    ("lesson04", "teach", "https://classroom.github.com/a/NjQIIM9R"),
-    ("lesson05", "teach", "https://classroom.github.com/a/AFP9u45h"),
+    ("lesson01", "teach", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/teach-01"),
+    ("lesson02", "teach", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/teach-02"),
+    ("lesson04", "teach", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/teach-04"),
+    ("lesson05", "teach", "https://classclowne.kaycoder.org/courses/byui-cse-212/sections/CURRENT/assignments/teach-05"),
 ]
 
 for lesson, type, link in links:
